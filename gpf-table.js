@@ -7,28 +7,32 @@
 
   const valueOrDash = (value) => {
     if (value === undefined || value === null || value === '') return '—';
+    if (Array.isArray(value)) return value.length ? value.join('\n') : '—';
     return String(value);
   };
 
   const normalizeRows = (fn) => {
     const modes = Array.isArray(fn.failure_modes) ? fn.failure_modes : [];
+    const causes = Array.isArray(fn.possible_causes) ? fn.possible_causes : [];
+    const effects = Array.isArray(fn.effects) ? fn.effects : [];
+    const monitors = Array.isArray(fn.obd_monitor_concepts) ? fn.obd_monitor_concepts : [];
 
     // Supports a future object-based JSON format such as:
-    // {"failure_mode":"...","effect":"...","obd_monitor":"..."}
+    // {"failure_mode":"...","possible_cause":"...","effect":"...","obd_monitor":"..."}
     if (modes.some((mode) => mode && typeof mode === 'object' && !Array.isArray(mode))) {
-      return modes.map((mode) => ({
+      return modes.map((mode, index) => ({
         failureMode: valueOrDash(mode.failure_mode ?? mode.name),
-        effect: valueOrDash(mode.effect ?? mode.example_effect),
-        monitor: valueOrDash(mode.obd_monitor ?? mode.obd_monitor_concept ?? mode.monitor)
+        possibleCause: valueOrDash(mode.possible_causes ?? mode.possible_cause ?? mode.cause),
+        effect: valueOrDash(mode.effect ?? mode.example_effect ?? effects[index]),
+        monitor: valueOrDash(mode.obd_monitor ?? mode.obd_monitor_concept ?? mode.monitor ?? monitors[index])
       }));
     }
 
-    const effects = Array.isArray(fn.effects) ? fn.effects : [];
-    const monitors = Array.isArray(fn.obd_monitor_concepts) ? fn.obd_monitor_concepts : [];
-    const rowCount = Math.max(modes.length, effects.length, monitors.length);
+    const rowCount = Math.max(modes.length, causes.length, effects.length, monitors.length);
 
     return Array.from({ length: rowCount }, (_, index) => ({
       failureMode: valueOrDash(modes[index]),
+      possibleCause: valueOrDash(causes[index]),
       effect: valueOrDash(effects[index]),
       monitor: valueOrDash(monitors[index])
     }));
@@ -37,6 +41,7 @@
   const addCell = (row, text, className) => {
     const cell = document.createElement('td');
     cell.textContent = text;
+    if (text.includes('\n')) cell.style.whiteSpace = 'pre-line';
     if (className) cell.className = className;
     if (text === '—') cell.classList.add('data-missing');
     row.appendChild(cell);
@@ -45,34 +50,23 @@
 
   const render = (data) => {
     tbody.replaceChildren();
-    const functions = Array.isArray(data.functions) ? data.functions : [];
+    const failureModes = Array.isArray(data.failure_modes) ? data.failure_modes : [];
 
-    functions.forEach((fn) => {
-      const rows = normalizeRows(fn);
-      if (!rows.length) return;
-
-      rows.forEach((item, index) => {
-        const tr = document.createElement('tr');
-
-        if (index === 0) {
-          const functionCell = addCell(tr, valueOrDash(fn.name), 'function-cell');
-          functionCell.rowSpan = rows.length;
-          const strong = document.createElement('strong');
-          strong.textContent = functionCell.textContent;
-          functionCell.replaceChildren(strong);
-        }
-
-        addCell(tr, item.failureMode);
-        addCell(tr, item.effect);
-        addCell(tr, item.monitor);
-        tbody.appendChild(tr);
-      });
+    failureModes.forEach((item) => {
+      const tr = document.createElement('tr');
+      addCell(tr, valueOrDash(item.id));
+      addCell(tr, valueOrDash(item.failure_mode), 'failure-mode-cell');
+      addCell(tr, valueOrDash(item.function), 'function-cell');
+      addCell(tr, valueOrDash(item.cause));
+      addCell(tr, valueOrDash(item.effect));
+      addCell(tr, valueOrDash(item.obd));
+      tbody.appendChild(tr);
     });
 
     if (!tbody.children.length) {
       const tr = document.createElement('tr');
       const td = document.createElement('td');
-      td.colSpan = 4;
+      td.colSpan = 6;
       td.textContent = 'No diagnostic rows are defined in the JSON source.';
       tr.appendChild(td);
       tbody.appendChild(tr);
@@ -88,7 +82,7 @@
     tbody.replaceChildren();
     const tr = document.createElement('tr');
     const td = document.createElement('td');
-    td.colSpan = 4;
+    td.colSpan = 6;
     td.textContent = 'Could not load the JSON source. Check gpf-fmea-obd.json for valid JSON syntax.';
     tr.appendChild(td);
     tbody.appendChild(tr);

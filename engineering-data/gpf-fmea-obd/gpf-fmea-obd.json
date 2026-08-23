@@ -2,20 +2,20 @@
   "title": "Gasoline Particulate Filter Failore Mode and Effect Anlysis",
   "status": "draft",
   "purpose": "Plain data source for recreating the GPF FMEA / OBD logical and physical views.",
-  "functions": [
+  "failure_modes": [
     {
       "id": "F1",
-      "name": "Capture soot",
-      "failure_modes": [
-        "Low filtration efficiency",
-        "Cracked or damaged substrate",
-        "Leakage / bypass"
+      "failure_mode": "Reduced / insufficient filtration efficiency",
+      "function": "Capture soot",
+      "cause": [
+        "Cracked substrate",
+        "Canning or seal leakage / bypass",
+        "Melted / thermally damaged substrate",
+        "Mechanical damage to substrate",
+        "Substrate/manufacturing defect"
       ],
-      "effects": [
-        "Tailpipe particulate emissions increase",
-        "Potential emissions non-compliance"
-      ],
-      "obd_monitor_concepts": [
+      "effect": "Increased tailpipe PM/PN",
+      "obd": [
         "Filter efficiency monitor",
         "Sensor / model plausibility",
         "PM sensor if available"
@@ -23,41 +23,51 @@
     },
     {
       "id": "F2",
-      "name": "Store soot",
-      "failure_modes": [
-        "Excessive soot loading",
-        "Reduced storage capacity",
-        "Ash accumulation / restriction"
-      ],
-      "effects": [
-        "Backpressure rises",
-        "Frequent regeneration",
-        "Performance / fuel economy impact"
-      ],
-      "obd_monitor_concepts": [
-        "Differential pressure monitor",
-        "Soot load model",
-        "Frequent regeneration monitor"
-      ]
+      "failure_mode": "Excessive soot loading",
+      "function": "Store soot",
+      "cause": [],
+      "effect": "Backpressure rises",
+      "obd": "Differential pressure monitor"
     },
     {
       "id": "F3",
-      "name": "Burn soot",
-      "failure_modes": [
-        "Incomplete regeneration",
-        "Regeneration does not initiate",
-        "Over-temperature during regeneration"
-      ],
-      "effects": [
-        "Soot not removed",
-        "Thermal damage risk",
-        "Warning or degraded operation if severe"
-      ],
-      "obd_monitor_concepts": [
-        "Regeneration completion monitor",
-        "Temperature sensor rationality",
-        "Regeneration timing / duration check"
-      ]
+      "failure_mode": "Reduced storage capacity",
+      "function": "Store soot",
+      "cause": [],
+      "effect": "Frequent regeneration",
+      "obd": "Soot load model"
+    },
+    {
+      "id": "F4",
+      "failure_mode": "Ash accumulation / restriction",
+      "function": "Store soot",
+      "cause": [],
+      "effect": "Performance / fuel economy impact",
+      "obd": "Frequent regeneration monitor"
+    },
+    {
+      "id": "F5",
+      "failure_mode": "Incomplete regeneration",
+      "function": "Burn soot",
+      "cause": [],
+      "effect": "Soot not removed",
+      "obd": "Regeneration completion monitor"
+    },
+    {
+      "id": "F6",
+      "failure_mode": "Regeneration does not initiate",
+      "function": "Burn soot",
+      "cause": [],
+      "effect": "Thermal damage risk",
+      "obd": "Temperature sensor rationality"
+    },
+    {
+      "id": "F7",
+      "failure_mode": "Over-temperature during regeneration",
+      "function": "Burn soot",
+      "cause": [],
+      "effect": "Warning or degraded operation if severe",
+      "obd": "Regeneration timing / duration check"
     }
   ],
   "physical_view": {
@@ -65,32 +75,32 @@
       {
         "id": "P1",
         "name": "GPF substrate / canning",
-        "supports_functions": ["F1", "F2", "F3"]
+        "supports_failure_modes": ["F1", "F2", "F3", "F4", "F5", "F6", "F7"]
       },
       {
         "id": "P2",
         "name": "Differential pressure sensing path",
-        "supports_functions": ["F2", "F3"]
+        "supports_failure_modes": ["F2", "F3", "F4", "F5", "F6", "F7"]
       },
       {
         "id": "P3",
         "name": "Upstream temperature sensor",
-        "supports_functions": ["F3"]
+        "supports_failure_modes": ["F5", "F6", "F7"]
       },
       {
         "id": "P4",
         "name": "Downstream temperature sensor",
-        "supports_functions": ["F3"]
+        "supports_failure_modes": ["F5", "F6", "F7"]
       },
       {
         "id": "P5",
         "name": "ECU / OBD diagnostic logic",
-        "supports_functions": ["F1", "F2", "F3"]
+        "supports_failure_modes": ["F1", "F2", "F3", "F4", "F5", "F6", "F7"]
       },
       {
         "id": "P6",
         "name": "Engine / regeneration controls",
-        "supports_functions": ["F3"]
+        "supports_failure_modes": ["F5", "F6", "F7"]
       }
     ],
     "interfaces": [

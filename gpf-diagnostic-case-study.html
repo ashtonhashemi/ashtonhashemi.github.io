@@ -71,7 +71,7 @@
 
     <section class="case-shell case-section">
       <div class="case-label">02 / Diagnostic table</div>
-      <h2>Function → failure → effect → monitor.</h2>
+      <h2>Failure mode → function → cause → effect → monitor.</h2>
       <p class="case-intro">
         This table is generated directly from the editable JSON source. Change the JSON, commit it, and the portfolio
         table updates without editing this HTML page.
@@ -86,15 +86,17 @@
         <table class="diagnostic-table">
           <thead>
             <tr>
-              <th>Function</th>
+              <th>ID</th>
               <th>Failure Mode</th>
+              <th>Function</th>
+              <th>Possible Cause / Failure Mechanism</th>
               <th>Example Effect</th>
               <th>OBD Monitor Concept</th>
             </tr>
           </thead>
           <tbody id="gpf-diagnostic-table-body">
             <tr>
-              <td colspan="4">Loading diagnostic data…</td>
+              <td colspan="6">Loading diagnostic data…</td>
             </tr>
           </tbody>
         </table>
