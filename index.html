@@ -3,14 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ashton Hashemi — System Engineer, Fault Management</title>
+  <title>Ashton Hashemi | System Engineer - Fault management</title>
   <meta name="description" content="Ashton Hashemi — automotive systems engineering, fault management, diagnostics, electrified powertrain, SIL/vECU, and verification & validation.">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header class="site-header">
-    <a class="wordmark" href="#top" aria-label="Ashton Hashemi home">Ashton Hashemi</a>
-    <nav class="primary-nav" aria-label="Primary navigation">
+  <header class="topbar">
+    <a class="logo" href="#top">Ashton Hashemi</a>
+    <nav>
       <a href="#work">Work</a>
       <a href="#experience">Experience</a>
       <a href="#skills">Skills</a>
@@ -20,248 +20,170 @@
   </header>
 
   <main id="top">
-    <section class="hero shell">
-      <div class="hero-main">
-        <p class="eyebrow">Automotive systems engineering</p>
-        <h1>System Engineer —<br>Fault Management</h1>
-        <p class="hero-copy">
-          OBD and UDS diagnostics, fault-monitoring strategies, electrified powertrain systems,
-          DFMEA / DFMEA-MSR, requirements development, software test automation, SIL / vECU,
-          and vehicle-level verification &amp; validation.
+    <section class="job-hero">
+      <div class="job-hero-inner">
+        <div class="job-heading">
+          <h1>Ashton Hashemi</h1>
+          <a class="apply-btn" href="mailto:ashtonhashemi@gmail.com">Contact Me</a>
+        </div>
+
+        <div class="job-meta-wrap">
+          <div class="job-meta">
+            <span>System Engineer - Fault management</span>
+            <span>Automotive Systems &amp; Diagnostics</span>
+            <span>Riverside, California, US</span>
+          </div>
+          <img class="profile" src="https://avatars.githubusercontent.com/u/103288925?v=4" alt="Ashton Hashemi">
+        </div>
+
+        <a class="back-link" href="https://github.com/ashtonhashemi">GitHub Profile ↗</a>
+      </div>
+    </section>
+
+    <section class="job-body">
+      <div class="copy">
+        <p>
+          Automotive systems engineer with experience in OBD and UDS diagnostics, fault-monitoring
+          strategies, electrified powertrain systems, DFMEA / DFMEA-MSR, requirements development,
+          software test automation, SIL / virtual ECU testing, and vehicle-level verification and validation.
         </p>
-        <div class="hero-actions">
-          <a class="button button-dark" href="#work">Selected work</a>
-          <a class="button button-light" href="https://github.com/ashtonhashemi">GitHub</a>
-        </div>
-      </div>
+        <p>
+          My work connects system functions and failure modes to diagnostic requirements, monitor logic,
+          fault responses, communication requirements, and verification criteria across regulatory,
+          powertrain, charging, battery, and control-system applications.
+        </p>
 
-      <aside class="hero-side">
-        <img class="profile-photo" src="https://avatars.githubusercontent.com/u/103288925?v=4" alt="Ashton Hashemi">
-        <dl class="hero-facts">
-          <div><dt>Focus</dt><dd>Fault management &amp; diagnostics</dd></div>
-          <div><dt>Domain</dt><dd>Automotive / electrified powertrain</dd></div>
-          <div><dt>Location</dt><dd>Riverside, California, US</dd></div>
-          <div><dt>Email</dt><dd><a href="mailto:ashtonhashemi@gmail.com">ashtonhashemi@gmail.com</a></dd></div>
-        </dl>
-      </aside>
-    </section>
+        <section id="work" class="detail-section">
+          <h2>Selected Engineering Work</h2>
+          <ul>
+            <li><strong>GPF diagnostic requirements:</strong> Developed requirements from regulatory needs and failure modes, allocated functions to software, controls, and calibration teams, and defined verification and vehicle-validation criteria.</li>
+            <li><strong>xEV ECU fault monitoring:</strong> Developed ECU diagnostic requirements using UDS / OBD concepts including DTC definitions, DIDs, diagnostic sessions, fault detection, recovery criteria, and service-level communication.</li>
+            <li><strong>BMS and onboard-charger diagnostics:</strong> Developed fault-detection routines including over-voltage, over-temperature, and cell-balancing strategies.</li>
+            <li><strong>DFMEA / DFMEA-MSR:</strong> Performed diagnostic-coverage analysis for engine, hybrid-control, ESS, and powertrain systems and supported mitigation strategies.</li>
+            <li><strong>UDS / DoCAN testing:</strong> Created diagnostic test cases for controller commands and measurements and developed Python / CAN-tool automation for software testing and defect identification.</li>
+            <li><strong>Charging interoperability:</strong> Validated AC / DC charging communication, handshakes, current ramp-up, vehicle-grid interoperability, and fail-safe behavior.</li>
+            <li><strong>SOC estimation:</strong> Developed a Kalman-filter and open-circuit-voltage based battery State-of-Charge estimation algorithm.</li>
+          </ul>
 
-    <section class="statement-band">
-      <div class="shell statement-grid">
-        <p class="eyebrow">Engineering approach</p>
-        <h2>I connect system functions and failure modes to diagnostic requirements, fault responses, and verification.</h2>
-      </div>
-    </section>
+          <div class="sub-detail">
+            <h3>GPF FMEA / OBD Functional Decomposition</h3>
+            <ul>
+              <li>Capture soot</li>
+              <li>Store soot</li>
+              <li>Burn soot</li>
+            </ul>
+            <a class="inline-link" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">View editable GPF FMEA / OBD source →</a>
+          </div>
+        </section>
 
-    <section id="work" class="shell content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Selected engineering work</p>
-        <h2>Fault management, diagnostics &amp; electrified powertrain</h2>
-      </div>
+        <section id="experience" class="detail-section">
+          <h2>Professional Experience</h2>
 
-      <article class="feature-row">
-        <div class="feature-index">01</div>
-        <div class="feature-copy">
-          <h3>GPF diagnostic requirements development</h3>
-          <p>
-            Developed gasoline particulate filter diagnostic requirements from regulatory needs and failure modes,
-            allocated functions to software, controls, and calibration teams, and defined verification and
-            vehicle-validation criteria.
-          </p>
-          <div class="feature-meta">Requirements / Failure modes / Function allocation / Verification / Vehicle validation</div>
-        </div>
-        <div class="feature-aside">
-          <p class="aside-label">Functional decomposition</p>
-          <ol class="plain-flow">
-            <li>Capture soot</li>
-            <li>Store soot</li>
-            <li>Burn soot</li>
-          </ol>
-          <a class="text-link" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">View editable source →</a>
-        </div>
-      </article>
+          <div class="experience-entry">
+            <h3>California Air Resources Board (CARB)</h3>
+            <p class="role-line">Staff Air Pollution Specialist · 2024 - Present · Riverside, CA</p>
+            <ul>
+              <li>Lead liaison to SAE J1699 and J1979-x task forces on OBD communication protocols, service-mode requirements, data definitions, DoCAN, OBDonUDS, and ZEVonUDS.</li>
+              <li>Developed GPF diagnostic requirements and verification / vehicle-validation criteria.</li>
+              <li>Support ZEV propulsion workgroups with OBD monitoring and data-communication expertise.</li>
+            </ul>
+          </div>
 
-      <article class="feature-row">
-        <div class="feature-index">02</div>
-        <div class="feature-copy">
-          <h3>xEV ECU fault monitoring &amp; diagnostic design</h3>
-          <p>
-            Developed ECU diagnostic requirements and fault-monitoring strategies for electrified powertrain
-            controllers, including DTC definitions, DIDs, diagnostic sessions, detection and recovery criteria,
-            and service-level communication.
-          </p>
-          <div class="feature-meta">UDS / OBD / DTC / DID / Diagnostic sessions / Detection / Recovery</div>
-        </div>
-        <div class="feature-aside">
-          <p class="aside-label">Applied to</p>
-          <p>BMS, onboard charger, engine and hybrid control systems.</p>
-        </div>
-      </article>
+          <div class="experience-entry">
+            <h3>California Air Resources Board (CARB)</h3>
+            <p class="role-line">Air Pollution Specialist · 2023 - 2024 · Riverside, CA</p>
+            <ul>
+              <li>Analyzed California Clean Truck Check data in Snowflake and developed ETL workflows for regulatory and program analysis.</li>
+            </ul>
+          </div>
 
-      <article class="feature-row">
-        <div class="feature-index">03</div>
-        <div class="feature-copy">
-          <h3>DFMEA-MSR &amp; diagnostic coverage</h3>
-          <p>
-            Performed DFMEA-MSR for OBD II diagnostic coverage on engine and hybrid control systems and DFMEA for
-            energy-storage and powertrain components, identifying failure modes, evaluating effects, and supporting
-            mitigation strategies.
-          </p>
-          <div class="feature-meta">DFMEA / DFMEA-MSR / OBD II / ESS / Hybrid controls / Mitigation</div>
-        </div>
-        <div class="feature-aside">
-          <p class="aside-label">Fault-management flow</p>
-          <p>Function → failure mode → monitor → response → verification.</p>
-        </div>
-      </article>
+          <div class="experience-entry">
+            <h3>Hyundai Kia America Technical Center</h3>
+            <p class="role-line">xEV Engine Management System Engineer II · 2021 - 2023 · Chino, CA</p>
+            <ul>
+              <li>Developed xEV diagnostic routines and ECU fault-monitoring requirements.</li>
+              <li>Performed DFMEA-MSR for OBD II diagnostic coverage.</li>
+              <li>Created UDS / DoCAN test cases and Python automation.</li>
+              <li>Conducted EV charging and vehicle-grid interoperability validation.</li>
+            </ul>
+          </div>
 
-      <article class="feature-row">
-        <div class="feature-index">04</div>
-        <div class="feature-copy">
-          <h3>UDS / DoCAN test development &amp; automation</h3>
-          <p>
-            Created DoCAN and UDSonCAN test cases for commanding control units and measurements and developed
-            Python / CAN-tool automation for software testing and defect identification.
-          </p>
-          <div class="feature-meta">Python / CANoe / CAN / DoCAN / UDSonCAN / Automated testing</div>
-        </div>
-        <div class="feature-aside">
-          <p class="aside-label">Verification emphasis</p>
-          <p>Command, measurement, diagnostic response, and fault-behavior checks.</p>
-        </div>
-      </article>
+          <div class="experience-entry">
+            <h3>ITRAC</h3>
+            <p class="role-line">Consultant, MANDO ECUs · 2016 - 2019 · Remote</p>
+            <ul>
+              <li>Supported chassis-ECU technical coordination and procurement.</li>
+              <li>Validated EV charging interoperability and analyzed DC fast-charging communication and fail-safe behavior.</li>
+            </ul>
+          </div>
 
-      <article class="feature-row">
-        <div class="feature-index">05</div>
-        <div class="feature-copy">
-          <h3>EV charging &amp; interoperability validation</h3>
-          <p>
-            Validated AC and DC charging communication behavior, communication handshakes, current ramp-up,
-            vehicle-grid interoperability, and fail-safe modes across EV development and test programs.
-          </p>
-          <div class="feature-meta">AC charging / DC fast charging / Interoperability / Fail-safe modes / Validation</div>
-        </div>
-        <div class="feature-aside">
-          <p class="aside-label">System view</p>
-          <p>Vehicle ↔ charger ↔ communication ↔ power transfer ↔ fault response.</p>
-        </div>
-      </article>
+          <div class="experience-entry">
+            <h3>ITRAC</h3>
+            <p class="role-line">Vehicle Test Engineer II · 2009 - 2013 · Tehran</p>
+            <ul>
+              <li>Conducted type-approval tests based on ISO, EEC, and FMVSS standards.</li>
+              <li>Established braking and performance test capability and corresponding procedures.</li>
+            </ul>
+          </div>
 
-      <article class="feature-row">
-        <div class="feature-index">06</div>
-        <div class="feature-copy">
-          <h3>Battery state-of-charge estimation</h3>
-          <p>
-            Engineered a State-of-Charge estimation algorithm using a Kalman-filter approach combined with
-            open-circuit-voltage information for electrified powertrain applications.
-          </p>
-          <div class="feature-meta">Kalman filter / OCV / SOC estimation / Electrified powertrain</div>
-        </div>
-        <div class="feature-aside">
-          <p class="aside-label">Algorithmic work</p>
-          <p>State estimation using model and measurement information.</p>
-        </div>
-      </article>
-    </section>
+          <div class="experience-entry">
+            <h3>Parax Motors</h3>
+            <p class="role-line">Lead Electrified Powertrain Engineer · 2011 - 2016 · Qazvin, Iran</p>
+            <ul>
+              <li>Worked on EV / hybrid powertrain systems, charger interoperability, BMS / OBC diagnostics, system-level fault response, ESS / powertrain DFMEA, and SOC estimation.</li>
+            </ul>
+          </div>
+        </section>
 
-    <section class="media-section shell" aria-label="Emissions virtual sensor engineering visual">
-      <div class="media-caption">
-        <p class="eyebrow">Technical project</p>
-        <h2>Virtual emissions sensor modeling</h2>
-        <p>TensorFlow / Keras time-series models for THC, CO, and NO prediction, derived from an engineering codebase.</p>
-      </div>
-      <img src="assets/emissions-model-architecture.svg" alt="Virtual emissions sensor LSTM architecture">
-    </section>
+        <section id="skills" class="detail-section">
+          <h2>Technical Skills</h2>
+          <ul>
+            <li><strong>Diagnostics &amp; networks:</strong> OBD, UDS, DoCAN, OBDonUDS, ZEVonUDS, DTC, DID, CANoe, CANalyzer, CANdb++.</li>
+            <li><strong>Fault management:</strong> DFMEA, DFMEA-MSR, fault detection, diagnostic coverage, fault recovery, verification criteria.</li>
+            <li><strong>Systems engineering:</strong> requirements development, function allocation, IBM DOORS, Jama Connect, MATLAB System Composer, MATLAB Requirements Toolbox.</li>
+            <li><strong>SIL &amp; simulation:</strong> CANoe, MATLAB / Simulink, Python test automation, vECU testing, fault injection, automated regression testing.</li>
+            <li><strong>Programming &amp; data:</strong> Python, C, Rust, Snowflake, ETL workflows.</li>
+            <li><strong>Calibration / measurement:</strong> INCA, MDA, EHandbook, ASCET, Indigo.</li>
+          </ul>
+        </section>
 
-    <section id="experience" class="shell content-section">
-      <div class="section-heading">
-        <p class="eyebrow">Experience</p>
-        <h2>Automotive &amp; regulatory engineering</h2>
-      </div>
+        <section id="education" class="detail-section">
+          <h2>Education</h2>
+          <ul>
+            <li><strong>Master of Science in Mechanical and Energy Engineering</strong> — University of North Texas, 2019 - 2021.</li>
+            <li><strong>Bachelor of Science in Mechanical Engineering</strong> — Azad University, 2005 - 2013.</li>
+          </ul>
 
-      <div class="experience-list">
-        <article class="experience-row">
-          <div><p class="company">California Air Resources Board</p><p class="role">Staff Air Pollution Specialist</p></div>
-          <div class="dates">2024 — Present<br>Riverside, CA</div>
-          <p>Lead liaison to SAE J1699 and J1979-x task forces; OBD communication protocols, service-mode requirements, data definitions, DoCAN, OBDonUDS, ZEVonUDS, diagnostic requirements, and ZEV monitoring workgroups.</p>
-        </article>
-        <article class="experience-row">
-          <div><p class="company">California Air Resources Board</p><p class="role">Air Pollution Specialist</p></div>
-          <div class="dates">2023 — 2024<br>Riverside, CA</div>
-          <p>Analyzed Clean Truck Check data in Snowflake and developed ETL workflows to clean, transform, validate, and summarize compliance datasets.</p>
-        </article>
-        <article class="experience-row">
-          <div><p class="company">Hyundai Kia America Technical Center</p><p class="role">xEV Engine Management System Engineer II</p></div>
-          <div class="dates">2021 — 2023<br>Chino, CA</div>
-          <p>xEV diagnostic routines, ECU fault-monitoring requirements, DFMEA-MSR, UDS / DoCAN test cases, Python automation, and EV charging / vehicle-grid interoperability validation.</p>
-        </article>
-        <article class="experience-row">
-          <div><p class="company">ITRAC</p><p class="role">Consultant — MANDO ECUs</p></div>
-          <div class="dates">2016 — 2019<br>Remote</div>
-          <p>Chassis-ECU technical coordination, EV charging interoperability validation, DC fast-charging communication analysis, and fail-safe behavior.</p>
-        </article>
-        <article class="experience-row">
-          <div><p class="company">ITRAC</p><p class="role">Vehicle Test Engineer II</p></div>
-          <div class="dates">2009 — 2013<br>Tehran</div>
-          <p>Type-approval testing to ISO, EEC, and FMVSS requirements; M2 type-approval committees; braking and performance test capability.</p>
-        </article>
-        <article class="experience-row">
-          <div><p class="company">Parax Motors</p><p class="role">Lead Electrified Powertrain Engineer</p></div>
-          <div class="dates">2011 — 2016<br>Qazvin, Iran</div>
-          <p>EV / hybrid powertrain systems, charger interoperability, BMS / OBC diagnostics, system-level fault response, ESS / powertrain DFMEA, and Kalman-filter-based SOC estimation.</p>
-        </article>
-        <article class="experience-row">
-          <div><p class="company">Parax Motors</p><p class="role">Powertrain R&amp;D Engineer</p></div>
-          <div class="dates">2008 — 2011<br>Qazvin, Iran</div>
-          <p>Electric quadricycle development and certification, hybridization of a KIA PRIDE powertrain, and creation of a university powertrain research laboratory.</p>
-        </article>
+          <h2 class="secondary-heading">Certifications</h2>
+          <ul>
+            <li>FMEA Specialist Certification — Udemy.</li>
+            <li>High Voltage Safety — Weber State University.</li>
+            <li>Cloud Solutions Architect — Amazon Web Services.</li>
+          </ul>
+        </section>
       </div>
     </section>
 
-    <section id="skills" class="inverted-section">
-      <div class="shell">
-        <div class="section-heading light-heading">
-          <p class="eyebrow">Technical capabilities</p>
-          <h2>Systems, diagnostics, simulation &amp; data</h2>
-        </div>
-        <div class="skill-columns">
-          <div><h3>Diagnostics</h3><p>OBD<br>UDS<br>DoCAN<br>OBDonUDS<br>ZEVonUDS<br>DTC / DID</p></div>
-          <div><h3>Fault management</h3><p>DFMEA<br>DFMEA-MSR<br>Fault detection<br>Fault recovery<br>Diagnostic coverage<br>Verification criteria</p></div>
-          <div><h3>Tools</h3><p>CANoe<br>CANalyzer<br>INCA<br>MDA<br>CANdb++<br>IBM DOORS<br>Jama Connect</p></div>
-          <div><h3>Simulation &amp; code</h3><p>MATLAB / Simulink<br>System Composer<br>Requirements Toolbox<br>Python<br>C<br>Rust<br>vECU / SIL</p></div>
-        </div>
-      </div>
-    </section>
-
-    <section id="education" class="shell content-section education-section">
-      <div class="section-heading">
-        <p class="eyebrow">Education &amp; certifications</p>
-        <h2>Engineering foundation</h2>
-      </div>
-      <div class="education-grid">
-        <div><p class="degree">M.S. Mechanical and Energy Engineering</p><p>University of North Texas<br>2019 — 2021</p></div>
-        <div><p class="degree">B.S. Mechanical Engineering</p><p>Azad University<br>2005 — 2013</p></div>
-        <div><p class="degree">Certifications</p><p>FMEA Specialist — Udemy<br>High Voltage Safety — Weber State University<br>Cloud Solutions Architect — AWS</p></div>
-      </div>
-    </section>
-
-    <section class="closing-band">
-      <div class="shell closing-grid">
-        <h2>Build systems that detect faults early, respond intentionally, and verify the result.</h2>
-        <div>
-          <p>Automotive systems, diagnostics, fault management, electrified powertrain, and verification &amp; validation.</p>
-          <a class="button button-dark" href="mailto:ashtonhashemi@gmail.com">Get in touch</a>
-        </div>
+    <section class="world-band">
+      <div class="world-inner">
+        <h2>Engineered in California.</h2>
+        <p>Automotive systems · fault management · diagnostics · electrified powertrain</p>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer shell">
-    <p>© 2026 Ashton Hashemi</p>
-    <div>
-      <a href="https://github.com/ashtonhashemi">GitHub</a>
-      <a href="mailto:ashtonhashemi@gmail.com">Email</a>
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Get to know me.</h3>
+        <p>Explore my engineering work or contact me about systems and fault-management opportunities.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
     </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
   </footer>
 </body>
 </html>
