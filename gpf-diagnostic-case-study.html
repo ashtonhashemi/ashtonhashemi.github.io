@@ -73,9 +73,14 @@
       <div class="case-label">02 / Diagnostic table</div>
       <h2>Function → failure → effect → monitor.</h2>
       <p class="case-intro">
-        This working table shows the diagnostic logic chain used for portfolio and interview discussion. The exact
-        monitor strategy and sensor set can be adapted to the specific GPF architecture and regulatory program.
+        This table is generated directly from the editable JSON source. Change the JSON, commit it, and the portfolio
+        table updates without editing this HTML page.
       </p>
+
+      <div class="table-data-source">
+        <span id="gpf-table-status">Loading gpf-fmea-obd.json…</span>
+        <a href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">Open JSON source →</a>
+      </div>
 
       <div class="table-wrap">
         <table class="diagnostic-table">
@@ -87,63 +92,17 @@
               <th>OBD Monitor Concept</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody id="gpf-diagnostic-table-body">
             <tr>
-              <td rowspan="3"><strong>Capture soot</strong></td>
-              <td>Low filtration efficiency</td>
-              <td>Tailpipe particulate emissions increase</td>
-              <td>Filter efficiency monitor</td>
-            </tr>
-            <tr>
-              <td>Cracked or damaged substrate</td>
-              <td>Potential emissions non-compliance</td>
-              <td>Sensor / model plausibility</td>
-            </tr>
-            <tr>
-              <td>Leakage / bypass</td>
-              <td>Reduced capture effectiveness</td>
-              <td>PM sensor if available</td>
-            </tr>
-
-            <tr>
-              <td rowspan="3"><strong>Store soot</strong></td>
-              <td>Excessive soot loading</td>
-              <td>Backpressure rises</td>
-              <td>Differential pressure monitor</td>
-            </tr>
-            <tr>
-              <td>Reduced storage capacity</td>
-              <td>Frequent regeneration</td>
-              <td>Soot load model</td>
-            </tr>
-            <tr>
-              <td>Ash accumulation / restriction</td>
-              <td>Performance / fuel economy impact</td>
-              <td>Frequent regeneration monitor</td>
-            </tr>
-
-            <tr>
-              <td rowspan="3"><strong>Burn soot</strong></td>
-              <td>Incomplete regeneration</td>
-              <td>Soot not removed</td>
-              <td>Regeneration completion monitor</td>
-            </tr>
-            <tr>
-              <td>Regeneration does not initiate</td>
-              <td>Soot remains stored</td>
-              <td>Temperature sensor rationality</td>
-            </tr>
-            <tr>
-              <td>Over-temperature during regeneration</td>
-              <td>Thermal damage risk</td>
-              <td>Regeneration timing / duration check</td>
+              <td colspan="4">Loading diagnostic data…</td>
             </tr>
           </tbody>
         </table>
       </div>
 
       <p class="case-note">
-        Working diagnostic concept table. Severity, occurrence, detection ratings and RPN are intentionally omitted.
+        The table displays only what is present in the JSON source. Missing entries are shown as “—”. Severity,
+        occurrence, detection ratings and RPN are intentionally omitted unless they are added to the source model.
       </p>
     </section>
 
@@ -197,9 +156,10 @@
 
     <section class="case-shell case-section">
       <div class="case-label">05 / Editable source</div>
-      <h2>Keep the analysis reproducible.</h2>
+      <h2>Edit the JSON, not the table.</h2>
       <p class="case-intro">
-        The portfolio table is backed by plain JSON and Mermaid source so the failure analysis and architecture views can be revised without redrawing the page manually.
+        The FMEA / OBD table reads the JSON file at page load. The Mermaid files remain available for the functional
+        and physical architecture views.
       </p>
       <div class="case-source-links">
         <a class="apply-btn" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">JSON source</a>
@@ -223,6 +183,7 @@
     <div class="copyright">© 2026 Ashton Hashemi</div>
   </footer>
 
+  <script src="gpf-table.js"></script>
   <script>
     const menuButton = document.querySelector('.menu-toggle');
     const siteMenu = document.getElementById('site-menu');
