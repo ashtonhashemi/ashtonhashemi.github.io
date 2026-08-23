@@ -1,6 +1,6 @@
 {
-  "title": "GPF FMEA / OBD Working Draft",
-  "status": "draft_user_editable",
+  "title": "Gasoline Particulate Filter Failore Mode and Effect Anlysis",
+  "status": "draft",
   "purpose": "Plain data source for recreating the GPF FMEA / OBD logical and physical views.",
   "functions": [
     {
