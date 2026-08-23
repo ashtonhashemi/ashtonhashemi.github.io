@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GPF Diagnostic Development | Ashton Hashemi</title>
+  <meta name="description" content="GPF diagnostic development case study: functional decomposition, failure modes, effects, OBD monitor concepts, and physical allocation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">Ashton Hashemi</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="index.html#work"><span>01</span>Work</a>
+        <a href="index.html#experience"><span>02</span>Experience</a>
+        <a href="index.html#skills"><span>03</span>Skills</a>
+        <a href="index.html#education"><span>04</span>Education</a>
+        <a href="alerta-aws-architecture.html"><span>05</span>AWS Architecture</a>
+        <a href="gpf-diagnostic-case-study.html"><span>06</span>GPF Diagnostics</a>
+      </div>
+      <div class="menu-secondary">
+        <p>System Engineer — Fault Management</p>
+        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="index.html#work">← Selected Engineering Work</a>
+        <p class="case-kicker">Diagnostics / FMEA / requirements decomposition</p>
+        <h1>GPF Diagnostic Development</h1>
+        <p class="case-lead">
+          A system-level diagnostic decomposition that starts with the Gasoline Particulate Filter functions,
+          identifies representative failure modes and effects, and connects them to OBD monitoring concepts and
+          physical implementation elements.
+        </p>
+        <div class="case-meta">
+          <span>GPF</span>
+          <span>OBD</span>
+          <span>FMEA</span>
+          <span>Functional decomposition</span>
+          <span>Diagnostic monitoring</span>
+          <span>Verification planning</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">01 / Functional decomposition</div>
+      <h2>Start with what the filter must do.</h2>
+      <p class="case-intro">
+        The diagnostic analysis is organized around three top-level GPF functions. This creates a traceable path from
+        intended function to failure mode, observable effect, and monitor concept.
+      </p>
+      <div class="gpf-function-flow" aria-label="GPF functional decomposition">
+        <div class="gpf-function"><span>F1</span><strong>Capture soot</strong></div>
+        <div class="gpf-function"><span>F2</span><strong>Store soot</strong></div>
+        <div class="gpf-function"><span>F3</span><strong>Burn soot</strong></div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">02 / Diagnostic table</div>
+      <h2>Function → failure → effect → monitor.</h2>
+      <p class="case-intro">
+        This working table shows the diagnostic logic chain used for portfolio and interview discussion. The exact
+        monitor strategy and sensor set can be adapted to the specific GPF architecture and regulatory program.
+      </p>
+
+      <div class="table-wrap">
+        <table class="diagnostic-table">
+          <thead>
+            <tr>
+              <th>Function</th>
+              <th>Failure Mode</th>
+              <th>Example Effect</th>
+              <th>OBD Monitor Concept</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td rowspan="3"><strong>Capture soot</strong></td>
+              <td>Low filtration efficiency</td>
+              <td>Tailpipe particulate emissions increase</td>
+              <td>Filter efficiency monitor</td>
+            </tr>
+            <tr>
+              <td>Cracked or damaged substrate</td>
+              <td>Potential emissions non-compliance</td>
+              <td>Sensor / model plausibility</td>
+            </tr>
+            <tr>
+              <td>Leakage / bypass</td>
+              <td>Reduced capture effectiveness</td>
+              <td>PM sensor if available</td>
+            </tr>
+
+            <tr>
+              <td rowspan="3"><strong>Store soot</strong></td>
+              <td>Excessive soot loading</td>
+              <td>Backpressure rises</td>
+              <td>Differential pressure monitor</td>
+            </tr>
+            <tr>
+              <td>Reduced storage capacity</td>
+              <td>Frequent regeneration</td>
+              <td>Soot load model</td>
+            </tr>
+            <tr>
+              <td>Ash accumulation / restriction</td>
+              <td>Performance / fuel economy impact</td>
+              <td>Frequent regeneration monitor</td>
+            </tr>
+
+            <tr>
+              <td rowspan="3"><strong>Burn soot</strong></td>
+              <td>Incomplete regeneration</td>
+              <td>Soot not removed</td>
+              <td>Regeneration completion monitor</td>
+            </tr>
+            <tr>
+              <td>Regeneration does not initiate</td>
+              <td>Soot remains stored</td>
+              <td>Temperature sensor rationality</td>
+            </tr>
+            <tr>
+              <td>Over-temperature during regeneration</td>
+              <td>Thermal damage risk</td>
+              <td>Regeneration timing / duration check</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <p class="case-note">
+        Working diagnostic concept table. Severity, occurrence, detection ratings and RPN are intentionally omitted.
+      </p>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">03 / Physical allocation</div>
+      <h2>Map diagnostic responsibility to physical elements.</h2>
+      <p class="case-intro">
+        The functional view is then allocated across sensing, the GPF assembly, ECU diagnostic logic, and engine / regeneration controls.
+      </p>
+
+      <div class="gpf-physical-flow" aria-label="GPF physical diagnostic allocation">
+        <div class="arch-node arch-node-main">Engine-out exhaust</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Upstream temperature sensing</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">GPF substrate / canning</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node">Downstream temperature sensing</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">Tailpipe</div>
+      </div>
+
+      <div class="gpf-monitor-grid">
+        <div class="case-fact">
+          <h3>Differential pressure sensing</h3>
+          <p>Pre- and post-GPF pressure information supports soot-loading and restriction assessment.</p>
+        </div>
+        <div class="case-fact">
+          <h3>ECU / OBD diagnostic logic</h3>
+          <p>Evaluates sensor information and models, applies diagnostic criteria, and determines diagnostic status.</p>
+        </div>
+        <div class="case-fact">
+          <h3>Engine / regeneration controls</h3>
+          <p>Provides the actuation path for regeneration behavior and system response when diagnostic conditions require it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">04 / Systems engineering traceability</div>
+      <h2>Turn failure analysis into testable requirements.</h2>
+      <div class="case-flow-list">
+        <div><span>01</span><strong>Function</strong><p>Define the intended GPF behavior: capture, store, and burn soot.</p></div>
+        <div><span>02</span><strong>Failure mode</strong><p>Identify how each function can be lost, degraded, or behave outside the intended range.</p></div>
+        <div><span>03</span><strong>Effect</strong><p>Connect the failure to emissions, restriction, regeneration, performance, or thermal consequences.</p></div>
+        <div><span>04</span><strong>Diagnostic monitor</strong><p>Define the sensing, model, plausibility, threshold, and enabling-condition concept needed for detection.</p></div>
+        <div><span>05</span><strong>Allocation</strong><p>Assign implementation responsibility to sensing, ECU software, controls, and calibration.</p></div>
+        <div><span>06</span><strong>Verification</strong><p>Define software, system, and vehicle-level criteria that demonstrate the diagnostic requirement is satisfied.</p></div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">05 / Editable source</div>
+      <h2>Keep the analysis reproducible.</h2>
+      <p class="case-intro">
+        The portfolio table is backed by plain JSON and Mermaid source so the failure analysis and architecture views can be revised without redrawing the page manually.
+      </p>
+      <div class="case-source-links">
+        <a class="apply-btn" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">JSON source</a>
+        <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-functional.mmd">Functional Mermaid</a>
+        <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-physical.mmd">Physical Mermaid</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>From function to diagnostic evidence.</h3>
+        <p>System decomposition, failure analysis, monitoring strategy, allocation, and verification.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#work">Portfolio ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
+    }
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
