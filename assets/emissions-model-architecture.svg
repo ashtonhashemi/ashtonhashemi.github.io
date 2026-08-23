@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="520" viewBox="0 0 1100 520" role="img" aria-labelledby="title desc">
+  <title id="title">Virtual Emissions Sensor LSTM Architecture</title>
+  <desc id="desc">Architecture derived from the private emission-formation-deep-learning repository. Compares recurrent and dense layer units for THC, CO, and NO models.</desc>
+  <rect width="1100" height="520" rx="24" fill="#0d1425"/>
+  <text x="54" y="58" fill="#eef3ff" font-family="Arial, sans-serif" font-size="27" font-weight="700">Virtual Emissions Sensor — Actual Model Architecture</text>
+  <text x="54" y="88" fill="#a9b4cb" font-family="Arial, sans-serif" font-size="15">Derived from train_gasmodel.py • TensorFlow/Keras LSTM models • THC / CO / NO prediction</text>
+
+  <line x1="160" y1="420" x2="1030" y2="420" stroke="#40506f" stroke-width="1"/>
+  <line x1="160" y1="140" x2="160" y2="420" stroke="#40506f" stroke-width="1"/>
+
+  <g fill="#a9b4cb" font-family="Arial, sans-serif" font-size="13">
+    <text x="137" y="425">0</text><text x="128" y="355">6</text><text x="120" y="285">12</text><text x="120" y="215">18</text><text x="120" y="145">24</text>
+    <text x="192" y="450">LSTM 1</text><text x="332" y="450">LSTM 2</text><text x="472" y="450">LSTM 3</text><text x="612" y="450">LSTM 4</text><text x="752" y="450">LSTM 5</text><text x="900" y="450">Dense</text>
+    <text x="43" y="286" transform="rotate(-90 43 286)">Units</text>
+  </g>
+
+  <!-- THC -->
+  <g fill="#55d6be">
+    <rect x="190" y="233" width="24" height="187" rx="4"/><rect x="330" y="233" width="24" height="187" rx="4"/><rect x="470" y="233" width="24" height="187" rx="4"/><rect x="610" y="280" width="24" height="140" rx="4"/><rect x="890" y="350" width="24" height="70" rx="4"/>
+  </g>
+  <!-- CO -->
+  <g fill="#79a7ff">
+    <rect x="220" y="187" width="24" height="233" rx="4"/><rect x="360" y="233" width="24" height="187" rx="4"/><rect x="500" y="233" width="24" height="187" rx="4"/><rect x="640" y="233" width="24" height="187" rx="4"/><rect x="780" y="280" width="24" height="140" rx="4"/><rect x="920" y="280" width="24" height="140" rx="4"/>
+  </g>
+  <!-- NO -->
+  <g fill="#d59bff">
+    <rect x="250" y="233" width="24" height="187" rx="4"/><rect x="390" y="233" width="24" height="187" rx="4"/><rect x="530" y="233" width="24" height="187" rx="4"/><rect x="670" y="280" width="24" height="140" rx="4"/><rect x="950" y="350" width="24" height="70" rx="4"/>
+  </g>
+
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="700">
+    <circle cx="174" cy="488" r="7" fill="#55d6be"/><text x="188" y="493" fill="#eef3ff">THC: 16 → 16 → 16 → 12 → Dense 6 → Output</text>
+    <circle cx="485" cy="488" r="7" fill="#79a7ff"/><text x="499" y="493" fill="#eef3ff">CO: 20 → 16 → 16 → 16 → 12 → Dense 12 → Output</text>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="13" font-weight="700">
+    <circle cx="812" cy="488" r="7" fill="#d59bff"/><text x="826" y="493" fill="#eef3ff">NO: 16 → 16 → 16 → 12 → Dense 6 → Output</text>
+  </g>
+
+  <text x="755" y="116" fill="#a9b4cb" font-family="Arial, sans-serif" font-size="12">CO model includes 0.1 dropout between recurrent layers</text>
+  <text x="755" y="134" fill="#a9b4cb" font-family="Arial, sans-serif" font-size="12">NO output uses LeakyReLU activation</text>
+</svg>
