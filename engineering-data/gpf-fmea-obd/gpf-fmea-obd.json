@@ -1,0 +1,112 @@
+{
+  "title": "GPF FMEA / OBD Working Draft",
+  "status": "draft_user_editable",
+  "purpose": "Plain data source for recreating the GPF FMEA / OBD logical and physical views.",
+  "functions": [
+    {
+      "id": "F1",
+      "name": "Capture soot",
+      "failure_modes": [
+        "Low filtration efficiency",
+        "Cracked or damaged substrate",
+        "Leakage / bypass"
+      ],
+      "effects": [
+        "Tailpipe particulate emissions increase",
+        "Potential emissions non-compliance"
+      ],
+      "obd_monitor_concepts": [
+        "Filter efficiency monitor",
+        "Sensor / model plausibility",
+        "PM sensor if available"
+      ]
+    },
+    {
+      "id": "F2",
+      "name": "Store soot",
+      "failure_modes": [
+        "Excessive soot loading",
+        "Reduced storage capacity",
+        "Ash accumulation / restriction"
+      ],
+      "effects": [
+        "Backpressure rises",
+        "Frequent regeneration",
+        "Performance / fuel economy impact"
+      ],
+      "obd_monitor_concepts": [
+        "Differential pressure monitor",
+        "Soot load model",
+        "Frequent regeneration monitor"
+      ]
+    },
+    {
+      "id": "F3",
+      "name": "Burn soot",
+      "failure_modes": [
+        "Incomplete regeneration",
+        "Regeneration does not initiate",
+        "Over-temperature during regeneration"
+      ],
+      "effects": [
+        "Soot not removed",
+        "Thermal damage risk",
+        "Warning or degraded operation if severe"
+      ],
+      "obd_monitor_concepts": [
+        "Regeneration completion monitor",
+        "Temperature sensor rationality",
+        "Regeneration timing / duration check"
+      ]
+    }
+  ],
+  "physical_view": {
+    "components": [
+      {
+        "id": "P1",
+        "name": "GPF substrate / canning",
+        "supports_functions": ["F1", "F2", "F3"]
+      },
+      {
+        "id": "P2",
+        "name": "Differential pressure sensing path",
+        "supports_functions": ["F2", "F3"]
+      },
+      {
+        "id": "P3",
+        "name": "Upstream temperature sensor",
+        "supports_functions": ["F3"]
+      },
+      {
+        "id": "P4",
+        "name": "Downstream temperature sensor",
+        "supports_functions": ["F3"]
+      },
+      {
+        "id": "P5",
+        "name": "ECU / OBD diagnostic logic",
+        "supports_functions": ["F1", "F2", "F3"]
+      },
+      {
+        "id": "P6",
+        "name": "Engine / regeneration controls",
+        "supports_functions": ["F3"]
+      }
+    ],
+    "interfaces": [
+      ["Engine-out exhaust", "GPF substrate / canning"],
+      ["GPF substrate / canning", "Tailpipe"],
+      ["Pre-GPF pressure tap", "Differential pressure sensing path"],
+      ["Post-GPF pressure tap", "Differential pressure sensing path"],
+      ["Differential pressure sensing path", "ECU / OBD diagnostic logic"],
+      ["Upstream temperature sensor", "ECU / OBD diagnostic logic"],
+      ["Downstream temperature sensor", "ECU / OBD diagnostic logic"],
+      ["ECU / OBD diagnostic logic", "Engine / regeneration controls"]
+    ]
+  },
+  "notes": [
+    "This is a working draft for portfolio and interview discussion.",
+    "Failure modes, effects, monitors and physical allocation should be edited to match the exact analysis you want to present.",
+    "No severity, occurrence, detection or RPN values are included until you define them."
+  ]
+}
