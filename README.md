@@ -1,29 +1,41 @@
-# Ashton Hashemi — Engineering Portfolio
+# Ashton Hashemi — Automotive Systems Engineering Portfolio
 
-Source for my GitHub Pages engineering portfolio.
+Personal portfolio site based on my current engineering resume.
 
 **Portfolio URL:** `https://ashtonhashemi.github.io`
 
-Focus areas:
-- Automotive fault management
-- Systems engineering and requirements
-- ADAS software-in-the-loop (SIL)
-- Virtual ECUs (vECU)
-- Diagnostics and UDS/OBD
-- Fault injection and verification & validation
+## Focus areas
+
+- Automotive systems engineering
+- Fault management and diagnostic monitoring
+- OBD, UDS, DoCAN, OBDonUDS, and ZEVonUDS
 - Electrified powertrain systems
+- BMS and onboard-charger diagnostics
+- DFMEA and DFMEA-MSR
+- Software-in-the-loop (SIL) and virtual ECU testing
+- Python test automation and automated regression testing
+- Requirements development, function allocation, verification, and vehicle validation
+- EV charging and vehicle-grid interoperability
 
-## Current featured project
+## Selected engineering work represented on the site
 
-`ADAS SIL & Virtual ECU CI Environment`
+- GPF diagnostic requirements derived from regulatory needs and failure modes
+- ECU diagnostic requirements and fault-monitoring strategies for xEV controllers
+- BMS/OBC fault detection including over-voltage, over-temperature, and cell balancing
+- DoCAN and UDSonCAN test development and Python automation
+- DFMEA-MSR for OBD II diagnostic coverage
+- EV AC/DC charging interoperability and fail-safe validation
+- Kalman-filter/open-circuit-voltage State-of-Charge estimation
 
-Current implementation: host-compiled C++ virtual ECU, Python scenario harness,
-fault injection, unit/scenario regression tests, and AWS CodeBuild configuration.
+## Tools and technologies
 
-Roadmap: distributed virtual HPC + zonal-controller simulation.
+- INCA, MDA, EHandbook, ASCET, CANoe, CANalyzer, Indigo, CANdb++
+- IBM DOORS, Jama Connect, MATLAB System Composer, MATLAB Requirements Toolbox
+- MATLAB/Simulink, Python test automation, vECU testing, fault injection
+- C, Rust, Python, Agentic AI
+- Snowflake and ETL workflows
 
-## Recommended project repositories
+## Education
 
-1. `adas-sil-virtual-ecu`
-2. `automotive-fault-management-case-study`
-3. `uds-diagnostic-simulator`
+- M.S. Mechanical and Energy Engineering — University of North Texas
+- B.S. Mechanical Engineering — Azad University
