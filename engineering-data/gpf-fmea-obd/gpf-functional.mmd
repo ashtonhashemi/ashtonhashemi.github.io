@@ -1,0 +1,12 @@
+flowchart LR
+  F1["Capture soot"] --> F1M1["Low filtration efficiency"] --> F1E1["Tailpipe particulate emissions increase"] --> F1D1["Filter efficiency monitor"]
+  F1 --> F1M2["Cracked or damaged substrate"] --> F1E2["Potential emissions non-compliance"] --> F1D2["Sensor / model plausibility"]
+  F1 --> F1M3["Leakage / bypass"] --> F1E3["Reduced capture effectiveness"] --> F1D3["PM sensor if available"]
+
+  F2["Store soot"] --> F2M1["Excessive soot loading"] --> F2E1["Backpressure rises"] --> F2D1["Differential pressure monitor"]
+  F2 --> F2M2["Reduced storage capacity"] --> F2E2["Frequent regeneration"] --> F2D2["Soot load model"]
+  F2 --> F2M3["Ash accumulation / restriction"] --> F2E3["Performance / fuel economy impact"] --> F2D3["Frequent regeneration monitor"]
+
+  F3["Burn soot"] --> F3M1["Incomplete regeneration"] --> F3E1["Soot not removed"] --> F3D1["Regeneration completion monitor"]
+  F3 --> F3M2["Regeneration does not initiate"] --> F3E2["Soot remains stored"] --> F3D2["Temperature sensor rationality"]
+  F3 --> F3M3["Over-temperature during regeneration"] --> F3E3["Thermal damage risk"] --> F3D3["Regeneration timing / duration check"]
