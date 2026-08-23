@@ -1,0 +1,22 @@
+flowchart LR
+  ENG["Engine-out exhaust"] --> TUP["Upstream temperature sensor"] --> GPF["GPF substrate / canning"] --> TDN["Downstream temperature sensor"] --> TP["Tailpipe"]
+
+  PRE["Pre-GPF pressure tap"] --> DPS["Differential pressure sensing path"]
+  POST["Post-GPF pressure tap"] --> DPS
+
+  TUP --> ECU["ECU / OBD diagnostic logic"]
+  TDN --> ECU
+  DPS --> ECU
+
+  ECU --> REGEN["Engine / regeneration controls"]
+  REGEN --> ENG
+
+  GPF -. supports .-> F1["Capture soot"]
+  GPF -. supports .-> F2["Store soot"]
+  GPF -. supports .-> F3["Burn soot"]
+  DPS -. supports .-> F2
+  TUP -. supports .-> F3
+  TDN -. supports .-> F3
+  ECU -. monitors .-> F1
+  ECU -. monitors .-> F2
+  ECU -. monitors .-> F3
