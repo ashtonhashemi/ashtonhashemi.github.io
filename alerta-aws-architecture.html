@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alerta Nova AWS Architecture | Ashton Hashemi</title>
+  <meta name="description" content="AWS serverless IoT architecture case study: Alerta Nova backend architecture, decomposition, data flows, APIs, and CI/CD.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="index.html">Ashton Hashemi</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="index.html#work"><span>01</span>Work</a>
+        <a href="index.html#experience"><span>02</span>Experience</a>
+        <a href="index.html#skills"><span>03</span>Skills</a>
+        <a href="index.html#education"><span>04</span>Education</a>
+      </div>
+      <div class="menu-secondary">
+        <p>System Engineer — Fault Management</p>
+        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="index.html#work">← Selected Engineering Work</a>
+        <p class="case-kicker">Cloud architecture / IoT / serverless systems</p>
+        <h1>Alerta Nova — AWS Serverless IoT Architecture</h1>
+        <p class="case-lead">
+          Designed and implemented a cloud backend architecture for an IoT-connected product using AWS serverless services,
+          then decomposed the platform into independently deployable infrastructure stacks with automated CI/CD.
+        </p>
+        <div class="case-meta">
+          <span>AWS SAM / CloudFormation</span>
+          <span>IoT Core</span>
+          <span>Lambda</span>
+          <span>DynamoDB</span>
+          <span>AppSync</span>
+          <span>CodePipeline / CodeBuild</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">01 / Architecture</div>
+      <h2>End-to-end cloud data path</h2>
+      <p class="case-intro">
+        The system accepts device telemetry and status messages through AWS IoT Core, routes events into serverless processing,
+        stores operational and time-series data, and exposes application data through GraphQL and REST interfaces.
+      </p>
+
+      <div class="aws-architecture" aria-label="Alerta Nova AWS architecture diagram">
+        <div class="arch-stage">
+          <div class="arch-stage-title">Device layer</div>
+          <div class="arch-node arch-node-main">IoT devices &amp; gateways</div>
+          <div class="arch-caption">Telemetry / status / commands</div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-stage">
+          <div class="arch-stage-title">Ingestion</div>
+          <div class="arch-node arch-node-main">AWS IoT Core</div>
+          <div class="arch-node">IoT Rules</div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-stage">
+          <div class="arch-stage-title">Processing</div>
+          <div class="arch-node arch-node-main">AWS Lambda</div>
+          <div class="arch-node">Payload ingestion</div>
+          <div class="arch-node">Status ingestion</div>
+          <div class="arch-node">Routine / job processing</div>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-stage">
+          <div class="arch-stage-title">Data</div>
+          <div class="arch-node arch-node-main">Amazon DynamoDB</div>
+          <div class="arch-node">Amazon Timestream</div>
+          <div class="arch-caption">State + history + telemetry</div>
+        </div>
+      </div>
+
+      <div class="aws-architecture arch-second-row">
+        <div class="arch-stage">
+          <div class="arch-stage-title">Applications</div>
+          <div class="arch-node arch-node-main">Web / mobile clients</div>
+        </div>
+        <div class="arch-arrow">↔</div>
+        <div class="arch-stage">
+          <div class="arch-stage-title">API layer</div>
+          <div class="arch-node arch-node-main">AWS AppSync GraphQL</div>
+          <div class="arch-node">API Gateway REST</div>
+          <div class="arch-caption">Queries / mutations / subscriptions</div>
+        </div>
+        <div class="arch-arrow">↔</div>
+        <div class="arch-stage">
+          <div class="arch-stage-title">Backend data sources</div>
+          <div class="arch-node arch-node-main">Direct DynamoDB resolvers</div>
+          <div class="arch-node">Lambda integrations</div>
+          <div class="arch-caption">Authorization + business logic</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">02 / Decomposition</div>
+        <h2>From monolith to deployable service stacks</h2>
+      </div>
+      <div class="case-copy">
+        <p>
+          The backend evolved from a large SAM/CloudFormation definition into multiple stacks aligned to clear responsibilities.
+          This reduced deployment coupling and made individual parts of the cloud system easier to build, test, and release.
+        </p>
+        <ul class="case-list">
+          <li>IoT ingestion and device-state processing</li>
+          <li>AppSync GraphQL API and authorization</li>
+          <li>System processes and scheduled routines</li>
+          <li>Web-application backend services</li>
+          <li>Monitoring / backup / supporting infrastructure</li>
+          <li>Pipeline and deployment infrastructure</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">03 / API architecture</div>
+      <h2>GraphQL with direct data access where appropriate</h2>
+      <div class="case-grid-three">
+        <article class="case-fact">
+          <h3>AppSync</h3>
+          <p>GraphQL API for device status, messages, data, connectivity, timezone, routines, and web-app jobs.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Authorization</h3>
+          <p>Lambda-based authorization integrated with external identity validation, alongside IAM and API-key modes.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Resolvers</h3>
+          <p>JavaScript resolver functions use direct DynamoDB data sources for low-overhead reads and writes, reserving Lambda for integration logic.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">04 / Event-driven behavior</div>
+      <h2>Serverless processing and scheduling</h2>
+      <div class="case-flow-list">
+        <div><span>01</span><strong>IoT message arrives</strong><p>AWS IoT rules route selected telemetry and status topics into Lambda processing.</p></div>
+        <div><span>02</span><strong>Lambda evaluates the event</strong><p>Functions perform ingestion, state updates, notification/routine logic, or time-series storage.</p></div>
+        <div><span>03</span><strong>State is persisted</strong><p>DynamoDB holds operational state while Timestream supports time-series telemetry.</p></div>
+        <div><span>04</span><strong>Applications consume state</strong><p>AppSync and REST endpoints expose backend data and actions to application clients.</p></div>
+        <div><span>05</span><strong>Scheduled work runs independently</strong><p>EventBridge schedules and events trigger periodic or lifecycle-related backend processes.</p></div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">05 / Delivery architecture</div>
+      <h2>Infrastructure as code and automated deployment</h2>
+      <div class="delivery-flow">
+        <div class="arch-node arch-node-main">GitHub source</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">CodeStar connection</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">CodePipeline</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">CodeBuild</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">SAM / CloudFormation</div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-node arch-node-main">AWS service stacks</div>
+      </div>
+      <p class="case-note">
+        Portfolio representation is intentionally sanitized: account identifiers, credentials, secret names, internal endpoints,
+        and deployment-specific values are omitted.
+      </p>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">06 / Engineering takeaways</div>
+        <h2>Why this matters for systems engineering</h2>
+      </div>
+      <div class="case-copy">
+        <ul class="case-list">
+          <li><strong>Architecture decomposition:</strong> split a large cloud system into logical service boundaries and deployment units.</li>
+          <li><strong>Interface definition:</strong> defined device-to-cloud, event, API, and database interfaces.</li>
+          <li><strong>Fault containment:</strong> serverless functions and service boundaries isolate processing responsibilities and deployment failures.</li>
+          <li><strong>Traceable infrastructure:</strong> infrastructure-as-code makes architecture changes reviewable and repeatable.</li>
+          <li><strong>Verification:</strong> service-level tests, deployment checks, and CI/CD provide evidence that infrastructure and integrations behave as intended.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="world-band">
+      <div class="world-inner">
+        <h2>Architecture that moves from device signal to deployable cloud system.</h2>
+        <p>AWS · IoT · serverless · APIs · data architecture · infrastructure as code · CI/CD</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Back to the portfolio.</h3>
+        <p>See the automotive systems, fault-management, diagnostics, and verification work.</p>
+      </div>
+      <div class="footer-links">
+        <a href="index.html#work">Selected Work ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
+    }
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
