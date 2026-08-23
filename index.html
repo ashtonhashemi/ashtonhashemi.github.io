@@ -10,14 +10,26 @@
 <body>
   <header class="topbar">
     <a class="logo" href="#top">Ashton Hashemi</a>
-    <nav>
-      <a href="#work">Work</a>
-      <a href="#experience">Experience</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="mailto:ashtonhashemi@gmail.com">Contact</a>
-    </nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
   </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="#work"><span>01</span>Work</a>
+        <a href="#experience"><span>02</span>Experience</a>
+        <a href="#skills"><span>03</span>Skills</a>
+        <a href="#education"><span>04</span>Education</a>
+      </div>
+      <div class="menu-secondary">
+        <p>System Engineer — Fault Management</p>
+        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
 
   <main id="top">
     <section class="job-hero">
@@ -185,5 +197,24 @@
     </div>
     <div class="copyright">© 2026 Ashton Hashemi</div>
   </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
+
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
+    }
+
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  </script>
 </body>
 </html>
