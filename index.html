@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ashton Hashemi | Fault Management & Systems Engineering</title>
+  <meta name="description" content="Automotive systems engineering portfolio focused on fault management, diagnostics, ADAS SIL, virtual ECUs, requirements, and verification & validation.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="nav">
+      <a class="brand" href="#">AH</a>
+      <div class="navlinks">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Contact</a>
+      </div>
+    </nav>
+
+    <div class="hero-content">
+      <p class="eyebrow">AUTOMOTIVE SYSTEMS • FAULT MANAGEMENT • SIL/VECU</p>
+      <h1>Ashton Hashemi</h1>
+      <h2>Fault Management & Systems Engineer</h2>
+      <p class="lead">
+        Automotive systems engineer focused on requirements, fault detection and response,
+        diagnostic architecture, virtual ECU testing, and verification & validation across
+        electrified powertrain and vehicle systems.
+      </p>
+      <div class="cta-row">
+        <a class="button primary" href="#projects">View Projects</a>
+        <a class="button secondary" href="https://github.com/ashtonhashemi">GitHub</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="projects" class="section">
+      <p class="section-kicker">FEATURED WORK</p>
+      <h2>Engineering Projects</h2>
+
+      <article class="project featured">
+        <div>
+          <span class="tag">ADAS • SIL • CI/CD</span>
+          <h3>ADAS SIL & Virtual ECU CI Environment</h3>
+          <p>
+            A working end-to-end software-in-the-loop portfolio project for autonomous fault
+            management. A host-compiled virtual ECU executes ADAS supervisory logic while a
+            Python test harness injects scenarios and verifies expected fault responses.
+          </p>
+          <ul>
+            <li>Host-compiled C++ vECU with nominal, degraded, and minimal-risk states</li>
+            <li>Scenario-driven camera/radar fault injection and simplified AEB testing</li>
+            <li>Python test harness with automated assertions and JUnit-style results</li>
+            <li>CMake-based build with unit and scenario-level regression tests</li>
+            <li>AWS CodeBuild configuration for Git-triggered CI execution</li>
+          </ul>
+          <div class="stack">C++ • Python • CMake • AWS CodeBuild • SIL • vECU</div>
+        </div>
+        <div class="diagram">
+          <div class="node">ADAS HPC<br><small>C++</small></div>
+          <div class="arrow">↕</div>
+          <div class="node">Virtual Vehicle Network</div>
+          <div class="arrow">↕</div>
+          <div class="node">Zonal Controller<br><small>C</small></div>
+          <div class="arrow">↕</div>
+          <div class="node accent">Test Harness<br><small>Fault Injection + V&V</small></div>
+        </div>
+      </article>
+
+      <div class="project-grid">
+        <article class="project">
+          <span class="tag">FAULT MANAGEMENT</span>
+          <h3>Next: Fault Analysis → Monitor → Response</h3>
+          <p>
+            Planned systems-engineering case study connecting component failure modes to
+            diagnostic coverage, monitor requirements, thresholds, fault responses, degraded
+            operation, and verification criteria.
+          </p>
+          <div class="stack">DFMEA • DFMEA-MSR • Requirements • V&V</div>
+        </article>
+
+        <article class="project">
+          <span class="tag">DIAGNOSTICS</span>
+          <h3>Next: Automotive Diagnostic Architecture</h3>
+          <p>
+            Planned public case study covering DTCs, data identifiers, diagnostic sessions,
+            fault detection and recovery, OBD/UDS communication, and controller-level verification.
+          </p>
+          <div class="stack">UDS • OBD • DoCAN • CANoe • CAN</div>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section split">
+      <div>
+        <p class="section-kicker">ENGINEERING BACKGROUND</p>
+        <h2>Selected Experience</h2>
+      </div>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3>California Air Resources Board</h3>
+          <p class="role">Staff Air Pollution Specialist</p>
+          <p>Technical work involving OBD requirements, standards, diagnostic communication, monitoring requirements, stakeholder coordination, and verification criteria.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Hyundai Kia America Technical Center</h3>
+          <p class="role">xEV Engine Management System Engineer II</p>
+          <p>ECU diagnostic requirements and fault-monitoring strategies for electrified powertrain systems, including DFMEA-MSR and vehicle-level validation.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h3>Parax Motors</h3>
+          <p class="role">Lead Electrified Powertrain Engineer</p>
+          <p>EV/hybrid powertrain development, BMS and onboard-charger diagnostics, fault-response strategies, ESS failure analysis, and SOC estimation.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section">
+      <p class="section-kicker">CAPABILITIES</p>
+      <h2>Technical Focus</h2>
+      <div class="skills-grid">
+        <div class="skill-card"><h3>Systems Engineering</h3><p>Requirements definition • decomposition • allocation • interfaces • traceability • logical/physical architecture • V&V</p></div>
+        <div class="skill-card"><h3>Fault Management</h3><p>DFMEA • DFMEA-MSR • fault detection • diagnostic coverage • fault response • degraded operation</p></div>
+        <div class="skill-card"><h3>SIL & Virtual ECU</h3><p>Host-compiled vECU • scenario testing • fault injection • automated regression • Python test harnesses • CI/CD</p></div>
+        <div class="skill-card"><h3>Diagnostics & Networks</h3><p>UDS • OBDonUDS • DoCAN • CAN • CANoe • CANalyzer • CANdb++ • INCA • MDA</p></div>
+        <div class="skill-card"><h3>Tools</h3><p>IBM DOORS • Jama Connect • MATLAB System Composer • MATLAB Requirements Toolbox • ASCET</p></div>
+        <div class="skill-card"><h3>Programming</h3><p>C • C++ • Python • Rust</p></div>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <p class="section-kicker">CONTACT</p>
+      <h2>Interested in fault-tolerant vehicle systems?</h2>
+      <p>Explore the projects above or reach out directly.</p>
+      <div class="cta-row">
+        <a class="button primary" href="mailto:ashtonhashemi@gmail.com">Email Me</a>
+        <a class="button secondary" href="https://github.com/ashtonhashemi">GitHub Profile</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2026 Ashton Hashemi • Automotive Systems Engineering Portfolio</p>
+  </footer>
+</body>
+</html>
