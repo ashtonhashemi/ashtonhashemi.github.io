@@ -3,230 +3,141 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ashton Hashemi | System Engineer - Fault management</title>
-  <meta name="description" content="Ashton Hashemi — automotive systems engineering, fault management, diagnostics, electrified powertrain, SIL/vECU, and verification & validation.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="top-style.css">
+  <title>Ashton Hashemi</title>
+  <meta name="description" content="Ashton Hashemi portfolio landing page.">
+  <style>
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; }
+    body {
+      min-height: 100vh;
+      overflow: hidden;
+      background: #f4f4f1;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+    .landing {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 100vw;
+      height: 100vh;
+      color: inherit;
+      text-decoration: none;
+      isolation: isolate;
+    }
+    .landing::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(rgba(20,20,20,.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(20,20,20,.045) 1px, transparent 1px);
+      background-size: 46px 46px;
+      mask-image: radial-gradient(circle at center, #000 0 30%, transparent 72%);
+      -webkit-mask-image: radial-gradient(circle at center, #000 0 30%, transparent 72%);
+      z-index: -2;
+    }
+    .network {
+      position: relative;
+      width: min(72vw, 760px);
+      aspect-ratio: 1.55 / 1;
+      filter: drop-shadow(0 14px 30px rgba(0,0,0,.05));
+    }
+    .line {
+      position: absolute;
+      height: 1px;
+      background: #aaa9a4;
+      transform-origin: left center;
+      z-index: -1;
+    }
+    .line.l1 { left: 50%; top: 50%; width: 33%; transform: rotate(-25deg); }
+    .line.l2 { left: 50%; top: 50%; width: 35%; transform: rotate(27deg); }
+    .line.l3 { left: 50%; top: 50%; width: 31%; transform: rotate(153deg); }
+    .line.l4 { left: 50%; top: 50%; width: 33%; transform: rotate(205deg); }
+    .line.l5 { left: 50%; top: 50%; width: 29%; transform: rotate(-88deg); }
+    .line.l6 { left: 50%; top: 50%; width: 30%; transform: rotate(89deg); }
+    .node {
+      position: absolute;
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid #9a9993;
+      background: #f4f4f1;
+      box-shadow: 0 0 0 8px rgba(244,244,241,.8);
+    }
+    .node::after {
+      content: "";
+      position: absolute;
+      inset: 11px;
+      border-radius: 50%;
+      background: #d71920;
+    }
+    .node.n1 { right: 8%; top: 17%; }
+    .node.n2 { right: 4%; bottom: 17%; }
+    .node.n3 { left: 6%; top: 19%; }
+    .node.n4 { left: 4%; bottom: 14%; }
+    .node.n5 { left: 48%; top: 3%; }
+    .node.n6 { left: 49%; bottom: 2%; }
+    .hub {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 154px;
+      height: 154px;
+      transform: translate(-50%, -50%);
+      border-radius: 32px;
+      background: #111;
+      box-shadow: 0 22px 48px rgba(0,0,0,.16);
+    }
+    .hub::before,
+    .hub::after {
+      content: "";
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      border-radius: 999px;
+      background: #f4f4f1;
+    }
+    .hub::before { top: 54px; width: 50px; height: 8px; }
+    .hub::after { top: 75px; width: 28px; height: 8px; }
+    .pulse {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 190px;
+      height: 190px;
+      transform: translate(-50%, -50%);
+      border: 1px solid rgba(215,25,32,.38);
+      border-radius: 50%;
+      animation: pulse 3s ease-out infinite;
+    }
+    @keyframes pulse {
+      0% { transform: translate(-50%, -50%) scale(.72); opacity: 0; }
+      25% { opacity: .7; }
+      100% { transform: translate(-50%, -50%) scale(1.45); opacity: 0; }
+    }
+    .landing:focus-visible { outline: 3px solid #d71920; outline-offset: -8px; }
+    @media (max-width: 700px) {
+      .network { width: 92vw; }
+      .hub { width: 122px; height: 122px; border-radius: 26px; }
+      .hub::before { top: 42px; width: 42px; }
+      .hub::after { top: 63px; width: 24px; }
+      .pulse { width: 154px; height: 154px; }
+      .node { width: 28px; height: 28px; }
+      .node::after { inset: 9px; }
+    }
+    @media (prefers-reduced-motion: reduce) { .pulse { animation: none; opacity: .35; } }
+  </style>
 </head>
 <body>
-  <div class="draft-banner" role="status">Entire portfolio is still in draft</div>
-  <header class="topbar">
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <a class="site-mark" href="#top" aria-label="Ashton Hashemi home">AH</a>
-    <a class="logo" href="#top">Portfolio</a>
-  </header>
-
-  <div id="site-menu" class="site-menu" aria-hidden="true">
-    <nav class="menu-inner" aria-label="Main navigation">
-      <div class="menu-primary">
-        <a href="#work"><span>01</span>Work</a>
-        <a href="#experience"><span>02</span>Experience</a>
-        <a href="#skills"><span>03</span>Skills</a>
-        <a href="#education"><span>04</span>Education</a>
-        <a href="alerta-aws-architecture.html"><span>05</span>AWS Architecture</a>
-        <a href="gpf-diagnostic-case-study.html"><span>06</span>GPF Diagnostics</a>
-      </div>
-      <div class="menu-secondary">
-        <p>System Engineer — Fault Management</p>
-        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
-        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
-      </div>
-    </nav>
-  </div>
-
-  <main id="top">
-    <section class="job-hero">
-      <div class="job-hero-inner">
-        <div class="job-heading">
-          <div class="hero-identity">
-            <div class="hero-person">
-              <img class="profile" src="https://avatars.githubusercontent.com/u/103288925?v=4" alt="Portrait of Ashton Hashemi">
-              <p>Ashton Hashemi</p>
-            </div>
-            <h1>System Engineer – Fault management</h1>
-          </div>
-          <a class="apply-btn" href="mailto:ashtonhashemi@gmail.com">Contact Me</a>
-        </div>
-
-        <div class="job-meta-wrap">
-          <div class="job-meta">
-            <span>Automotive Systems &amp; Diagnostics</span>
-            <span>Full-Time</span>
-            <span>Riverside, California, US</span>
-          </div>
-          <a class="back-link" href="https://github.com/ashtonhashemi">GitHub Profile ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="job-body">
-      <div class="copy">
-        <p>
-          Automotive systems engineer with experience in OBD and UDS diagnostics, fault-monitoring
-          strategies, electrified powertrain systems, DFMEA / DFMEA-MSR, requirements development,
-          software test automation, SIL / virtual ECU testing, and vehicle-level verification and validation.
-        </p>
-        <p>
-          My work connects system functions and failure modes to diagnostic requirements, monitor logic,
-          fault responses, communication requirements, and verification criteria across regulatory,
-          powertrain, charging, battery, and control-system applications.
-        </p>
-
-        <section id="work" class="detail-section">
-          <h2>Selected Engineering Work</h2>
-          <ul>
-            <li><strong>AWS serverless IoT architecture:</strong> Designed and implemented the Alerta Nova cloud backend using AWS SAM / CloudFormation, IoT Core, Lambda, DynamoDB, AppSync, API Gateway, EventBridge, Timestream, and automated CodePipeline / CodeBuild deployment. Decomposed the backend into independently deployable service stacks. <a class="inline-link" href="alerta-aws-architecture.html">View architecture case study →</a></li>
-            <li><strong>GPF diagnostic requirements:</strong> Developed requirements from regulatory needs and failure modes, allocated functions to software, controls, and calibration teams, and defined verification and vehicle-validation criteria. <a class="inline-link" href="gpf-diagnostic-case-study.html">View diagnostic/FMEA case study →</a></li>
-            <li><strong>xEV ECU fault monitoring:</strong> Developed ECU diagnostic requirements using UDS / OBD concepts including DTC definitions, DIDs, diagnostic sessions, fault detection, recovery criteria, and service-level communication.</li>
-            <li><strong>BMS and onboard-charger diagnostics:</strong> Developed fault-detection routines including over-voltage, over-temperature, and cell-balancing strategies.</li>
-            <li><strong>DFMEA / DFMEA-MSR:</strong> Performed diagnostic-coverage analysis for engine, hybrid-control, ESS, and powertrain systems and supported mitigation strategies.</li>
-            <li><strong>UDS / DoCAN testing:</strong> Created diagnostic test cases for controller commands and measurements and developed Python / CAN-tool automation for software testing and defect identification.</li>
-            <li><strong>Charging interoperability:</strong> Validated AC / DC charging communication, handshakes, current ramp-up, vehicle-grid interoperability, and fail-safe behavior.</li>
-            <li><strong>SOC estimation:</strong> Developed a Kalman-filter and open-circuit-voltage based battery State-of-Charge estimation algorithm.</li>
-          </ul>
-
-          <div class="sub-detail">
-            <h3>GPF FMEA / OBD Functional Decomposition</h3>
-            <ul>
-              <li>Capture soot</li>
-              <li>Store soot</li>
-              <li>Burn soot</li>
-            </ul>
-            <a class="inline-link" href="gpf-diagnostic-case-study.html">View diagnostic table and physical allocation →</a><br><br>
-            <a class="inline-link" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">View editable GPF FMEA / OBD source →</a>
-          </div>
-        </section>
-
-        <section id="experience" class="detail-section">
-          <h2>Professional Experience</h2>
-
-          <div class="experience-entry">
-            <h3>California Air Resources Board (CARB)</h3>
-            <p class="role-line">Staff Air Pollution Specialist · 2024 - Present · Riverside, CA</p>
-            <ul>
-              <li>Lead liaison to SAE J1699 and J1979-x task forces on OBD communication protocols, service-mode requirements, data definitions, DoCAN, OBDonUDS, and ZEVonUDS.</li>
-              <li>Developed GPF diagnostic requirements and verification / vehicle-validation criteria.</li>
-              <li>Support ZEV propulsion workgroups with OBD monitoring and data-communication expertise.</li>
-            </ul>
-          </div>
-
-          <div class="experience-entry">
-            <h3>California Air Resources Board (CARB)</h3>
-            <p class="role-line">Air Pollution Specialist · 2023 - 2024 · Riverside, CA</p>
-            <ul>
-              <li>Analyzed California Clean Truck Check data in Snowflake and developed ETL workflows for regulatory and program analysis.</li>
-            </ul>
-          </div>
-
-          <div class="experience-entry">
-            <h3>Hyundai Kia America Technical Center</h3>
-            <p class="role-line">xEV Engine Management System Engineer II · 2021 - 2023 · Chino, CA</p>
-            <ul>
-              <li>Developed xEV diagnostic routines and ECU fault-monitoring requirements.</li>
-              <li>Performed DFMEA-MSR for OBD II diagnostic coverage.</li>
-              <li>Created UDS / DoCAN test cases and Python automation.</li>
-              <li>Conducted EV charging and vehicle-grid interoperability validation.</li>
-            </ul>
-          </div>
-
-          <div class="experience-entry">
-            <h3>ITRAC</h3>
-            <p class="role-line">Consultant, MANDO ECUs · 2016 - 2019 · Remote</p>
-            <ul>
-              <li>Supported chassis-ECU technical coordination and procurement.</li>
-              <li>Validated EV charging interoperability and analyzed DC fast-charging communication and fail-safe behavior.</li>
-            </ul>
-          </div>
-
-          <div class="experience-entry">
-            <h3>ITRAC</h3>
-            <p class="role-line">Vehicle Test Engineer II · 2009 - 2013 · Tehran</p>
-            <ul>
-              <li>Conducted type-approval tests based on ISO, EEC, and FMVSS standards.</li>
-              <li>Established braking and performance test capability and corresponding procedures.</li>
-            </ul>
-          </div>
-
-          <div class="experience-entry">
-            <h3>Parax Motors</h3>
-            <p class="role-line">Lead Electrified Powertrain Engineer · 2011 - 2016 · Qazvin, Iran</p>
-            <ul>
-              <li>Worked on EV / hybrid powertrain systems, charger interoperability, BMS / OBC diagnostics, system-level fault response, ESS / powertrain DFMEA, and SOC estimation.</li>
-            </ul>
-          </div>
-        </section>
-
-        <section id="skills" class="detail-section">
-          <h2>Technical Skills</h2>
-          <ul>
-            <li><strong>Diagnostics &amp; networks:</strong> OBD, UDS, DoCAN, OBDonUDS, ZEVonUDS, DTC, DID, CANoe, CANalyzer, CANdb++.</li>
-            <li><strong>Fault management:</strong> DFMEA, DFMEA-MSR, fault detection, diagnostic coverage, fault recovery, verification criteria.</li>
-            <li><strong>Systems engineering:</strong> requirements development, function allocation, IBM DOORS, Jama Connect, MATLAB System Composer, MATLAB Requirements Toolbox.</li>
-            <li><strong>SIL &amp; simulation:</strong> CANoe, MATLAB / Simulink, Python test automation, vECU testing, fault injection, automated regression testing.</li>
-            <li><strong>Programming &amp; data:</strong> Python, C, Rust, Snowflake, ETL workflows.</li>
-            <li><strong>Cloud architecture:</strong> AWS SAM / CloudFormation, IoT Core, Lambda, DynamoDB, AppSync, API Gateway, EventBridge, Timestream, CodePipeline, CodeBuild.</li>
-            <li><strong>Calibration / measurement:</strong> INCA, MDA, EHandbook, ASCET, Indigo.</li>
-          </ul>
-        </section>
-
-        <section id="education" class="detail-section">
-          <h2>Education</h2>
-          <ul>
-            <li><strong>Master of Science in Mechanical and Energy Engineering</strong> — University of North Texas, 2019 - 2021.</li>
-            <li><strong>Bachelor of Science in Mechanical Engineering</strong> — Azad University, 2005 - 2013.</li>
-          </ul>
-
-          <h2 class="secondary-heading">Certifications</h2>
-          <ul>
-            <li>FMEA Specialist Certification — Udemy.</li>
-            <li>High Voltage Safety — Weber State University.</li>
-            <li>Cloud Solutions Architect — Amazon Web Services.</li>
-          </ul>
-        </section>
-      </div>
-    </section>
-
-    <section class="world-band">
-      <div class="world-inner">
-        <h2>Engineered in California.</h2>
-        <p>Automotive systems · fault management · diagnostics · electrified powertrain</p>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <h3>Get to know me.</h3>
-        <p>Explore my engineering work or contact me about systems and fault-management opportunities.</p>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
-        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
-      </div>
+  <a class="landing" href="system-engineer-fault-management/" aria-label="Open System Engineer - Fault Management portfolio">
+    <div class="network" aria-hidden="true">
+      <div class="line l1"></div><div class="line l2"></div><div class="line l3"></div>
+      <div class="line l4"></div><div class="line l5"></div><div class="line l6"></div>
+      <div class="pulse"></div>
+      <div class="hub"></div>
+      <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div>
+      <div class="node n4"></div><div class="node n5"></div><div class="node n6"></div>
     </div>
-    <div class="copyright">© 2026 Ashton Hashemi</div>
-  </footer>
-
-  <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const siteMenu = document.getElementById('site-menu');
-    const menuLinks = siteMenu.querySelectorAll('a');
-
-    function setMenu(open) {
-      menuButton.classList.toggle('is-open', open);
-      siteMenu.classList.toggle('is-open', open);
-      document.body.classList.toggle('menu-open', open);
-      menuButton.setAttribute('aria-expanded', String(open));
-      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      siteMenu.setAttribute('aria-hidden', String(!open));
-    }
-
-    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
-    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
-  </script>
+  </a>
 </body>
 </html>
