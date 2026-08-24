@@ -52,6 +52,10 @@
 .job-hero { border-bottom: 0; }
 .job-hero-inner { width: min(1366px, calc(100% - 128px)); padding: 190px 0 66px; }
 .job-heading { align-items: flex-end; gap: 70px; padding-bottom: 48px; border-bottom: 1px solid #989894; }
+.hero-identity { max-width: 850px; }
+.hero-person { display: flex; align-items: center; gap: 16px; margin-bottom: 30px; }
+.hero-person .profile { width: 72px; height: 72px; flex: 0 0 auto; }
+.hero-person p { margin: 0; font-size: 22px; font-weight: 700; letter-spacing: -.025em; }
 .job-heading h1 { max-width: 850px; font-size: clamp(54px, 5.2vw, 76px); line-height: .92; letter-spacing: -.045em; font-weight: 700; }
 .apply-btn { min-width: 125px; height: 52px; border-radius: 8px; padding: 0 22px; }
 .job-meta-wrap { align-items: flex-start; margin-top: 26px; }
@@ -79,6 +83,9 @@
   .logo { font-size: 13px; }
   .job-hero-inner { width: calc(100% - 40px); padding: 105px 0 46px; }
   .job-heading { padding-bottom: 34px; }
+  .hero-person { margin-bottom: 24px; }
+  .hero-person .profile { width: 62px; height: 62px; }
+  .hero-person p { font-size: 19px; }
   .job-heading h1 { font-size: clamp(45px, 13vw, 60px); }
   .job-meta-wrap { margin-top: 24px; }
   .job-meta { font-size: 14px; }
