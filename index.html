@@ -5,67 +5,143 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ashton Hashemi</title>
   <meta name="description" content="Ashton Hashemi portfolio landing page.">
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script src="https://static.sketchfab.com/api/sketchfab-viewer-1.12.1.js"></script>
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; min-height: 100%; }
     body {
       min-height: 220vh;
-      background: #f4f4f1;
+      background: #f5f5f2;
+      overflow-x: hidden;
     }
     .stage {
       position: fixed;
       inset: 0;
-      display: grid;
-      place-items: center;
       overflow: hidden;
+      background:
+        radial-gradient(circle at 50% 54%, rgba(255,255,255,.98) 0 28%, rgba(250,250,247,.96) 55%, #f2f2ef 100%);
     }
-    model-viewer {
-      width: min(94vw, 1380px);
-      height: min(92vh, 900px);
+    .stage::after {
+      content: "";
+      position: absolute;
+      left: 8%;
+      right: 8%;
+      bottom: 11%;
+      height: 14%;
+      background: radial-gradient(ellipse at center, rgba(0,0,0,.12), rgba(0,0,0,0) 68%);
+      filter: blur(28px);
+      opacity: .42;
+      pointer-events: none;
+    }
+    #api-frame {
+      position: absolute;
+      inset: -3%;
+      width: 106%;
+      height: 106%;
+      border: 0;
       background: transparent;
-      --poster-color: transparent;
-      cursor: grab;
-      filter: drop-shadow(0 28px 38px rgba(0,0,0,.08));
     }
-    model-viewer:active { cursor: grabbing; }
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      white-space: nowrap;
+      border: 0;
+    }
     @media (max-width: 700px) {
-      model-viewer { width: 100vw; height: 82vh; }
+      #api-frame { inset: -8%; width: 116%; height: 116%; }
     }
   </style>
 </head>
 <body>
-  <main class="stage" aria-label="Interactive 3D vehicle">
-    <model-viewer
-      id="car"
-      src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/glTF-Binary/CarConcept.glb"
-      alt="Interactive 3D concept vehicle"
-      camera-controls
-      disable-zoom
-      interaction-prompt="none"
-      touch-action="pan-y"
-      environment-image="neutral"
-      exposure="1.05"
-      shadow-intensity="0.9"
-      shadow-softness="0.9"
-      camera-orbit="25deg 72deg 105%"
-      field-of-view="28deg">
-    </model-viewer>
+  <main class="stage" aria-label="Interactive modern electric sedan">
+    <span class="sr-only">Drag the vehicle to rotate it. Scroll the page to orbit around it.</span>
+    <iframe
+      id="api-frame"
+      title="Interactive 3D modern electric sedan"
+      allow="autoplay; fullscreen; xr-spatial-tracking"
+      allowfullscreen
+      mozallowfullscreen="true"
+      webkitallowfullscreen="true"></iframe>
   </main>
 
   <script>
-    const car = document.getElementById('car');
+    const iframe = document.getElementById('api-frame');
+    const client = new Sketchfab('1.12.1', iframe);
+    const uid = '54860f7335c04bb8b7b181d15a13fe50';
 
-    function rotateWithScroll() {
+    let api = null;
+    let target = [0, 0, 0];
+    let radiusXY = 1;
+    let height = 0;
+    let startAngle = 0;
+    let rafPending = false;
+
+    function applyScrollOrbit() {
+      rafPending = false;
+      if (!api) return;
+
       const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
       const progress = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
-      const azimuth = 25 + progress * 330;
-      const radius = 105 - progress * 7;
-      car.cameraOrbit = `${azimuth}deg 72deg ${radius}%`;
+      const angle = startAngle + progress * Math.PI * 2;
+      const eye = [
+        target[0] + Math.cos(angle) * radiusXY,
+        target[1] + Math.sin(angle) * radiusXY,
+        target[2] + height
+      ];
+
+      api.setCameraLookAt(eye, target, 0);
     }
 
-    window.addEventListener('scroll', rotateWithScroll, { passive: true });
-    window.addEventListener('load', rotateWithScroll);
+    function scheduleScrollOrbit() {
+      if (rafPending) return;
+      rafPending = true;
+      requestAnimationFrame(applyScrollOrbit);
+    }
+
+    client.init(uid, {
+      autostart: 1,
+      camera: 0,
+      autospin: 0,
+      scrollwheel: 0,
+      transparent: 1,
+      ui_controls: 0,
+      ui_infos: 0,
+      ui_hint: 0,
+      ui_stop: 0,
+      ui_help: 0,
+      ui_settings: 0,
+      ui_inspector: 0,
+      ui_vr: 0,
+      ui_annotations: 0,
+      ui_animations: 0,
+      ui_watermark: 0,
+      success: function(viewerApi) {
+        api = viewerApi;
+        api.start();
+        api.addEventListener('viewerready', function() {
+          api.getCameraLookAt(function(err, camera) {
+            if (err || !camera) return;
+            target = camera.target.slice();
+            const dx = camera.position[0] - target[0];
+            const dy = camera.position[1] - target[1];
+            height = camera.position[2] - target[2];
+            radiusXY = Math.max(Math.hypot(dx, dy), 0.01);
+            startAngle = Math.atan2(dy, dx);
+            applyScrollOrbit();
+          });
+        });
+      },
+      error: function() {
+        console.error('Unable to load 3D vehicle viewer.');
+      }
+    });
+
+    window.addEventListener('scroll', scheduleScrollOrbit, { passive: true });
   </script>
 </body>
 </html>
