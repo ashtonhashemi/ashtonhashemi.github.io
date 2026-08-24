@@ -7,6 +7,27 @@
   <meta name="description" content="Ashton Hashemi — automotive systems engineering, fault management, diagnostics, electrified powertrain, SIL/vECU, and verification & validation.">
   <link rel="stylesheet" href="../style.css">
   <link rel="stylesheet" href="../top-style.css">
+  <style>
+    .project-architecture {
+      margin: 22px 0 18px;
+      padding: 14px;
+      background: #fff;
+      border: 1px solid rgba(22, 22, 22, .12);
+      border-radius: 16px;
+      overflow: hidden;
+    }
+    .project-architecture img {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .project-architecture figcaption {
+      margin-top: 10px;
+      font-size: .88rem;
+      line-height: 1.45;
+      color: #686868;
+    }
+  </style>
 </head>
 <body>
   <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
@@ -86,6 +107,10 @@
               IoT Core, Lambda, DynamoDB, AppSync, API Gateway, EventBridge, Timestream, and automated
               CodePipeline / CodeBuild deployment. Decomposed the backend into independently deployable service stacks.
             </p>
+            <figure class="project-architecture">
+              <img src="../assets/aws-serverless-iot-architecture.svg" alt="AWS serverless IoT architecture showing device telemetry through IoT Core and Lambda to DynamoDB and Timestream, with AppSync, API Gateway, EventBridge, Cognito, and CloudWatch.">
+              <figcaption>AWS-style architecture view derived from the project infrastructure-as-code and application data flows.</figcaption>
+            </figure>
             <a class="inline-link" href="../alerta-aws-architecture.html">View architecture case study →</a>
           </div>
         </section>
