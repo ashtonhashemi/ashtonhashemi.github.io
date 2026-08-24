@@ -53,14 +53,31 @@
     const failureModes = Array.isArray(data.failure_modes) ? data.failure_modes : [];
 
     failureModes.forEach((item) => {
-      const tr = document.createElement('tr');
-      addCell(tr, valueOrDash(item.id));
-      addCell(tr, valueOrDash(item.failure_mode), 'failure-mode-cell');
-      addCell(tr, valueOrDash(item.function), 'function-cell');
-      addCell(tr, valueOrDash(item.cause));
-      addCell(tr, valueOrDash(item.effect));
-      addCell(tr, valueOrDash(item.obd));
-      tbody.appendChild(tr);
+      const causes = Array.isArray(item.cause) && item.cause.length ? item.cause : [item.cause];
+
+      causes.forEach((cause, index) => {
+        const tr = document.createElement('tr');
+
+        if (index === 0) {
+          const sharedCells = [
+            addCell(tr, valueOrDash(item.id), 'failure-id-cell'),
+            addCell(tr, valueOrDash(item.failure_mode), 'failure-mode-cell'),
+            addCell(tr, valueOrDash(item.function), 'function-cell')
+          ];
+          sharedCells.forEach((cell) => { cell.rowSpan = causes.length; });
+        }
+
+        addCell(tr, valueOrDash(cause), 'cause-cell');
+
+        if (index === 0) {
+          const effectCell = addCell(tr, valueOrDash(item.effect), 'effect-cell');
+          const obdCell = addCell(tr, valueOrDash(item.obd), 'obd-cell');
+          effectCell.rowSpan = causes.length;
+          obdCell.rowSpan = causes.length;
+        }
+
+        tbody.appendChild(tr);
+      });
     });
 
     if (!tbody.children.length) {

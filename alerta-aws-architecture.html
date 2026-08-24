@@ -7,6 +7,7 @@
   <meta name="description" content="AWS serverless IoT architecture case study: Alerta Nova backend architecture, decomposition, data flows, APIs, and CI/CD.">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="top-style.css">
+  <link rel="stylesheet" href="aws-diagram.css">
 </head>
 <body>
   <div class="draft-banner" role="status">Entire portfolio is still in draft</div>
@@ -63,7 +64,15 @@
         stores operational and time-series data, and exposes application data through GraphQL and REST interfaces.
       </p>
 
-      <div class="aws-architecture" aria-label="Alerta Nova AWS architecture diagram">
+      <figure class="aws-reference-diagram">
+        <div class="aws-diagram-frame">
+          <img src="assets/aws-serverless-iot-architecture.svg" alt="AWS reference architecture showing IoT devices sending telemetry through IoT Core and Lambda to DynamoDB and Timestream, with Cognito-secured AppSync and API Gateway access for web and mobile clients.">
+        </div>
+        <figcaption>Serverless reference architecture showing the primary telemetry, event-processing, persistence, application-access, and observability paths.</figcaption>
+      </figure>
+
+      <div class="legacy-architecture" hidden aria-hidden="true">
+      <div class="aws-architecture">
         <div class="arch-stage">
           <div class="arch-stage-title">Device layer</div>
           <div class="arch-node arch-node-main">IoT devices &amp; gateways</div>
@@ -111,6 +120,7 @@
           <div class="arch-node">Lambda integrations</div>
           <div class="arch-caption">Authorization + business logic</div>
         </div>
+      </div>
       </div>
     </section>
 
