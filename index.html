@@ -5,124 +5,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Ashton Hashemi</title>
   <meta name="description" content="Ashton Hashemi portfolio landing page.">
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
   <style>
     * { box-sizing: border-box; }
     html, body { margin: 0; width: 100%; min-height: 100%; }
     body {
-      min-height: 100vh;
-      overflow: hidden;
+      min-height: 220vh;
       background: #f4f4f1;
     }
     .stage {
-      width: 100vw;
-      height: 100vh;
+      position: fixed;
+      inset: 0;
       display: grid;
       place-items: center;
-      position: relative;
-      isolation: isolate;
+      overflow: hidden;
     }
-    .stage::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background:
-        linear-gradient(rgba(22,22,22,.035) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(22,22,22,.035) 1px, transparent 1px);
-      background-size: 48px 48px;
-      mask-image: radial-gradient(ellipse at center, #000 0 33%, transparent 75%);
-      -webkit-mask-image: radial-gradient(ellipse at center, #000 0 33%, transparent 75%);
-      z-index: -2;
+    model-viewer {
+      width: min(94vw, 1380px);
+      height: min(92vh, 900px);
+      background: transparent;
+      --poster-color: transparent;
+      cursor: grab;
+      filter: drop-shadow(0 28px 38px rgba(0,0,0,.08));
     }
-    .car-art {
-      width: min(86vw, 1080px);
-      height: auto;
-      filter: drop-shadow(0 28px 34px rgba(0,0,0,.06));
-    }
-    .wire { fill: none; stroke: #242424; stroke-width: 2.1; stroke-linecap: round; stroke-linejoin: round; }
-    .wire-soft { fill: none; stroke: #999892; stroke-width: 1.25; stroke-linecap: round; stroke-linejoin: round; }
-    .wire-faint { fill: none; stroke: #c7c6c0; stroke-width: 1; }
-    .sensor { fill: #555550; }
-    .sensor-line { fill: none; stroke: #686862; stroke-width: 1.55; stroke-linecap: round; opacity: .72; }
-    .sensor-faint { fill: none; stroke: #8f8e88; stroke-width: 1; opacity: .28; }
-    .scan { transform-origin: 570px 220px; animation: scan 6s linear infinite; }
-    .pulse { animation: pulse 2.8s ease-out infinite; transform-origin: center; }
-    @keyframes scan { to { transform: rotate(360deg); } }
-    @keyframes pulse { 0%,100% { opacity:.2; } 50% { opacity:.75; } }
+    model-viewer:active { cursor: grabbing; }
     @media (max-width: 700px) {
-      .car-art { width: 98vw; transform: scale(1.05); }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      .scan, .pulse { animation: none; }
+      model-viewer { width: 100vw; height: 82vh; }
     }
   </style>
 </head>
 <body>
-  <main class="stage" aria-label="Autonomous vehicle wireframe illustration">
-    <svg class="car-art" viewBox="0 0 1120 700" role="img" aria-label="Wireframe autonomous vehicle with perception sensors">
-      <g aria-hidden="true">
-        <path class="wire-faint" d="M90 563 L560 340 L1030 563"/>
-        <path class="wire-faint" d="M185 600 L560 420 L935 600"/>
-        <path class="wire-faint" d="M300 632 L560 505 L820 632"/>
-        <path class="wire-faint" d="M560 340 L560 666"/>
-        <path class="wire-faint" d="M430 405 L275 666"/>
-        <path class="wire-faint" d="M690 405 L845 666"/>
-      </g>
-
-      <g aria-hidden="true">
-        <ellipse class="wire-faint" cx="560" cy="560" rx="364" ry="70"/>
-        <path class="wire-soft" d="M248 489 C312 435 382 414 462 406 L658 406 C739 414 809 435 872 489"/>
-        <path class="wire" d="M210 491 C245 454 300 426 378 411 L431 324 C450 294 480 276 515 272 L611 272 C648 277 676 294 697 324 L747 410 C827 424 879 452 912 491 L901 532 C824 557 710 570 560 570 C410 570 295 557 219 532 Z"/>
-        <path class="wire" d="M431 324 L697 324"/>
-        <path class="wire-soft" d="M456 324 L488 281 M665 324 L633 281"/>
-        <path class="wire-soft" d="M560 272 L560 570"/>
-        <path class="wire-soft" d="M378 411 C420 430 480 440 560 440 C640 440 701 430 747 410"/>
-        <path class="wire-soft" d="M270 468 C360 492 457 503 560 503 C663 503 760 492 850 468"/>
-        <path class="wire-soft" d="M305 435 L267 522 M814 435 L853 522"/>
-        <path class="wire-soft" d="M431 324 L378 411 M697 324 L747 410"/>
-
-        <ellipse class="wire" cx="304" cy="524" rx="55" ry="74"/>
-        <ellipse class="wire-soft" cx="304" cy="524" rx="30" ry="47"/>
-        <ellipse class="wire" cx="816" cy="524" rx="55" ry="74"/>
-        <ellipse class="wire-soft" cx="816" cy="524" rx="30" ry="47"/>
-
-        <path class="wire" d="M472 334 L648 334 L681 405 C638 417 598 422 560 422 C522 422 481 417 439 405 Z"/>
-        <path class="wire-soft" d="M496 347 L624 347"/>
-        <path class="wire-soft" d="M233 499 L299 488 M821 488 L888 499"/>
-        <path class="wire-soft" d="M246 529 C337 547 442 555 560 555 C677 555 783 547 875 529"/>
-      </g>
-
-      <g aria-hidden="true">
-        <circle class="wire" cx="560" cy="245" r="18"/>
-        <ellipse class="wire" cx="560" cy="239" rx="23" ry="8"/>
-        <path class="wire-soft" d="M544 257 L541 272 M576 257 L579 272"/>
-        <circle class="sensor" cx="560" cy="239" r="4.5"/>
-
-        <circle class="sensor" cx="250" cy="491" r="5"/>
-        <circle class="sensor" cx="870" cy="491" r="5"/>
-        <circle class="sensor" cx="560" cy="526" r="5"/>
-        <circle class="sensor" cx="446" cy="354" r="4"/>
-        <circle class="sensor" cx="674" cy="354" r="4"/>
-
-        <g class="scan">
-          <path class="sensor-line" d="M560 239 L786 140"/>
-          <path class="sensor-faint" d="M560 239 L824 217"/>
-          <path class="sensor-faint" d="M560 239 L747 57"/>
-        </g>
-
-        <path class="sensor-line pulse" d="M214 486 C161 451 126 405 111 350"/>
-        <path class="sensor-line pulse" d="M906 486 C959 451 994 405 1009 350"/>
-        <path class="sensor-line pulse" d="M560 529 C506 602 425 635 336 645"/>
-        <path class="sensor-line pulse" d="M560 529 C614 602 695 635 784 645"/>
-
-        <path class="sensor-faint" d="M225 478 C163 432 127 375 119 312"/>
-        <path class="sensor-faint" d="M895 478 C957 432 993 375 1001 312"/>
-        <path class="sensor-faint" d="M246 474 C192 440 161 401 151 358"/>
-        <path class="sensor-faint" d="M874 474 C928 440 959 401 969 358"/>
-
-        <ellipse class="sensor-faint" cx="560" cy="239" rx="92" ry="34"/>
-        <ellipse class="sensor-faint" cx="560" cy="239" rx="151" ry="57"/>
-      </g>
-    </svg>
+  <main class="stage" aria-label="Interactive 3D vehicle">
+    <model-viewer
+      id="car"
+      src="https://raw.githubusercontent.com/KhronosGroup/glTF-Sample-Assets/main/Models/CarConcept/glTF-Binary/CarConcept.glb"
+      alt="Interactive 3D concept vehicle"
+      camera-controls
+      disable-zoom
+      interaction-prompt="none"
+      touch-action="pan-y"
+      environment-image="neutral"
+      exposure="1.05"
+      shadow-intensity="0.9"
+      shadow-softness="0.9"
+      camera-orbit="25deg 72deg 105%"
+      field-of-view="28deg">
+    </model-viewer>
   </main>
+
+  <script>
+    const car = document.getElementById('car');
+
+    function rotateWithScroll() {
+      const maxScroll = Math.max(document.documentElement.scrollHeight - window.innerHeight, 1);
+      const progress = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
+      const azimuth = 25 + progress * 330;
+      const radius = 105 - progress * 7;
+      car.cameraOrbit = `${azimuth}deg 72deg ${radius}%`;
+    }
+
+    window.addEventListener('scroll', rotateWithScroll, { passive: true });
+    window.addEventListener('load', rotateWithScroll);
+  </script>
 </body>
 </html>
