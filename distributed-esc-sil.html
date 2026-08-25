@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Distributed ESC SIL — Graviton HPC + x86 ZCU | Ashton Hashemi</title>
+  <meta name="description" content="Distributed automotive ESC SIL case study using AWS Graviton as an HPC vehicle simulator and x86 EC2 as a ZCU/ESC controller over real UDP/IP in an AWS VPC.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="top-style.css">
+  <link rel="stylesheet" href="esc-sil.css">
+</head>
+<body>
+  <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
+  <header class="topbar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="site-mark" href="system-engineer-fault-management/index.html" aria-label="Ashton Hashemi home">AH</a>
+    <a class="logo" href="system-engineer-fault-management/index.html">Portfolio</a>
+  </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="system-engineer-fault-management/index.html#work"><span>01</span>Work</a>
+        <a href="system-engineer-fault-management/index.html#experience"><span>02</span>Experience</a>
+        <a href="system-engineer-fault-management/index.html#skills"><span>03</span>Skills</a>
+        <a href="system-engineer-fault-management/index.html#education"><span>04</span>Education</a>
+      </div>
+      <div class="menu-secondary">
+        <p>System Engineer — Fault Management</p>
+        <a href="https://github.com/ashtonhashemi" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="system-engineer-fault-management/index.html#work">← Selected Engineering Work</a>
+        <p class="case-kicker">Distributed SIL / ESC / vehicle dynamics / cloud compute</p>
+        <h1>Distributed ESC SIL — Graviton HPC + x86 ZCU</h1>
+        <p class="case-lead">
+          Built a two-node automotive SIL environment in AWS where a Graviton EC2 instance acts as the HPC vehicle and maneuver simulator,
+          while a separate x86 EC2 instance acts as the ZCU executing an ESC control algorithm. The two nodes exchange real bidirectional
+          UDP/IPv4 traffic inside an AWS VPC at a 10 ms control period.
+        </p>
+        <div class="case-meta">
+          <span>AWS Graviton / ARM64</span>
+          <span>x86_64 EC2</span>
+          <span>UDP / IPv4</span>
+          <span>100 Hz control loop</span>
+          <span>FMVSS 126-inspired SIL</span>
+          <span>AWS SAM / CloudFormation</span>
+        </div>
+        <a class="case-code-link" href="https://github.com/ashtonhashemi/aws-graviton-automotive-benchmar" target="_blank" rel="noreferrer">View implementation on GitHub ↗</a>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">01 / System architecture</div>
+      <h2>Separate vehicle/HPC and ZCU compute nodes</h2>
+      <p class="case-intro">
+        The architecture intentionally separates the simulated vehicle environment from the ESC controller. The Graviton node generates the maneuver,
+        integrates the vehicle dynamics model, and publishes sensor state. The x86 node receives that state as a ZCU would, calculates a corrective yaw moment,
+        and returns the command over the VPC network for application in the next vehicle-model step.
+      </p>
+
+      <figure class="esc-architecture">
+        <img src="assets/distributed-esc-sil-architecture.svg" alt="Distributed ESC SIL architecture with AWS Graviton HPC vehicle simulator connected by real UDP IPv4 to an x86 EC2 ZCU ESC controller, with an AWS serverless control plane.">
+        <figcaption>Distributed SIL architecture: real UDP/IPv4 communication between the Graviton HPC and x86 ZCU, with AWS services providing orchestration, security, persistence, and dashboard access.</figcaption>
+      </figure>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">02 / Closed-loop interface</div>
+        <h2>Vehicle state out. ESC correction back.</h2>
+      </div>
+      <div class="case-copy">
+        <div class="signal-flow">
+          <article class="signal-node">
+            <h3>Graviton HPC → ZCU</h3>
+            <p>Steering-wheel angle, vehicle speed, yaw rate, lateral acceleration, sideslip estimate, sequence number, and timestamp are serialized into UDP sensor frames every 10 ms.</p>
+          </article>
+          <div class="signal-arrow">↔</div>
+          <article class="signal-node">
+            <h3>ZCU → Graviton HPC</h3>
+            <p>The ZCU calculates the ESC corrective yaw moment from desired yaw, measured yaw, and sideslip, then returns the command with processing-time data.</p>
+          </article>
+        </div>
+        <div class="tag-row">
+          <span>UDP port 5005</span>
+          <span>private VPC IPs</span>
+          <span>10 ms cycle</span>
+          <span>sequence monitoring</span>
+          <span>round-trip latency</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">03 / ESC maneuver</div>
+      <h2>FMVSS 126-inspired Sine-with-Dwell SIL scenario</h2>
+      <p class="case-intro">
+        The Graviton HPC executes an illustrative Sine-with-Dwell stability-control scenario using a simplified nonlinear bicycle model.
+        The implementation uses the characteristic 0.7 Hz steering input, 500 ms dwell, and an 80 km/h entry-speed test condition, then evaluates
+        yaw-rate decay and lateral-displacement metrics. This is a portfolio SIL demonstration, not a certification test or compliance tool.
+      </p>
+
+      <table class="verification-table">
+        <thead>
+          <tr><th>Verification metric</th><th>SIL criterion</th><th>Purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Yaw rate @ 1.0 s</td><td>&lt; 35% of reference peak</td><td>Checks post-maneuver stability / yaw decay.</td></tr>
+          <tr><td>Yaw rate @ 1.75 s</td><td>&lt; 20% of reference peak</td><td>Checks continued decay after steering completion.</td></tr>
+          <tr><td>Lateral displacement @ 1.07 s</td><td>≥ 1.83 m in the illustrative case</td><td>Checks responsiveness to the commanded maneuver.</td></tr>
+        </tbody>
+      </table>
+
+      <div class="case-callout">
+        <p><strong>Engineering intent:</strong> demonstrate how a regulatory-style vehicle test can be converted into a repeatable SIL verification contract with explicit inputs, interfaces, measurements, and pass/fail criteria.</p>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">04 / Network &amp; control observability</div>
+      <h2>Measure the distributed control loop, not just the vehicle response</h2>
+      <p class="case-intro">
+        The test captures networking and controller-timing behavior in addition to vehicle-dynamics outputs. This allows the same run to evaluate both functional ESC behavior and the timing quality of the distributed execution environment.
+      </p>
+      <div class="metric-grid">
+        <article class="metric-card"><strong>Packet loss</strong><span>Sent, received, lost packets, and loss percentage across the HPC ↔ ZCU control loop.</span></article>
+        <article class="metric-card"><strong>RTT</strong><span>Mean, P95, and maximum UDP round-trip latency measured by the Graviton HPC.</span></article>
+        <article class="metric-card"><strong>Deadlines</strong><span>Counts communication cycles exceeding the 10 ms control-period budget.</span></article>
+        <article class="metric-card"><strong>ZCU compute</strong><span>Mean, P95, and maximum ESC controller processing time on the x86 node.</span></article>
+      </div>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">05 / Test dashboard</div>
+        <h2>Control, execute, and inspect the experiment from one interface</h2>
+      </div>
+      <div class="case-copy">
+        <ul class="case-list">
+          <li>Start and stop the Graviton HPC and x86 ZCU independently or together.</li>
+          <li>Verify EC2 state and AWS Systems Manager readiness before launching the test.</li>
+          <li>Select ESC enabled or disabled to compare stability-control behavior.</li>
+          <li>Launch the distributed maneuver through API Gateway and Lambda orchestration.</li>
+          <li>Display steering angle, yaw rate, lateral acceleration, ESC corrective moment, and actual UDP network RTT versus time.</li>
+          <li>Show FMVSS-style pass/fail results together with packet-loss and controller-timing metrics.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">06 / Cloud control plane</div>
+      <h2>Infrastructure, orchestration, and cost control</h2>
+      <div class="case-grid-three">
+        <article class="case-fact">
+          <h3>Infrastructure as code</h3>
+          <p>AWS SAM / CloudFormation provisions the two architectures, IAM roles, security group, API, Lambda, S3, DynamoDB, and CloudFront dashboard.</p>
+        </article>
+        <article class="case-fact">
+          <h3>No SSH dependency</h3>
+          <p>AWS Systems Manager starts the ZCU application and Graviton maneuver remotely, reducing inbound-management exposure and keeping the worker security group closed to public administration.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Scoped network path</h3>
+          <p>UDP/5005 is permitted only between instances using the worker security group, allowing the distributed control traffic without exposing the ESC interface publicly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">07 / Systems-engineering value</div>
+        <h2>Why this project matters</h2>
+      </div>
+      <div class="case-copy">
+        <ul class="case-list">
+          <li><strong>Functional decomposition:</strong> separates maneuver/plant simulation from the ZCU control responsibility.</li>
+          <li><strong>Interface definition:</strong> converts steering, speed, yaw, acceleration, sideslip, and control commands into an explicit network contract.</li>
+          <li><strong>Timing requirements:</strong> connects a 10 ms control cycle to measurable RTT, processing latency, packet loss, and deadline misses.</li>
+          <li><strong>Verification:</strong> links maneuver inputs to vehicle-response metrics and pass/fail criteria.</li>
+          <li><strong>Fault-management thinking:</strong> sequence gaps, timeouts, packet loss, and stale/missing control responses become observable distributed-system failure modes.</li>
+          <li><strong>Architecture portability:</strong> demonstrates separation of software behavior from processor architecture while preserving the same control and verification interfaces.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">08 / Implementation evidence</div>
+      <h2>Runnable code and repeatable deployment</h2>
+      <p class="case-intro">
+        The public repository contains the Graviton vehicle/HPC client, x86 ZCU ESC server, infrastructure template, dashboard, Lambda control plane,
+        deployment scripts, architecture documentation, and CI checks including a two-process UDP integration test. Runtime vehicle and network results are generated by the deployed test environment rather than hard-coded into this portfolio page.
+      </p>
+      <a class="case-code-link" href="https://github.com/ashtonhashemi/aws-graviton-automotive-benchmar" target="_blank" rel="noreferrer">Open the project repository ↗</a>
+    </section>
+
+    <section class="world-band">
+      <div class="world-inner">
+        <h2>From regulatory-style maneuver to distributed control-loop verification.</h2>
+        <p>ESC · SIL · Graviton · ZCU · UDP/IP · vehicle dynamics · timing · fault management · AWS</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Back to the portfolio.</h3>
+        <p>Explore the automotive systems, fault-management, diagnostics, cloud, and verification work.</p>
+      </div>
+      <div class="footer-links">
+        <a href="system-engineer-fault-management/index.html#work">Selected Work ↗</a>
+        <a href="https://github.com/ashtonhashemi/aws-graviton-automotive-benchmar" target="_blank" rel="noreferrer">GitHub Project ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
+    }
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
