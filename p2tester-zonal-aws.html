@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OBDonUDS P2Tester — Distributed vs Zonal AWS Timing Lab | Ashton Hashemi</title>
+  <meta name="description" content="Automotive diagnostics timing case study comparing distributed, transparent zonal, and HPC diagnostic-proxy architectures using both a timing model and a four-node measured AWS VPC test environment.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="top-style.css">
+  <link rel="stylesheet" href="esc-sil.css">
+</head>
+<body>
+  <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
+  <header class="topbar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="site-mark" href="system-engineer-fault-management/index.html" aria-label="Ashton Hashemi home">AH</a>
+    <a class="logo" href="system-engineer-fault-management/index.html">Portfolio</a>
+  </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="system-engineer-fault-management/index.html#work"><span>01</span>Work</a>
+        <a href="system-engineer-fault-management/index.html#experience"><span>02</span>Experience</a>
+        <a href="system-engineer-fault-management/index.html#skills"><span>03</span>Skills</a>
+        <a href="system-engineer-fault-management/index.html#education"><span>04</span>Education</a>
+      </div>
+      <div class="menu-secondary">
+        <p>System Engineer — Fault Management</p>
+        <a href="https://github.com/ashtonhashemi" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main>
+    <section class="case-hero">
+      <div class="case-shell">
+        <a class="case-back" href="system-engineer-fault-management/index.html#work">← Selected Engineering Work</a>
+        <p class="case-kicker">OBDonUDS / diagnostics / zonal architecture / latency verification / AWS</p>
+        <h1>OBDonUDS P2Tester — Distributed vs Zonal AWS Timing Lab</h1>
+        <p class="case-lead">
+          Built an automotive diagnostic-timing experiment to compare how a traditional distributed path, transparent zonal routing, and an HPC diagnostic proxy affect tester-to-response latency. The project combines an engineering timing model with a four-node AWS environment that measures real end-to-end TCP/IP timing across Tester, HPC, Zone Controller, and Target ECU processes.
+        </p>
+        <div class="case-meta">
+          <span>OBDonUDS / UDS-style timing</span>
+          <span>P2Tester</span>
+          <span>Distributed vs zonal</span>
+          <span>4 EC2 nodes</span>
+          <span>TCP / IPv4</span>
+          <span>AWS VPC</span>
+          <span>SSM orchestration</span>
+          <span>SAM / CloudFormation</span>
+        </div>
+        <a class="case-code-link" href="https://github.com/ashtonhashemi/aws-graviton-automotive-benchmar" target="_blank" rel="noreferrer">View implementation on GitHub ↗</a>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">01 / Engineering question</div>
+      <h2>Does a zonal diagnostic path consume too much P2Tester margin?</h2>
+      <p class="case-intro">
+        The project was created around a practical architecture concern: a diagnostic request in a zonal vehicle may pass through central compute and a zone controller before reaching the target ECU, while a conventional distributed architecture may use a shorter tester-to-gateway-to-ECU path. The experiment turns that argument into a measurable verification problem rather than assuming that more logical hops automatically means more latency.
+      </p>
+      <div class="case-callout">
+        <p><strong>Verification question:</strong> for a selected P2Tester budget such as 50 ms, which architecture produces the lowest mean and tail latency, and under what target-ECU or HPC workload does the budget begin to fail?</p>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">02 / Architecture comparison</div>
+      <h2>Three diagnostic routing strategies</h2>
+      <div class="case-grid-three">
+        <article class="case-fact">
+          <h3>Distributed path</h3>
+          <p><strong>Tester → Zone/Gateway → Target ECU</strong></p>
+          <p>Represents the conventional shorter diagnostic-routing case used as the comparison baseline.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Zonal transparent</h3>
+          <p><strong>Tester → HPC → Zone → Target ECU</strong></p>
+          <p>The HPC forwards the request without intentionally adding application-level diagnostic work.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Zonal HPC proxy</h3>
+          <p><strong>Tester → HPC proxy → Zone → Target ECU</strong></p>
+          <p>The HPC terminates, processes, and reissues the diagnostic request, allowing proxy workload and scheduling cost to be studied directly.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">03 / Measured AWS environment</div>
+        <h2>Four independent EC2 roles</h2>
+      </div>
+      <div class="case-copy">
+        <ul class="case-list">
+          <li><strong>Tester EC2:</strong> originates diagnostic requests and measures the complete tester-to-response elapsed time using its monotonic clock.</li>
+          <li><strong>HPC EC2:</strong> supports either transparent forwarding or an application-level diagnostic proxy with controlled local workload.</li>
+          <li><strong>Zone Controller EC2:</strong> represents the zonal forwarding layer between central compute and the target ECU.</li>
+          <li><strong>Target ECU EC2:</strong> returns a UDS-style diagnostic response after a controlled processing delay.</li>
+        </ul>
+        <div class="tag-row">
+          <span>private VPC addressing</span>
+          <span>TCP port 13400</span>
+          <span>no public diagnostic ingress</span>
+          <span>AWS Systems Manager</span>
+          <span>auto-stop support</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">04 / Measurement method</div>
+      <h2>Measure P2Tester on one clock; instrument every node locally</h2>
+      <p class="case-intro">
+        End-to-end P2Tester is measured entirely on the Tester EC2 monotonic clock, avoiding dependence on cross-machine clock synchronization for the primary result. The HPC, zone, and target processes also capture local processing times and observational timestamps so the measured total can be decomposed into target-ECU work, HPC work, zone work, and residual transport / operating-system overhead.
+      </p>
+      <div class="metric-grid">
+        <article class="metric-card"><strong>P50 / P95 / P99</strong><span>Tail-latency statistics for tester-to-response timing across repeated diagnostic requests.</span></article>
+        <article class="metric-card"><strong>Budget misses</strong><span>Percentage of measured requests exceeding the configured P2Tester budget.</span></article>
+        <article class="metric-card"><strong>Local compute</strong><span>Target ECU, HPC proxy, and zone-controller processing contributions are recorded separately.</span></article>
+        <article class="metric-card"><strong>Residual path</strong><span>Difference between total tester elapsed time and instrumented local processing exposes transport and OS contribution.</span></article>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">05 / Controlled experiment design</div>
+      <h2>Paired ECU workload across architectures</h2>
+      <p class="case-intro">
+        The Target ECU simulator uses a deterministic seeded delay sequence so equivalent request numbers receive the same target-processing stimulus across the distributed, transparent-zonal, and HPC-proxy cases. This reduces random target variation and makes architecture-level differences easier to interpret.
+      </p>
+      <table class="verification-table">
+        <thead>
+          <tr><th>Test variable</th><th>Examples</th><th>Engineering purpose</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Target ECU profile</td><td>Nominal, near-limit, or custom</td><td>Shows when server processing leaves little margin for the architecture.</td></tr>
+          <tr><td>P2Tester budget</td><td>Configurable, including 50 ms studies</td><td>Converts timing into an explicit pass/fail verification contract.</td></tr>
+          <tr><td>HPC proxy workload</td><td>0 ms plus controlled added workload</td><td>Measures sensitivity to application-level central-compute processing.</td></tr>
+          <tr><td>Request count</td><td>Repeated measured requests per architecture</td><td>Captures jitter and tail behavior rather than relying on a single ping.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">06 / Model + measurement</div>
+        <h2>Keep the model, verify it with real infrastructure</h2>
+      </div>
+      <div class="case-copy">
+        <p>The dashboard deliberately provides two modes:</p>
+        <ul class="case-list">
+          <li><strong>Timing model:</strong> Monte Carlo architecture trade study with explicit engineering assumptions for distributed, transparent-zonal, and proxy-zonal delay components.</li>
+          <li><strong>Measured AWS:</strong> real multi-node TCP/IP execution using the four EC2 roles and actual end-to-end timing recorded by the Tester.</li>
+        </ul>
+        <p>The model is useful for sensitivity analysis, including delay sources that AWS cannot physically reproduce as an in-vehicle bus. The measured mode is used to quantify the actual software, VPC, and routing overhead of the implemented architecture.</p>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">07 / Dashboard &amp; orchestration</div>
+      <h2>One interface for architecture selection, node control, and timing results</h2>
+      <div class="case-grid-three">
+        <article class="case-fact">
+          <h3>Node lifecycle</h3>
+          <p>Start, stop, and refresh Tester, HPC, Zone, and Target ECU EC2 state with Systems Manager readiness checks before a measured run.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Test configuration</h3>
+          <p>Select architecture, target-ECU processing profile, P2Tester budget, request count, HPC proxy workload, and automatic shutdown behavior.</p>
+        </article>
+        <article class="case-fact">
+          <h3>Timing visualization</h3>
+          <p>Display mean, P50, P95, P99, maximum, budget-miss rate, latency breakdown, and response-time histograms for the selected architecture set.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="case-shell case-section case-grid-two">
+      <div>
+        <div class="case-label">08 / Systems-engineering value</div>
+        <h2>Architecture trade study tied to a measurable requirement</h2>
+      </div>
+      <div class="case-copy">
+        <ul class="case-list">
+          <li><strong>Requirement decomposition:</strong> separates tester-visible timing from target-ECU processing and architecture contribution.</li>
+          <li><strong>Interface definition:</strong> defines explicit request/response contracts between Tester, HPC, Zone, and Target roles.</li>
+          <li><strong>Architecture verification:</strong> compares distributed and zonal designs using identical workload and measurement criteria.</li>
+          <li><strong>Tail-latency analysis:</strong> evaluates P95/P99 behavior and budget-miss rate rather than average latency alone.</li>
+          <li><strong>Fault / timing thinking:</strong> exposes how queueing, application proxy work, transport delay, and near-limit ECU response time consume diagnostic margin.</li>
+          <li><strong>Cloud-based SIL:</strong> uses reproducible infrastructure as code and automated orchestration to turn an architecture debate into a repeatable experiment.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="case-shell case-section">
+      <div class="case-label">09 / Implementation evidence</div>
+      <h2>Deployed infrastructure; measured results generated at runtime</h2>
+      <p class="case-intro">
+        The public repository contains the timing model, Tester/HPC/Zone/Target processes, AWS SAM / CloudFormation infrastructure, Lambda control plane, SSM orchestration, dashboard, deployment scripts, and CI integration tests. The four-node AWS environment has been deployed successfully. Numerical measured P2Tester results are intentionally not hard-coded into this portfolio page; they are generated by actual runtime experiments and can be added after representative runs are completed.
+      </p>
+      <a class="case-code-link" href="https://github.com/ashtonhashemi/aws-graviton-automotive-benchmar" target="_blank" rel="noreferrer">Open the project repository ↗</a>
+    </section>
+
+    <section class="world-band">
+      <div class="world-inner">
+        <h2>Turn a zonal-architecture timing concern into a repeatable verification experiment.</h2>
+        <p>OBDonUDS · P2Tester · zonal architecture · HPC · diagnostics · latency · AWS · systems engineering</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Back to the portfolio.</h3>
+        <p>Explore the automotive systems, fault-management, diagnostics, cloud, and verification work.</p>
+      </div>
+      <div class="footer-links">
+        <a href="system-engineer-fault-management/index.html#work">Selected Work ↗</a>
+        <a href="https://github.com/ashtonhashemi/aws-graviton-automotive-benchmar" target="_blank" rel="noreferrer">GitHub Project ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
+    }
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
