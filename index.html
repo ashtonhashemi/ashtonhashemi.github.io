@@ -53,7 +53,8 @@
 
     const root=new THREE.Group();
     scene.add(root);
-    let baseRotation=0;
+    const startAngle=Math.PI/3;
+    let baseRotation=startAngle;
 
     new GLTFLoader().load('assets/wireframe-head.glb',gltf=>{
       const model=gltf.scene;
@@ -83,7 +84,7 @@
     function updateScrollRotation(){
       if(reduced.matches)return;
       const max=Math.max(document.documentElement.scrollHeight-innerHeight,1);
-      baseRotation=(scrollY/max)*Math.PI*2;
+      baseRotation=startAngle+(scrollY/max)*Math.PI*2;
     }
     addEventListener('scroll',updateScrollRotation,{passive:true});
     addEventListener('resize',()=>{
