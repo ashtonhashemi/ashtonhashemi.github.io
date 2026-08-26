@@ -3,102 +3,220 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ashton Hashemi — Systems Engineer</title>
-  <meta name="description" content="Ashton Hashemi portfolio landing page.">
-  <style>
-    *{box-sizing:border-box}
-    html,body{margin:0;width:100%;min-height:100%;background:#fff}
-    body{min-height:240vh;overflow-x:hidden}
-    .stage{position:fixed;inset:0;background:#fff;overflow:hidden}
-    canvas{display:block;width:100%;height:100%;touch-action:none;cursor:grab}
-    canvas:active{cursor:grabbing}
-    .hint{position:absolute;right:clamp(18px,4vw,54px);bottom:clamp(18px,4vw,42px);margin:0;color:#171717;font:600 11px/1.2 Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase;pointer-events:none}
-    .hint::before{content:"";display:inline-block;width:30px;height:1px;margin:0 10px 3px 0;background:#171717}
-    .error{position:absolute;inset:0;display:grid;place-items:center;color:#222;font:14px Arial,sans-serif;opacity:0;pointer-events:none}.error.visible{opacity:1}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-    @media(prefers-reduced-motion:reduce){body{min-height:100vh}}
-  </style>
-  <script type="importmap">
-    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.180.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.180.0/examples/jsm/"}}
-  </script>
+  <title>Ashton Hashemi | Automotive Systems Engineer</title>
+  <meta name="description" content="Ashton Hashemi — automotive systems engineering, fault management, diagnostics, electrified powertrain, SIL/vECU, and verification & validation.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="top-style.css">
 </head>
 <body>
-  <main class="stage" aria-label="Interactive 3D wireframe head">
-    <span class="sr-only">Drag to rotate the three-dimensional wireframe head. Scroll the page to rotate it through a full turn.</span>
-    <p class="hint" aria-hidden="true">Drag or scroll to rotate</p>
-    <p id="load-error" class="error" role="status">The 3D model could not be loaded.</p>
+  <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
+  <header class="topbar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="site-mark" href="#top" aria-label="Ashton Hashemi home">AH</a>
+    <a class="logo" href="#top">Portfolio</a>
+  </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="#work"><span>01</span>Work</a>
+        <a href="#experience"><span>02</span>Experience</a>
+        <a href="#skills"><span>03</span>Skills</a>
+        <a href="#education"><span>04</span>Education</a>
+      </div>
+      <div class="menu-secondary">
+        <p>Automotive Systems Engineer</p>
+        <a href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://scholar.google.com/scholar?q=%22Ashton+Hashemi%22" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+        <a href="https://github.com/ashtonhashemi" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="job-hero">
+      <div class="job-hero-inner">
+        <div class="job-heading">
+          <div class="hero-identity">
+            <div class="hero-person">
+              <img class="profile" src="https://avatars.githubusercontent.com/u/103288925?v=4" alt="Portrait of Ashton Hashemi">
+              <p>Ashton Hashemi</p>
+            </div>
+            <h1>Automotive Systems Engineer</h1>
+          </div>
+          <a class="apply-btn" href="mailto:ashtonhashemi@gmail.com">Contact Me</a>
+        </div>
+
+        <div class="job-meta-wrap">
+          <div class="job-meta">
+            <span>Automotive Systems &amp; Diagnostics</span>
+            <span>Full-Time</span>
+            <span>Irvine, CA</span>
+          </div>
+          <a class="back-link" href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noreferrer">LinkedIn Profile ↗</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="job-body">
+      <div class="copy">
+        <p>
+          Automotive systems engineer with experience in OBD and UDS diagnostics, fault-monitoring
+          strategies, electrified powertrain systems, DFMEA / DFMEA-MSR, requirements development,
+          software test automation, SIL / virtual ECU testing, and vehicle-level verification and validation.
+        </p>
+        <p>
+          My work connects system functions and failure modes to diagnostic requirements, monitor logic,
+          fault responses, communication requirements, and verification criteria across regulatory,
+          powertrain, charging, battery, and control-system applications.
+        </p>
+
+        <section id="work" class="detail-section">
+          <h2>Selected Projects</h2>
+          <div class="sub-detail">
+            <h3><a class="inline-link" href="distributed-esc-sil.html">Distributed ESC SIL — Graviton HPC + x86 ZCU</a></h3>
+          </div>
+          <div class="sub-detail">
+            <h3><a class="inline-link" href="p2tester-zonal-aws.html">OBDonUDS P2Tester — Distributed vs Zonal AWS Timing Lab</a></h3>
+          </div>
+          <div class="sub-detail">
+            <h3><a class="inline-link" href="alerta-aws-architecture.html">AWS Serverless IoT Architecture</a></h3>
+          </div>
+        </section>
+
+        <section id="experience" class="detail-section">
+          <h2>Professional Experience</h2>
+
+          <div class="experience-entry">
+            <h3>California Air Resources Board (CARB)</h3>
+            <p class="role-line">Staff Air Pollution Specialist · 2024 - Present · Riverside, CA</p>
+            <ul>
+              <li>Lead liaison to SAE J1699 and J1979-x task forces on OBD communication protocols, service-mode requirements, data definitions, DoCAN, OBDonUDS, and ZEVonUDS.</li>
+              <li>Developed GPF diagnostic requirements and verification / vehicle-validation criteria.</li>
+              <li>Support ZEV propulsion workgroups with OBD monitoring and data-communication expertise.</li>
+            </ul>
+          </div>
+
+          <div class="experience-entry">
+            <h3>California Air Resources Board (CARB)</h3>
+            <p class="role-line">Air Pollution Specialist · 2023 - 2024 · Riverside, CA</p>
+            <ul>
+              <li>Analyzed California Clean Truck Check data in Snowflake and developed ETL workflows for regulatory and program analysis.</li>
+            </ul>
+          </div>
+
+          <div class="experience-entry">
+            <h3>Hyundai Kia America Technical Center</h3>
+            <p class="role-line">xEV Engine Management System Engineer II · 2021 - 2023 · Chino, CA</p>
+            <ul>
+              <li>Developed xEV diagnostic routines and ECU fault-monitoring requirements.</li>
+              <li>Performed DFMEA-MSR for OBD II diagnostic coverage.</li>
+              <li>Created UDS / DoCAN test cases and Python automation.</li>
+              <li>Conducted EV charging and vehicle-grid interoperability validation.</li>
+            </ul>
+          </div>
+
+          <div class="experience-entry">
+            <h3>ITRAC</h3>
+            <p class="role-line">Consultant, MANDO ECUs · 2016 - 2019 · Remote</p>
+            <ul>
+              <li>Supported chassis-ECU technical coordination and procurement.</li>
+              <li>Validated EV charging interoperability and analyzed DC fast-charging communication and fail-safe behavior.</li>
+            </ul>
+          </div>
+
+          <div class="experience-entry">
+            <h3>ITRAC</h3>
+            <p class="role-line">Vehicle Test Engineer II · 2009 - 2013 · Tehran</p>
+            <ul>
+              <li>Conducted type-approval tests based on ISO, EEC, and FMVSS standards.</li>
+              <li>Established braking and performance test capability and corresponding procedures.</li>
+            </ul>
+          </div>
+
+          <div class="experience-entry">
+            <h3>Parax Motors</h3>
+            <p class="role-line">Lead Electrified Powertrain Engineer · 2011 - 2016 · Qazvin, Iran</p>
+            <ul>
+              <li>Worked on EV / hybrid powertrain systems, charger interoperability, BMS / OBC diagnostics, system-level fault response, ESS / powertrain DFMEA, and SOC estimation.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="skills" class="detail-section">
+          <h2>Technical Skills</h2>
+          <ul>
+            <li><strong>Diagnostics &amp; networks:</strong> OBD, UDS, DoCAN, OBDonUDS, ZEVonUDS, DTC, DID, CANoe, CANalyzer, CANdb++.</li>
+            <li><strong>Fault management:</strong> DFMEA, DFMEA-MSR, fault detection, diagnostic coverage, fault recovery, verification criteria.</li>
+            <li><strong>Systems engineering:</strong> requirements development, function allocation, IBM DOORS, Jama Connect, MATLAB System Composer, MATLAB Requirements Toolbox.</li>
+            <li><strong>SIL &amp; simulation:</strong> CANoe, MATLAB / Simulink, Python test automation, vECU testing, fault injection, automated regression testing.</li>
+            <li><strong>Programming &amp; data:</strong> Python, C, Rust, Snowflake, ETL workflows.</li>
+            <li><strong>Cloud architecture:</strong> AWS SAM / CloudFormation, IoT Core, Lambda, DynamoDB, AppSync, API Gateway, EventBridge, Timestream, CodePipeline, CodeBuild.</li>
+            <li><strong>Calibration / measurement:</strong> INCA, MDA, EHandbook, ASCET, Indigo.</li>
+          </ul>
+        </section>
+
+        <section id="education" class="detail-section">
+          <h2>Education</h2>
+          <ul>
+            <li><strong>Master of Science in Mechanical and Energy Engineering</strong> — University of North Texas, 2019 - 2021.</li>
+            <li><strong>Bachelor of Science in Mechanical Engineering</strong> — Azad University, 2005 - 2013.</li>
+          </ul>
+
+          <h2 class="secondary-heading">Certifications</h2>
+          <ul>
+            <li>FMEA Specialist Certification — Udemy.</li>
+            <li>High Voltage Safety — Weber State University.</li>
+            <li>Cloud Solutions Architect — Amazon Web Services.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <section class="world-band">
+      <div class="world-inner">
+        <h2>Engineered in California.</h2>
+        <p>Automotive systems · fault management · diagnostics · electrified powertrain</p>
+      </div>
+    </section>
   </main>
-  <script type="module">
-    import * as THREE from 'three';
-    import {GLTFLoader} from 'three/addons/loaders/GLTFLoader.js';
-    import {OrbitControls} from 'three/addons/controls/OrbitControls.js';
 
-    const stage=document.querySelector('.stage');
-    const scene=new THREE.Scene();
-    scene.background=new THREE.Color(0xffffff);
+  <footer class="footer">
+    <div class="footer-inner">
+      <div>
+        <h3>Get to know me.</h3>
+        <p>Explore my engineering work or contact me about automotive systems opportunities.</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        <a href="https://scholar.google.com/scholar?q=%22Ashton+Hashemi%22" target="_blank" rel="noreferrer">Google Scholar ↗</a>
+        <a href="https://github.com/ashtonhashemi" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
+  </footer>
 
-    const camera=new THREE.PerspectiveCamera(28,innerWidth/innerHeight,.01,100);
-    const renderer=new THREE.WebGLRenderer({antialias:true,alpha:false,powerPreference:'high-performance'});
-    renderer.setPixelRatio(Math.min(devicePixelRatio,2));
-    renderer.setSize(innerWidth,innerHeight);
-    renderer.outputColorSpace=THREE.SRGBColorSpace;
-    stage.prepend(renderer.domElement);
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
 
-    const controls=new OrbitControls(camera,renderer.domElement);
-    controls.enableDamping=true;
-    controls.enablePan=false;
-    controls.enableZoom=true;
-    controls.minDistance=2;
-    controls.maxDistance=8;
-
-    const root=new THREE.Group();
-    scene.add(root);
-    const startAngle=Math.PI/3;
-    let baseRotation=startAngle;
-
-    new GLTFLoader().load('assets/wireframe-head.glb',gltf=>{
-      const model=gltf.scene;
-      model.traverse(node=>{
-        if(node.isMesh){
-          node.material=new THREE.MeshBasicMaterial({color:0x151515,wireframe:true});
-          node.material.side=THREE.DoubleSide;
-        }
-      });
-
-      const box=new THREE.Box3().setFromObject(model);
-      const center=box.getCenter(new THREE.Vector3());
-      const size=box.getSize(new THREE.Vector3());
-      model.position.sub(center);
-      root.add(model);
-
-      const largest=Math.max(size.x,size.y,size.z);
-      const distance=largest/(2*Math.tan(THREE.MathUtils.degToRad(camera.fov/2)))*1.12;
-      camera.position.set(0,0,distance);
-      controls.target.set(0,0,0);
-      controls.minDistance=distance*.72;
-      controls.maxDistance=distance*1.65;
-      controls.update();
-    },undefined,()=>document.getElementById('load-error').classList.add('visible'));
-
-    const reduced=matchMedia('(prefers-reduced-motion: reduce)');
-    function updateScrollRotation(){
-      if(reduced.matches)return;
-      const max=Math.max(document.documentElement.scrollHeight-innerHeight,1);
-      baseRotation=startAngle+(scrollY/max)*Math.PI*2;
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
     }
-    addEventListener('scroll',updateScrollRotation,{passive:true});
-    addEventListener('resize',()=>{
-      camera.aspect=innerWidth/innerHeight;
-      camera.updateProjectionMatrix();
-      renderer.setSize(innerWidth,innerHeight);
-    });
 
-    renderer.setAnimationLoop(()=>{
-      root.rotation.y=baseRotation;
-      controls.update();
-      renderer.render(scene,camera);
-    });
-    updateScrollRotation();
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
   </script>
 </body>
 </html>
