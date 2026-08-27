@@ -1,0 +1,107 @@
+---
+config:
+    theme: base
+---
+flowchart TB
+    GLOBAL["Certification"]
+
+    GLOBAL --> US["United States"]
+    GLOBAL --> EUROPE["Europe"]
+    GLOBAL --> UN["United Nations"]
+    
+
+    US --> US_FEDERAL["US Federal Requirements"]
+    US --> US_STATE["US State Requirements"]
+    
+
+    US_FEDERAL --> US_DOT["Department of Transportation"]
+    US_FEDERAL --> US_EPA["Environmental Protection Agency"]
+    US_DOT --> NHTSA["NHTSA"]
+    NHTSA --> CFR_571["49 CFR Part 571"]
+    US_STATE --> US_LOCAL["Individual State / Local Rules"]
+
+    EUROPE --> EU["European Union"]
+
+    EU --> EU_REGULATIONS["EU Regulations"]
+    EU --> EU_DIRECTIVES["EU Directives"]
+    EU --> EU_STANDARDS["Harmonized Standards"]
+    EU_REGULATIONS --> EU_2018_858["EU Regulation 2018/858"]
+    EU_2018_858 --> M1["M1 Category"]
+
+    subgraph EU_COLUMN["EU Requirements under Regulation 2018/858"]
+        direction TB
+        EU_LIST["EU Regulations"]
+        EU_LIST --> EU_2019_2144["Regulation (EU) 2019/2144 - General Safety Regulation"]
+        EU_2019_2144 --> EU_2024_1257["Regulation (EU) 2024/1257 - Euro 7"]
+        EU_2024_1257 --> EC_715_2007["Regulation (EC) 715/2007 - Euro 5/6 emissions"]
+        EC_715_2007 --> EU_2017_1151["Regulation (EU) 2017/1151 - Euro 6 implementing requirements"]
+        EU_2017_1151 --> EU_2021_646["Regulation (EU) 2021/646 - Emergency Lane Keeping System"]
+        EU_2021_646 --> EU_2021_1341["Regulation (EU) 2021/1341 - Driver Drowsiness and Attention Warning"]
+        EU_2021_1341 --> EU_2021_1958["Regulation (EU) 2021/1958 - Intelligent Speed Assistance"]
+        EU_2021_1958 --> EU_2022_545["Regulation (EU) 2022/545 - Event Data Recorder"]
+        EU_2022_545 --> EU_2023_2590["Regulation (EU) 2023/2590 - Advanced Driver Distraction Warning"]
+        EU_2023_2590 --> EU_2015_758["Regulation (EU) 2015/758 - eCall"]
+        EU_2015_758 --> EU_2021_535["Regulation (EU) 2021/535 - General vehicle construction requirements"]
+    end
+
+    subgraph UN_COLUMN["UN Requirements under Regulation 2018/858"]
+        direction TB
+        UN_LIST["UN Regulations"]
+        UN_LIST --> UN_R10["UN Regulation R10 - EMC"]
+        UN_R10 --> UN_R11["UN Regulation R11 - Door latches and hinges"]
+        UN_R11 --> UN_R12["UN Regulation R12 - Steering impact protection"]
+        UN_R12 --> UN_R13H["UN Regulation R13-H - Braking"]
+        UN_R13H --> UN_R14["UN Regulation R14 - Seat-belt anchorages"]
+        UN_R14 --> UN_R16["UN Regulation R16 - Seat belts"]
+        UN_R16 --> UN_R17["UN Regulation R17 - Seats and head restraints"]
+        UN_R17 --> UN_R21["UN Regulation R21 - Interior fittings"]
+        UN_R21 --> UN_R26["UN Regulation R26 - Exterior projections"]
+        UN_R26 --> UN_R28["UN Regulation R28 - Audible warning devices"]
+        UN_R28 --> UN_R34["UN Regulation R34 - Fuel/fire safety"]
+        UN_R34 --> UN_R39["UN Regulation R39 - Speedometer"]
+        UN_R39 --> UN_R43["UN Regulation R43 - Safety glazing"]
+        UN_R43 --> UN_R46["UN Regulation R46 - Mirrors / camera-monitor systems"]
+        UN_R46 --> UN_R48["UN Regulation R48 - Lighting installation"]
+        UN_R48 --> UN_R55["UN Regulation R55 - Mechanical couplings"]
+        UN_R55 --> UN_R79["UN Regulation R79 - Steering systems"]
+        UN_R79 --> UN_R94["UN Regulation R94 - Frontal collision"]
+        UN_R94 --> UN_R95["UN Regulation R95 - Side collision"]
+        UN_R95 --> UN_R100["UN Regulation R100 - Electric powertrain / HV battery safety"]
+        UN_R100 --> UN_R121["UN Regulation R121 - Controls, telltales and indicators"]
+        UN_R121 --> UN_R125["UN Regulation R125 - Forward field of vision"]
+        UN_R125 --> UN_R127["UN Regulation R127 - Pedestrian protection"]
+        UN_R127 --> UN_R129["UN Regulation R129 - Child restraint systems"]
+        UN_R129 --> UN_R135["UN Regulation R135 - Pole side impact"]
+        UN_R135 --> UN_R137["UN Regulation R137 - Frontal full-width impact"]
+        UN_R137 --> UN_R138["UN Regulation R138 - AVAS"]
+        UN_R138 --> UN_R139["UN Regulation R139 - Brake Assist"]
+        UN_R139 --> UN_R140["UN Regulation R140 - ESC"]
+        UN_R140 --> UN_R141["UN Regulation R141 - TPMS"]
+        UN_R141 --> UN_R142["UN Regulation R142 - Tire installation"]
+        UN_R142 --> UN_R145["UN Regulation R145 - ISOFIX / child-restraint anchorages"]
+        UN_R145 --> UN_R152["UN Regulation R152 - AEB"]
+        UN_R152 --> UN_R153["UN Regulation R153 - Rear impact"]
+        UN_R153 --> UN_R155["UN Regulation R155 - Cybersecurity"]
+        UN_R155 --> UN_R156["UN Regulation R156 - Software updates"]
+        UN_R156 --> UN_R158["UN Regulation R158 - Reversing detection"]
+        UN_R158 --> UN_R160["UN Regulation R160 - Event Data Recorder"]
+        UN_R160 --> UN_R171["UN Regulation R171 - Driver Control Assistance Systems"]
+    end
+
+    M1 --> EU_LIST
+    M1 --> UN_LIST
+    UN --> UN_LIST
+    click UN_R141 "un-r141-tpms.html" "Open TPMS details"
+
+    classDef root fill:#17324d,color:#ffffff,stroke:#17324d,stroke-width:2px;
+    classDef market fill:#d9edf7,color:#17324d,stroke:#4b91b9,stroke-width:1.5px;
+    classDef level fill:#f4ead5,color:#493a1f,stroke:#b58b42;
+    classDef authority fill:#e4f1e5,color:#214c2a,stroke:#5a9b63;
+    classDef regulation fill:#fff2cc,color:#000000,stroke:#d6b656,stroke-width:2px;
+
+    class GLOBAL root;
+    class US,EUROPE,EU,NON_EU,UN market;
+    class US_FEDERAL,US_STATE,US_CUSTOMER,EU_CUSTOMER,EU_REGULATIONS,EU_DIRECTIVES,EU_STANDARDS,EU_2018_858,M1 level;
+    class US_DOT,US_EPA,NHTSA,US_LOCAL,COUNTRY_RULES authority;
+    class CFR_571 regulation;
+    class EU_LIST,EU_2019_2144,EU_2024_1257,EC_715_2007,EU_2017_1151,EU_2021_646,EU_2021_1341,EU_2021_1958,EU_2022_545,EU_2023_2590,EU_2015_758,EU_2021_535,UN_LIST,UN_R10,UN_R11,UN_R12,UN_R13H,UN_R14,UN_R16,UN_R17,UN_R21,UN_R26,UN_R28,UN_R34,UN_R39,UN_R43,UN_R46,UN_R48,UN_R55,UN_R79,UN_R94,UN_R95,UN_R100,UN_R121,UN_R125,UN_R127,UN_R129,UN_R135,UN_R137,UN_R138,UN_R139,UN_R140,UN_R141,UN_R142,UN_R145,UN_R152,UN_R153,UN_R155,UN_R156,UN_R158,UN_R160,UN_R171 regulation;
