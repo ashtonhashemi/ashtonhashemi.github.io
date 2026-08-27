@@ -3,185 +3,142 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Homologation DVP | Ashton Hashemi</title>
-  <meta name="description" content="Homologation Design Verification Plan for M1 vehicle certification requirements across US, EU, and UN regulations.">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="top-style.css">
+  <title>Homologation DVP</title>
+  <meta name="description" content="A requirements-to-evidence view for turning vehicle certification obligations into a controlled Design Verification Plan.">
+  <script type="module">
+    import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    mermaid.initialize({ startOnLoad: true, theme: 'base', flowchart: { useMaxWidth: true, htmlLabels: true } });
+  </script>
   <style>
-    .homologation-page { background: #f7f7f4; }
-    .homologation-hero { width: min(1366px, calc(100% - 128px)); margin: 0 auto; padding: 170px 0 72px; border-bottom: 1px solid #989894; }
-    .eyebrow { margin: 0 0 24px; color: #d71920; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    .homologation-hero h1 { max-width: 920px; margin: 0; color: #111; font-size: clamp(58px, 8vw, 126px); line-height: .88; letter-spacing: -.055em; }
-    .hero-deck { max-width: 640px; margin: 42px 0 0; font-size: 21px; line-height: 1.35; color: #42423e; }
-    .homologation-content { width: min(1180px, calc(100% - 128px)); margin: 0 auto; padding: 76px 0 110px; }
-    .intro-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 80px; padding-bottom: 76px; border-bottom: 1px solid #c9c9c4; }
-    .section-kicker { margin: 0 0 14px; color: #777772; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
-    .intro-grid h2, .workflow h2 { margin: 0; color: #111; font-size: clamp(30px, 4vw, 52px); line-height: .98; letter-spacing: -.045em; }
-    .intro-copy { max-width: 620px; margin: 0; color: #42423e; font-size: 19px; line-height: 1.55; }
-    .hierarchy { padding: 76px 0; border-bottom: 1px solid #c9c9c4; }
-    .hierarchy-header { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 34px; }
-    .presentation-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; width: min(1180px, calc(100% - 128px)); margin: 0 auto; padding: 22px 0; border-bottom: 1px solid #c9c9c4; }
-    .presentation-nav a { color: #d71920; font-size: 13px; font-weight: 700; }
-    .presentation-nav a[aria-disabled="true"] { color: #999994; pointer-events: none; }
-    .page-count { color: #777772; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
-    .root-node { display: inline-block; margin-bottom: 30px; padding: 16px 22px; background: #17324d; color: #fff; font-size: 18px; font-weight: 700; }
-    .lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
-    .lane { min-width: 0; padding: 24px; background: #fff; border-top: 4px solid #d71920; }
-    .lane.eu { border-top-color: #4b91b9; }
-    .lane.un { border-top-color: #b58b42; }
-    .lane h3 { margin: 0 0 20px; font-size: 22px; letter-spacing: -.03em; }
-    .lane ul { list-style: none; margin: 0; padding: 0; }
-    .lane li { position: relative; padding: 12px 0 12px 18px; border-top: 1px solid #dededb; color: #42423e; font-size: 14px; line-height: 1.35; }
-    .lane li::before { content: ""; position: absolute; top: 19px; left: 0; width: 7px; height: 7px; background: #d71920; }
-    .lane.eu li::before { background: #4b91b9; }
-    .lane.un li::before { background: #b58b42; }
-    .lane li strong { display: block; color: #111; font-size: 15px; }
-    .workflow { padding-top: 76px; }
-    .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 34px; background: #c9c9c4; border: 1px solid #c9c9c4; }
-    .workflow-step { min-height: 180px; padding: 24px; background: #fff; }
-    .step-number { display: block; margin-bottom: 42px; color: #d71920; font-size: 13px; font-weight: 700; }
-    .workflow-step h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.05; letter-spacing: -.03em; }
-    .workflow-step p { margin: 0; color: #666660; font-size: 14px; line-height: 1.4; }
-    @media (max-width: 800px) {
-      .homologation-hero, .homologation-content { width: calc(100% - 40px); }
-      .homologation-hero { padding: 110px 0 52px; }
-      .hero-deck { margin-top: 30px; font-size: 18px; }
-      .intro-grid { grid-template-columns: 1fr; gap: 28px; padding-bottom: 54px; }
-      .hierarchy { padding: 54px 0; }
-      .hierarchy-header { display: block; }
-      .presentation-nav { width: calc(100% - 40px); }
-      .lanes, .workflow-grid { grid-template-columns: 1fr; }
-      .workflow { padding-top: 54px; }
-      .step-number { margin-bottom: 24px; }
+    :root { color-scheme: light; --ink: #111; --muted: #55554f; --line: #c9c9c4; --red: #d71920; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; min-height: 100%; background: #f7f7f4; color: var(--ink); }
+    body { font-family: Georgia, 'Times New Roman', serif; }
+    main { width: min(1440px, calc(100% - 80px)); margin: 0 auto; padding: 12vh 0 10vh; }
+    .eyebrow { margin: 0 0 24px; color: var(--red); font: 700 11px/1.2 Arial, sans-serif; letter-spacing: .16em; text-transform: uppercase; }
+    h1 { max-width: 1000px; margin: 0; font-size: clamp(58px, 9vw, 142px); line-height: .86; letter-spacing: -.055em; font-weight: 700; }
+    .description { max-width: 680px; margin: 42px 0 0; color: var(--muted); font-size: clamp(19px, 2vw, 26px); line-height: 1.35; }
+    .chart-wrap { margin-top: 86px; padding: 38px 24px; background: #fff; border-top: 4px solid var(--red); overflow-x: auto; }
+    .mermaid { min-width: 920px; text-align: center; }
+    @media (max-width: 700px) {
+      main { width: calc(100% - 32px); padding-top: 8vh; }
+      .description { margin-top: 28px; font-size: 19px; }
+      .chart-wrap { margin-top: 54px; padding: 24px 12px; }
     }
   </style>
 </head>
-<body class="homologation-page">
-  <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
-  <header class="topbar">
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <a class="site-mark" href="index.html" aria-label="Ashton Hashemi home">AH</a>
-    <a class="logo" href="index.html">Portfolio</a>
-  </header>
+<body>
+  <main>
+    <p class="eyebrow">Vehicle certification / M1</p>
+    <h1>Homologation DVP</h1>
+    <p class="description">A requirements-to-evidence view for turning vehicle certification obligations into a controlled Design Verification Plan.</p>
+    <section class="chart-wrap" aria-label="Homologation certification hierarchy">
+      <div class="mermaid">
+---
+config:
+  theme: base
+---
+flowchart TB
+    GLOBAL["Certification"]
 
-  <div id="site-menu" class="site-menu" aria-hidden="true">
-    <nav class="menu-inner" aria-label="Main navigation">
-      <div class="menu-primary">
-        <a href="index.html#work"><span>01</span>Work</a>
-        <a href="index.html#experience"><span>02</span>Experience</a>
-        <a href="index.html#skills"><span>03</span>Skills</a>
-        <a href="index.html#education"><span>04</span>Education</a>
-      </div>
-      <div class="menu-secondary">
-        <p>Automotive Systems Engineer</p>
-        <a href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="https://github.com/ashtonhashemi" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
-        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
-      </div>
-    </nav>
-  </div>
+    GLOBAL --> US["United States"]
+    GLOBAL --> EUROPE["Europe"]
+    GLOBAL --> UN["United Nations"]
 
-  <main id="top">
-    <section class="homologation-hero">
-      <p class="eyebrow">Certification architecture / M1 vehicle</p>
-      <h1>Homologation DVP</h1>
-      <p class="hero-deck">A requirements-to-evidence view for turning vehicle certification obligations into a controlled Design Verification Plan.</p>
+    US --> US_FEDERAL["US Federal Requirements"]
+    US --> US_STATE["US State Requirements"]
+
+    US_FEDERAL --> US_DOT["Department of Transportation"]
+    US_FEDERAL --> US_EPA["Environmental Protection Agency"]
+    US_DOT --> NHTSA["NHTSA"]
+    NHTSA --> CFR_571["49 CFR Part 571"]
+    US_STATE --> US_LOCAL["Individual State / Local Rules"]
+
+    EUROPE --> EU["European Union"]
+
+    EU --> EU_REGULATIONS["EU Regulations"]
+    EU --> EU_DIRECTIVES["EU Directives"]
+    EU --> EU_STANDARDS["Harmonized Standards"]
+    EU_REGULATIONS --> EU_2018_858["EU Regulation 2018/858"]
+    EU_2018_858 --> M1["M1 Category"]
+
+    subgraph EU_COLUMN["EU Requirements under Regulation 2018/858"]
+        direction TB
+        EU_LIST["EU Regulations"]
+        EU_LIST --> EU_2019_2144["Regulation (EU) 2019/2144 - General Safety Regulation"]
+        EU_2019_2144 --> EU_2024_1257["Regulation (EU) 2024/1257 - Euro 7"]
+        EU_2024_1257 --> EC_715_2007["Regulation (EC) 715/2007 - Euro 5/6 emissions"]
+        EC_715_2007 --> EU_2017_1151["Regulation (EU) 2017/1151 - Euro 6 implementing requirements"]
+        EU_2017_1151 --> EU_2021_646["Regulation (EU) 2021/646 - Emergency Lane Keeping System"]
+        EU_2021_646 --> EU_2021_1341["Regulation (EU) 2021/1341 - Driver Drowsiness and Attention Warning"]
+        EU_2021_1341 --> EU_2021_1958["Regulation (EU) 2021/1958 - Intelligent Speed Assistance"]
+        EU_2021_1958 --> EU_2022_545["Regulation (EU) 2022/545 - Event Data Recorder"]
+        EU_2022_545 --> EU_2023_2590["Regulation (EU) 2023/2590 - Advanced Driver Distraction Warning"]
+        EU_2023_2590 --> EU_2015_758["Regulation (EU) 2015/758 - eCall"]
+        EU_2015_758 --> EU_2021_535["Regulation (EU) 2021/535 - General vehicle construction requirements"]
+    end
+
+    subgraph UN_COLUMN["UN Requirements under Regulation 2018/858"]
+        direction TB
+        UN_LIST["UN Regulations"]
+        UN_LIST --> UN_R10["UN Regulation R10 - EMC"]
+        UN_R10 --> UN_R11["UN Regulation R11 - Door latches and hinges"]
+        UN_R11 --> UN_R12["UN Regulation R12 - Steering impact protection"]
+        UN_R12 --> UN_R13H["UN Regulation R13-H - Braking"]
+        UN_R13H --> UN_R14["UN Regulation R14 - Seat-belt anchorages"]
+        UN_R14 --> UN_R16["UN Regulation R16 - Seat belts"]
+        UN_R16 --> UN_R17["UN Regulation R17 - Seats and head restraints"]
+        UN_R17 --> UN_R21["UN Regulation R21 - Interior fittings"]
+        UN_R21 --> UN_R26["UN Regulation R26 - Exterior projections"]
+        UN_R26 --> UN_R28["UN Regulation R28 - Audible warning devices"]
+        UN_R28 --> UN_R34["UN Regulation R34 - Fuel/fire safety"]
+        UN_R34 --> UN_R39["UN Regulation R39 - Speedometer"]
+        UN_R39 --> UN_R43["UN Regulation R43 - Safety glazing"]
+        UN_R43 --> UN_R46["UN Regulation R46 - Mirrors / camera-monitor systems"]
+        UN_R46 --> UN_R48["UN Regulation R48 - Lighting installation"]
+        UN_R48 --> UN_R55["UN Regulation R55 - Mechanical couplings"]
+        UN_R55 --> UN_R79["UN Regulation R79 - Steering systems"]
+        UN_R79 --> UN_R94["UN Regulation R94 - Frontal collision"]
+        UN_R94 --> UN_R95["UN Regulation R95 - Side collision"]
+        UN_R95 --> UN_R100["UN Regulation R100 - Electric powertrain / HV battery safety"]
+        UN_R100 --> UN_R121["UN Regulation R121 - Controls, telltales and indicators"]
+        UN_R121 --> UN_R125["UN Regulation R125 - Forward field of vision"]
+        UN_R125 --> UN_R127["UN Regulation R127 - Pedestrian protection"]
+        UN_R127 --> UN_R129["UN Regulation R129 - Child restraint systems"]
+        UN_R129 --> UN_R135["UN Regulation R135 - Pole side impact"]
+        UN_R135 --> UN_R137["UN Regulation R137 - Frontal full-width impact"]
+        UN_R137 --> UN_R138["UN Regulation R138 - AVAS"]
+        UN_R138 --> UN_R139["UN Regulation R139 - Brake Assist"]
+        UN_R139 --> UN_R140["UN Regulation R140 - ESC"]
+        UN_R140 --> UN_R141["UN Regulation R141 - TPMS"]
+        UN_R141 --> UN_R142["UN Regulation R142 - Tire installation"]
+        UN_R142 --> UN_R145["UN Regulation R145 - ISOFIX / child-restraint anchorages"]
+        UN_R145 --> UN_R152["UN Regulation R152 - AEB"]
+        UN_R152 --> UN_R153["UN Regulation R153 - Rear impact"]
+        UN_R153 --> UN_R155["UN Regulation R155 - Cybersecurity"]
+        UN_R155 --> UN_R156["UN Regulation R156 - Software updates"]
+        UN_R156 --> UN_R158["UN Regulation R158 - Reversing detection"]
+        UN_R158 --> UN_R160["UN Regulation R160 - Event Data Recorder"]
+        UN_R160 --> UN_R171["UN Regulation R171 - Driver Control Assistance Systems"]
+    end
+
+    M1 --> EU_LIST
+    M1 --> UN_LIST
+
+    classDef root fill:#17324d,color:#ffffff,stroke:#17324d,stroke-width:2px;
+    classDef market fill:#d9edf7,color:#17324d,stroke:#4b91b9,stroke-width:1.5px;
+    classDef level fill:#f4ead5,color:#493a1f,stroke:#b58b42;
+    classDef authority fill:#e4f1e5,color:#214c2a,stroke:#5a9b63;
+    classDef regulation fill:#fff2cc,color:#000000,stroke:#d6b656,stroke-width:2px;
+
+    class GLOBAL root;
+    class US,EUROPE,EU,NON_EU,UN market;
+    class US_FEDERAL,US_STATE,US_CUSTOMER,EU_CUSTOMER,EU_REGULATIONS,EU_DIRECTIVES,EU_STANDARDS,EU_2018_858,M1 level;
+    class US_DOT,US_EPA,NHTSA,US_LOCAL,COUNTRY_RULES authority;
+    class CFR_571 regulation;
+    class EU_LIST,EU_2019_2144,EU_2024_1257,EC_715_2007,EU_2017_1151,EU_2021_646,EU_2021_1341,EU_2021_1958,EU_2022_545,EU_2023_2590,EU_2015_758,EU_2021_535,UN_LIST,UN_R10,UN_R11,UN_R12,UN_R13H,UN_R14,UN_R16,UN_R17,UN_R21,UN_R26,UN_R28,UN_R34,UN_R39,UN_R43,UN_R46,UN_R48,UN_R55,UN_R79,UN_R94,UN_R95,UN_R100,UN_R121,UN_R125,UN_R127,UN_R129,UN_R135,UN_R137,UN_R138,UN_R139,UN_R140,UN_R141,UN_R142,UN_R145,UN_R152,UN_R153,UN_R155,UN_R156,UN_R158,UN_R160,UN_R171 regulation;
+      </div>
     </section>
-
-    <nav class="presentation-nav" aria-label="Presentation navigation">
-      <a href="index.html" aria-label="Previous page">← Portfolio</a>
-      <span class="page-count">01 / 03</span>
-      <a href="homologation-dvp-hierarchy.html" aria-label="Next page">Next →</a>
-    </nav>
-
-    <div class="homologation-content">
-      <section class="intro-grid">
-        <div>
-          <p class="section-kicker">The premise</p>
-          <h2>One vehicle. Three regulatory lanes.</h2>
-        </div>
-        <p class="intro-copy">Homologation work becomes manageable when every requirement has a clear owner, a verification method, and an evidence trail. This draft maps the M1 certification structure across United States, European Union, and UN regulatory sources before the detailed test matrix is built.</p>
-      </section>
-
-      <section class="hierarchy" aria-labelledby="hierarchy-title">
-        <div class="hierarchy-header">
-          <div>
-            <p class="section-kicker">Requirement hierarchy</p>
-            <h2 id="hierarchy-title">Certification to test evidence</h2>
-          </div>
-        </div>
-        <div class="root-node">Certification</div>
-        <div class="lanes">
-          <article class="lane">
-            <h3>United States</h3>
-            <ul>
-              <li><strong>US Federal Requirements</strong>Department of Transportation</li>
-              <li><strong>NHTSA</strong>National Highway Traffic Safety Administration</li>
-              <li><strong>49 CFR Part 571</strong>Federal Motor Vehicle Safety Standards</li>
-            </ul>
-          </article>
-          <article class="lane eu">
-            <h3>Europe</h3>
-            <ul>
-              <li><strong>European Union</strong>EU regulatory framework</li>
-              <li><strong>Regulation (EU) 2018/858</strong>Whole vehicle type approval</li>
-              <li><strong>M1 Category</strong>Passenger vehicle requirements</li>
-            </ul>
-          </article>
-          <article class="lane un">
-            <h3>UN Regulations</h3>
-            <ul>
-              <li><strong>UN Regulation R10</strong>Electromagnetic compatibility</li>
-              <li><strong>UN Regulation R100</strong>Electric powertrain and HV battery safety</li>
-              <li><strong>UN Regulation R155</strong>Cybersecurity management</li>
-              <li><strong>UN Regulation R156</strong>Software update management</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section class="workflow" aria-labelledby="workflow-title">
-        <p class="section-kicker">DVP logic</p>
-        <h2 id="workflow-title">From obligation to approval</h2>
-        <div class="workflow-grid">
-          <article class="workflow-step"><span class="step-number">01</span><h3>Interpret</h3><p>Translate each regulation into a vehicle-level requirement and applicability decision.</p></article>
-          <article class="workflow-step"><span class="step-number">02</span><h3>Allocate</h3><p>Assign requirements to system, component, software, and vehicle verification owners.</p></article>
-          <article class="workflow-step"><span class="step-number">03</span><h3>Verify</h3><p>Define test conditions, instrumentation, pass criteria, and required compliance evidence.</p></article>
-          <article class="workflow-step"><span class="step-number">04</span><h3>Release</h3><p>Close findings, control revisions, and assemble the approval-ready evidence package.</p></article>
-        </div>
-      </section>
-    </div>
   </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div><h3>Get to know me.</h3><p>Explore my engineering work or contact me about automotive systems opportunities.</p></div>
-      <div class="footer-links">
-        <a href="index.html">Portfolio home</a>
-        <a href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
-      </div>
-    </div>
-    <div class="copyright">© 2026 Ashton Hashemi</div>
-  </footer>
-
-  <script>
-    const menuButton = document.querySelector('.menu-toggle');
-    const siteMenu = document.getElementById('site-menu');
-    const menuLinks = siteMenu.querySelectorAll('a');
-    function setMenu(open) {
-      menuButton.classList.toggle('is-open', open);
-      siteMenu.classList.toggle('is-open', open);
-      document.body.classList.toggle('menu-open', open);
-      menuButton.setAttribute('aria-expanded', String(open));
-      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      siteMenu.setAttribute('aria-hidden', String(!open));
-    }
-    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
-    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
-  </script>
 </body>
 </html>
