@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Homologation DVP | Ashton Hashemi</title>
+  <meta name="description" content="Homologation Design Verification Plan for M1 vehicle certification requirements across US, EU, and UN regulations.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="top-style.css">
+  <style>
+    .homologation-page { background: #f7f7f4; }
+    .homologation-hero { width: min(1366px, calc(100% - 128px)); margin: 0 auto; padding: 170px 0 72px; border-bottom: 1px solid #989894; }
+    .eyebrow { margin: 0 0 24px; color: #d71920; font-size: 12px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .homologation-hero h1 { max-width: 920px; margin: 0; color: #111; font-size: clamp(58px, 8vw, 126px); line-height: .88; letter-spacing: -.055em; }
+    .hero-deck { max-width: 640px; margin: 42px 0 0; font-size: 21px; line-height: 1.35; color: #42423e; }
+    .homologation-content { width: min(1180px, calc(100% - 128px)); margin: 0 auto; padding: 76px 0 110px; }
+    .intro-grid { display: grid; grid-template-columns: 1fr 1.7fr; gap: 80px; padding-bottom: 76px; border-bottom: 1px solid #c9c9c4; }
+    .section-kicker { margin: 0 0 14px; color: #777772; font-size: 11px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase; }
+    .intro-grid h2, .workflow h2 { margin: 0; color: #111; font-size: clamp(30px, 4vw, 52px); line-height: .98; letter-spacing: -.045em; }
+    .intro-copy { max-width: 620px; margin: 0; color: #42423e; font-size: 19px; line-height: 1.55; }
+    .hierarchy { padding: 76px 0; border-bottom: 1px solid #c9c9c4; }
+    .hierarchy-header { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 34px; }
+    .source-link { color: #d71920; font-size: 13px; font-weight: 700; border-bottom: 1px solid #d71920; }
+    .root-node { display: inline-block; margin-bottom: 30px; padding: 16px 22px; background: #17324d; color: #fff; font-size: 18px; font-weight: 700; }
+    .lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .lane { min-width: 0; padding: 24px; background: #fff; border-top: 4px solid #d71920; }
+    .lane.eu { border-top-color: #4b91b9; }
+    .lane.un { border-top-color: #b58b42; }
+    .lane h3 { margin: 0 0 20px; font-size: 22px; letter-spacing: -.03em; }
+    .lane ul { list-style: none; margin: 0; padding: 0; }
+    .lane li { position: relative; padding: 12px 0 12px 18px; border-top: 1px solid #dededb; color: #42423e; font-size: 14px; line-height: 1.35; }
+    .lane li::before { content: ""; position: absolute; top: 19px; left: 0; width: 7px; height: 7px; background: #d71920; }
+    .lane.eu li::before { background: #4b91b9; }
+    .lane.un li::before { background: #b58b42; }
+    .lane li strong { display: block; color: #111; font-size: 15px; }
+    .workflow { padding-top: 76px; }
+    .workflow-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; margin-top: 34px; background: #c9c9c4; border: 1px solid #c9c9c4; }
+    .workflow-step { min-height: 180px; padding: 24px; background: #fff; }
+    .step-number { display: block; margin-bottom: 42px; color: #d71920; font-size: 13px; font-weight: 700; }
+    .workflow-step h3 { margin: 0 0 10px; font-size: 20px; line-height: 1.05; letter-spacing: -.03em; }
+    .workflow-step p { margin: 0; color: #666660; font-size: 14px; line-height: 1.4; }
+    @media (max-width: 800px) {
+      .homologation-hero, .homologation-content { width: calc(100% - 40px); }
+      .homologation-hero { padding: 110px 0 52px; }
+      .hero-deck { margin-top: 30px; font-size: 18px; }
+      .intro-grid { grid-template-columns: 1fr; gap: 28px; padding-bottom: 54px; }
+      .hierarchy { padding: 54px 0; }
+      .hierarchy-header { display: block; }
+      .source-link { display: inline-block; margin-top: 20px; }
+      .lanes, .workflow-grid { grid-template-columns: 1fr; }
+      .workflow { padding-top: 54px; }
+      .step-number { margin-bottom: 24px; }
+    }
+  </style>
+</head>
+<body class="homologation-page">
+  <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
+  <header class="topbar">
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+    <a class="site-mark" href="index.html" aria-label="Ashton Hashemi home">AH</a>
+    <a class="logo" href="index.html">Portfolio</a>
+  </header>
+
+  <div id="site-menu" class="site-menu" aria-hidden="true">
+    <nav class="menu-inner" aria-label="Main navigation">
+      <div class="menu-primary">
+        <a href="index.html#work"><span>01</span>Work</a>
+        <a href="index.html#experience"><span>02</span>Experience</a>
+        <a href="index.html#skills"><span>03</span>Skills</a>
+        <a href="index.html#education"><span>04</span>Education</a>
+      </div>
+      <div class="menu-secondary">
+        <p>Automotive Systems Engineer</p>
+        <a href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="https://github.com/ashtonhashemi" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </nav>
+  </div>
+
+  <main id="top">
+    <section class="homologation-hero">
+      <p class="eyebrow">Certification architecture / M1 vehicle</p>
+      <h1>Homologation DVP</h1>
+      <p class="hero-deck">A requirements-to-evidence view for turning vehicle certification obligations into a controlled Design Verification Plan.</p>
+    </section>
+
+    <div class="homologation-content">
+      <section class="intro-grid">
+        <div>
+          <p class="section-kicker">The premise</p>
+          <h2>One vehicle. Three regulatory lanes.</h2>
+        </div>
+        <p class="intro-copy">Homologation work becomes manageable when every requirement has a clear owner, a verification method, and an evidence trail. This draft maps the M1 certification structure across United States, European Union, and UN regulatory sources before the detailed test matrix is built.</p>
+      </section>
+
+      <section class="hierarchy" aria-labelledby="hierarchy-title">
+        <div class="hierarchy-header">
+          <div>
+            <p class="section-kicker">Requirement hierarchy</p>
+            <h2 id="hierarchy-title">Certification to test evidence</h2>
+          </div>
+          <a class="source-link" href="../../DVP%26R/market_hierarchy.mmd">Open Mermaid source ↗</a>
+        </div>
+        <div class="root-node">Certification</div>
+        <div class="lanes">
+          <article class="lane">
+            <h3>United States</h3>
+            <ul>
+              <li><strong>US Federal Requirements</strong>Department of Transportation</li>
+              <li><strong>NHTSA</strong>National Highway Traffic Safety Administration</li>
+              <li><strong>49 CFR Part 571</strong>Federal Motor Vehicle Safety Standards</li>
+            </ul>
+          </article>
+          <article class="lane eu">
+            <h3>Europe</h3>
+            <ul>
+              <li><strong>European Union</strong>EU regulatory framework</li>
+              <li><strong>Regulation (EU) 2018/858</strong>Whole vehicle type approval</li>
+              <li><strong>M1 Category</strong>Passenger vehicle requirements</li>
+            </ul>
+          </article>
+          <article class="lane un">
+            <h3>UN Regulations</h3>
+            <ul>
+              <li><strong>UN Regulation R10</strong>Electromagnetic compatibility</li>
+              <li><strong>UN Regulation R100</strong>Electric powertrain and HV battery safety</li>
+              <li><strong>UN Regulation R155</strong>Cybersecurity management</li>
+              <li><strong>UN Regulation R156</strong>Software update management</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="workflow" aria-labelledby="workflow-title">
+        <p class="section-kicker">DVP logic</p>
+        <h2 id="workflow-title">From obligation to approval</h2>
+        <div class="workflow-grid">
+          <article class="workflow-step"><span class="step-number">01</span><h3>Interpret</h3><p>Translate each regulation into a vehicle-level requirement and applicability decision.</p></article>
+          <article class="workflow-step"><span class="step-number">02</span><h3>Allocate</h3><p>Assign requirements to system, component, software, and vehicle verification owners.</p></article>
+          <article class="workflow-step"><span class="step-number">03</span><h3>Verify</h3><p>Define test conditions, instrumentation, pass criteria, and required compliance evidence.</p></article>
+          <article class="workflow-step"><span class="step-number">04</span><h3>Release</h3><p>Close findings, control revisions, and assemble the approval-ready evidence package.</p></article>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <div><h3>Get to know me.</h3><p>Explore my engineering work or contact me about automotive systems opportunities.</p></div>
+      <div class="footer-links">
+        <a href="index.html">Portfolio home</a>
+        <a href="https://www.linkedin.com/in/ashton-h-45b10352/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
+      </div>
+    </div>
+    <div class="copyright">© 2026 Ashton Hashemi</div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-toggle');
+    const siteMenu = document.getElementById('site-menu');
+    const menuLinks = siteMenu.querySelectorAll('a');
+    function setMenu(open) {
+      menuButton.classList.toggle('is-open', open);
+      siteMenu.classList.toggle('is-open', open);
+      document.body.classList.toggle('menu-open', open);
+      menuButton.setAttribute('aria-expanded', String(open));
+      menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      siteMenu.setAttribute('aria-hidden', String(!open));
+    }
+    menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
+    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+  </script>
+</body>
+</html>
