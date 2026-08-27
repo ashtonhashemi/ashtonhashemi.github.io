@@ -20,7 +20,10 @@
     .intro-copy { max-width: 620px; margin: 0; color: #42423e; font-size: 19px; line-height: 1.55; }
     .hierarchy { padding: 76px 0; border-bottom: 1px solid #c9c9c4; }
     .hierarchy-header { display: flex; justify-content: space-between; align-items: end; gap: 30px; margin-bottom: 34px; }
-    .source-link { color: #d71920; font-size: 13px; font-weight: 700; border-bottom: 1px solid #d71920; }
+    .presentation-nav { display: flex; justify-content: space-between; align-items: center; gap: 20px; width: min(1180px, calc(100% - 128px)); margin: 0 auto; padding: 22px 0; border-bottom: 1px solid #c9c9c4; }
+    .presentation-nav a { color: #d71920; font-size: 13px; font-weight: 700; }
+    .presentation-nav a[aria-disabled="true"] { color: #999994; pointer-events: none; }
+    .page-count { color: #777772; font-size: 11px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
     .root-node { display: inline-block; margin-bottom: 30px; padding: 16px 22px; background: #17324d; color: #fff; font-size: 18px; font-weight: 700; }
     .lanes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
     .lane { min-width: 0; padding: 24px; background: #fff; border-top: 4px solid #d71920; }
@@ -46,7 +49,7 @@
       .intro-grid { grid-template-columns: 1fr; gap: 28px; padding-bottom: 54px; }
       .hierarchy { padding: 54px 0; }
       .hierarchy-header { display: block; }
-      .source-link { display: inline-block; margin-top: 20px; }
+      .presentation-nav { width: calc(100% - 40px); }
       .lanes, .workflow-grid { grid-template-columns: 1fr; }
       .workflow { padding-top: 54px; }
       .step-number { margin-bottom: 24px; }
@@ -87,6 +90,12 @@
       <p class="hero-deck">A requirements-to-evidence view for turning vehicle certification obligations into a controlled Design Verification Plan.</p>
     </section>
 
+    <nav class="presentation-nav" aria-label="Presentation navigation">
+      <a href="index.html" aria-label="Previous page">← Portfolio</a>
+      <span class="page-count">01 / 03</span>
+      <a href="homologation-dvp-hierarchy.html" aria-label="Next page">Next →</a>
+    </nav>
+
     <div class="homologation-content">
       <section class="intro-grid">
         <div>
@@ -102,7 +111,6 @@
             <p class="section-kicker">Requirement hierarchy</p>
             <h2 id="hierarchy-title">Certification to test evidence</h2>
           </div>
-          <a class="source-link" href="../../DVP%26R/market_hierarchy.mmd">Open Mermaid source ↗</a>
         </div>
         <div class="root-node">Certification</div>
         <div class="lanes">
