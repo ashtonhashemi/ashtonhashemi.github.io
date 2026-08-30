@@ -78,9 +78,8 @@
     }
 
     .viewer {
-      position: relative;
       min-height: 0;
-      overflow: scroll;
+      overflow: auto;
       background: #fff;
     }
 
@@ -108,29 +107,6 @@
     .viewer::-webkit-scrollbar-corner {
       background: #dce5ec;
     }
-
-    .vertical-scrollbar {
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 16px;
-      width: 16px;
-      background: #dce5ec;
-      z-index: 2;
-      touch-action: none;
-    }
-
-    .vertical-thumb {
-      width: 16px;
-      height: 84px;
-      min-height: 42px;
-      border: 3px solid #dce5ec;
-      background: #647b8d;
-      cursor: grab;
-      transform: translateY(0);
-    }
-
-    .vertical-thumb:active { cursor: grabbing; }
 
     #viewerContent {
       width: max-content;
@@ -167,9 +143,6 @@
       <div id="viewerContent">
         <iframe id="tableImage" title="Current table" scrolling="no"></iframe>
       </div>
-      <div class="vertical-scrollbar" id="verticalScrollbar" aria-label="Vertical table scrollbar">
-        <div class="vertical-thumb" id="verticalThumb"></div>
-      </div>
     </div>
   </main>
 
@@ -185,33 +158,6 @@
     const image = document.querySelector("#tableImage");
     const viewer = document.querySelector("#viewer");
     const tableOfContents = document.querySelector("#tableOfContents");
-    const verticalScrollbar = document.querySelector("#verticalScrollbar");
-    const verticalThumb = document.querySelector("#verticalThumb");
-    let verticalDragStartY = 0;
-    let verticalDragStartScrollTop = 0;
-
-    function updateVerticalScrollbar() {
-      const trackHeight = verticalScrollbar.clientHeight;
-      const contentHeight = viewer.scrollHeight;
-      const viewportHeight = viewer.clientHeight;
-      const maxScroll = Math.max(0, contentHeight - viewportHeight);
-      const thumbHeight = maxScroll === 0
-        ? trackHeight
-        : Math.max(42, trackHeight * viewportHeight / contentHeight);
-      const maxThumbTravel = Math.max(0, trackHeight - thumbHeight);
-      const thumbPosition = maxScroll === 0 ? 0 : maxThumbTravel * viewer.scrollTop / maxScroll;
-      verticalThumb.style.height = `${thumbHeight}px`;
-      verticalThumb.style.transform = `translateY(${thumbPosition}px)`;
-    }
-
-    function scrollVerticalFromPointer(clientY) {
-      const trackHeight = verticalScrollbar.clientHeight;
-      const thumbHeight = verticalThumb.offsetHeight;
-      const maxThumbTravel = Math.max(0, trackHeight - thumbHeight);
-      const maxScroll = Math.max(0, viewer.scrollHeight - viewer.clientHeight);
-      if (maxThumbTravel === 0) return;
-      viewer.scrollTop = verticalDragStartScrollTop + (clientY - verticalDragStartY) * maxScroll / maxThumbTravel;
-    }
     function sizeTable(table) {
       image.style.width = `${table.width}px`;
       image.style.height = `${table.height}px`;
@@ -238,37 +184,11 @@
       }
       location.hash = currentIndex;
       viewer.scrollTo({ top: 0, left: 0 });
-      requestAnimationFrame(() => requestAnimationFrame(updateVerticalScrollbar));
     }
 
     window.addEventListener("hashchange", () => {
       const index = indexFromHash();
       if (index !== currentIndex) showTable(index);
-    });
-
-    image.addEventListener("load", () => requestAnimationFrame(updateVerticalScrollbar));
-    viewer.addEventListener("scroll", updateVerticalScrollbar);
-    window.addEventListener("resize", updateVerticalScrollbar);
-
-    verticalThumb.addEventListener("pointerdown", event => {
-      verticalDragStartY = event.clientY;
-      verticalDragStartScrollTop = viewer.scrollTop;
-      verticalThumb.setPointerCapture(event.pointerId);
-    });
-
-    verticalThumb.addEventListener("pointermove", event => {
-      if (verticalThumb.hasPointerCapture(event.pointerId)) scrollVerticalFromPointer(event.clientY);
-    });
-
-    verticalThumb.addEventListener("pointerup", event => {
-      if (verticalThumb.hasPointerCapture(event.pointerId)) verticalThumb.releasePointerCapture(event.pointerId);
-    });
-
-    verticalScrollbar.addEventListener("pointerdown", event => {
-      if (event.target === verticalThumb) return;
-      const rect = verticalScrollbar.getBoundingClientRect();
-      const ratio = (event.clientY - rect.top) / rect.height;
-      viewer.scrollTop = ratio * Math.max(0, viewer.scrollHeight - viewer.clientHeight);
     });
 
     for (const [index, table] of tables.entries()) {
