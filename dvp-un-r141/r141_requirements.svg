@@ -1,0 +1,386 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1608" height="903" viewBox="0 0 1608 903">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:24px;font-weight:700;fill:#17324d}.head{font-size:15px;font-weight:700;fill:#ffffff}.cell{font-size:18px;fill:#202020}.test-link,.source-link{fill:#075a9c;text-decoration:underline;cursor:pointer}</style>
+<text class="title" x="804.0" y="75.2" text-anchor="middle">
+<tspan x="804.0" dy="0">Regulatory Traceability</tspan>
+</text>
+<rect x="36" y="100" width="146" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="48" y="129.25">Verification ID</text>
+<rect x="182" y="100" width="140" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="194" y="129.25">Regulation</text>
+<rect x="322" y="100" width="140" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="334" y="129.25">Section</text>
+<rect x="462" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="474" y="129.25">Requirement Summary</text>
+<rect x="782" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="794" y="129.25">Referenced Regulation / Procedure</text>
+<rect x="1102" y="100" width="340" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1114" y="129.25">Applicability</text>
+<rect x="1442" y="100" width="130" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1454" y="129.25">Test ID</text>
+<rect x="36" y="148" width="146" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="186.4">
+<tspan x="48" dy="0">TPMS-V01</tspan>
+</text>
+<rect x="182" y="148" width="140" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="186.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="148" width="140" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-07" target="_blank">
+<text class="cell test-link" x="334" y="186.4">
+<tspan x="334" dy="0">5.1.2</tspan>
+</text>
+</a>
+<rect x="462" y="148" width="320" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="186.4">
+<tspan x="474" dy="0">EMC immunity</tspan>
+</text>
+<rect x="782" y="148" width="320" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="794" y="186.4">
+<tspan x="794" dy="0">UN R10-03 / R10-06</tspan>
+</text>
+<rect x="1102" y="148" width="340" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="186.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="148" width="130" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="175.9">
+<tspan x="1454" dy="0">TPMS-T01,</tspan>
+<tspan x="1454" dy="21">TPMS-T02</tspan>
+</text>
+</a>
+<rect x="36" y="214" width="146" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="245.4">
+<tspan x="48" dy="0">TPMS-V02</tspan>
+</text>
+<rect x="182" y="214" width="140" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="245.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="214" width="140" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-07" target="_blank">
+<text class="cell test-link" x="334" y="245.4">
+<tspan x="334" dy="0">5.1.3</tspan>
+</text>
+</a>
+<rect x="462" y="214" width="320" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="245.4">
+<tspan x="474" dy="0">Operating speed range</tspan>
+</text>
+<rect x="782" y="214" width="320" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="794" y="245.4">
+<tspan x="794" dy="0">-</tspan>
+</text>
+<rect x="1102" y="214" width="340" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="245.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="214" width="130" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1454" y="245.4">
+<tspan x="1454" dy="0">-</tspan>
+</text>
+<rect x="36" y="266" width="146" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="304.4">
+<tspan x="48" dy="0">TPMS-V03</tspan>
+</text>
+<rect x="182" y="266" width="140" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="304.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="266" width="140" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-07" target="_blank">
+<text class="cell test-link" x="334" y="304.4">
+<tspan x="334" dy="0">5.1.4</tspan>
+</text>
+</a>
+<rect x="462" y="266" width="320" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="293.9">
+<tspan x="474" dy="0">Puncture, diffusion and</tspan>
+<tspan x="474" dy="21">malfunction tests</tspan>
+</text>
+<rect x="782" y="266" width="320" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-16" target="_blank">
+<text class="cell test-link" x="794" y="304.4">
+<tspan x="794" dy="0">Annex 3</tspan>
+</text>
+</a>
+<rect x="1102" y="266" width="340" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="304.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="266" width="130" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1454" y="304.4">
+<tspan x="1454" dy="0">-</tspan>
+</text>
+<rect x="36" y="332" width="146" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="370.4">
+<tspan x="48" dy="0">TPMS-V04</tspan>
+</text>
+<rect x="182" y="332" width="140" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="370.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="332" width="140" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-07" target="_blank">
+<text class="cell test-link" x="334" y="370.4">
+<tspan x="334" dy="0">5.1.5</tspan>
+</text>
+</a>
+<rect x="462" y="332" width="320" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="370.4">
+<tspan x="474" dy="0">Twin-wheel test configuration</tspan>
+</text>
+<rect x="782" y="332" width="320" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-16" target="_blank">
+<text class="cell test-link" x="794" y="370.4">
+<tspan x="794" dy="0">Annex 3</tspan>
+</text>
+</a>
+<rect x="1102" y="332" width="340" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="359.9">
+<tspan x="1114" dy="0">If a vehicle variant is fitted</tspan>
+<tspan x="1114" dy="21">with twin wheels</tspan>
+</text>
+<rect x="1442" y="332" width="130" height="66" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1454" y="370.4">
+<tspan x="1454" dy="0">-</tspan>
+</text>
+<rect x="36" y="398" width="146" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="436.4">
+<tspan x="48" dy="0">TPMS-V05</tspan>
+</text>
+<rect x="182" y="398" width="140" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="436.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="398" width="140" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-08" target="_blank">
+<text class="cell test-link" x="334" y="436.4">
+<tspan x="334" dy="0">5.1.6</tspan>
+</text>
+</a>
+<rect x="462" y="398" width="320" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="436.4">
+<tspan x="474" dy="0">Reset protection</tspan>
+</text>
+<rect x="782" y="398" width="320" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="794" y="436.4">
+<tspan x="794" dy="0">-</tspan>
+</text>
+<rect x="1102" y="398" width="340" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="425.9">
+<tspan x="1114" dy="0">If TPMS equipped and reset</tspan>
+<tspan x="1114" dy="21">function applies</tspan>
+</text>
+<rect x="1442" y="398" width="130" height="66" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="436.4">
+<tspan x="1454" dy="0">TPMS-T09</tspan>
+</text>
+</a>
+<rect x="36" y="464" width="146" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="495.4">
+<tspan x="48" dy="0">TPMS-V06</tspan>
+</text>
+<rect x="182" y="464" width="140" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="495.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="464" width="140" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-08" target="_blank">
+<text class="cell test-link" x="334" y="495.4">
+<tspan x="334" dy="0">5.2</tspan>
+</text>
+</a>
+<rect x="462" y="464" width="320" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="495.4">
+<tspan x="474" dy="0">Incident pressure loss</tspan>
+</text>
+<rect x="782" y="464" width="320" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-10" target="_blank"><text class="cell source-link" x="794" y="495.4">§5.5</text></a>
+<text class="cell" x="830" y="495.4">; </text>
+<a href="un-r141-source.html#page-16" target="_blank"><text class="cell source-link" x="842" y="495.4">Annex 3</text></a>
+<rect x="1102" y="464" width="340" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="495.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="464" width="130" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="495.4">
+<tspan x="1454" dy="0">TPMS-T03</tspan>
+</text>
+</a>
+<rect x="36" y="516" width="146" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="547.4">
+<tspan x="48" dy="0">TPMS-V07</tspan>
+</text>
+<rect x="182" y="516" width="140" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="547.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="516" width="140" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-09" target="_blank">
+<text class="cell test-link" x="334" y="547.4">
+<tspan x="334" dy="0">5.3</tspan>
+</text>
+</a>
+<rect x="462" y="516" width="320" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="547.4">
+<tspan x="474" dy="0">Gradual pressure loss</tspan>
+</text>
+<rect x="782" y="516" width="320" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-10" target="_blank"><text class="cell source-link" x="794" y="547.4">§5.5</text></a>
+<text class="cell" x="830" y="547.4">; </text>
+<a href="un-r141-source.html#page-16" target="_blank"><text class="cell source-link" x="842" y="547.4">Annex 3</text></a>
+<rect x="1102" y="516" width="340" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="547.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="516" width="130" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="547.4">
+<tspan x="1454" dy="0">TPMS-T05</tspan>
+</text>
+</a>
+<rect x="36" y="568" width="146" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="599.4">
+<tspan x="48" dy="0">TPMS-V08</tspan>
+</text>
+<rect x="182" y="568" width="140" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="599.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="568" width="140" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-09" target="_blank">
+<text class="cell test-link" x="334" y="599.4">
+<tspan x="334" dy="0">5.4</tspan>
+</text>
+</a>
+<rect x="462" y="568" width="320" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="599.4">
+<tspan x="474" dy="0">Malfunction detection</tspan>
+</text>
+<rect x="782" y="568" width="320" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-10" target="_blank"><text class="cell source-link" x="794" y="599.4">§5.5</text></a>
+<text class="cell" x="830" y="599.4">; </text>
+<a href="un-r141-source.html#page-16" target="_blank"><text class="cell source-link" x="842" y="599.4">Annex 3</text></a>
+<rect x="1102" y="568" width="340" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="599.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="568" width="130" height="52" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="599.4">
+<tspan x="1454" dy="0">TPMS-T07</tspan>
+</text>
+</a>
+<rect x="36" y="620" width="146" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="651.4">
+<tspan x="48" dy="0">TPMS-V09</tspan>
+</text>
+<rect x="182" y="620" width="140" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="651.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="620" width="140" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-10" target="_blank">
+<text class="cell test-link" x="334" y="651.4">
+<tspan x="334" dy="0">5.5</tspan>
+</text>
+</a>
+<rect x="462" y="620" width="320" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="651.4">
+<tspan x="474" dy="0">Warning/telltale</tspan>
+</text>
+<rect x="782" y="620" width="320" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="794" y="651.4">
+<tspan x="794" dy="0">UN R121</tspan>
+</text>
+<rect x="1102" y="620" width="340" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="651.4">
+<tspan x="1114" dy="0">If TPMS equipped</tspan>
+</text>
+<rect x="1442" y="620" width="130" height="52" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1454" y="651.4">
+<tspan x="1454" dy="0">-</tspan>
+</text>
+<rect x="36" y="672" width="146" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="731.4">
+<tspan x="48" dy="0">TPMS-V10</tspan>
+</text>
+<rect x="182" y="672" width="140" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="731.4">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="672" width="140" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-10" target="_blank">
+<text class="cell test-link" x="334" y="731.4">
+<tspan x="334" dy="0">5.6</tspan>
+</text>
+</a>
+<rect x="462" y="672" width="320" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="710.4">
+<tspan x="474" dy="0">Communications interface</tspan>
+<tspan x="474" dy="21">between towing and towed</tspan>
+<tspan x="474" dy="21">vehicles</tspan>
+</text>
+<rect x="782" y="672" width="320" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-24" target="_blank">
+<text class="cell test-link" x="794" y="699.9">
+<tspan x="794" dy="0">ISO 11992-1:2019; ISO</tspan>
+<tspan x="794" dy="21">11992-2:2014; ISO</tspan>
+<tspan x="794" dy="21">7638-1:2018; ISO 7638-2:2018;</tspan>
+<tspan x="794" dy="21">Annex 5; Annex 6</tspan>
+</text>
+</a>
+<rect x="1102" y="672" width="340" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="720.9">
+<tspan x="1114" dy="0">If TPMS equipped and N2/N3</tspan>
+<tspan x="1114" dy="21">towing O3/O4, or O3/O4</tspan>
+</text>
+<rect x="1442" y="672" width="130" height="108" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="731.4">
+<tspan x="1454" dy="0">TPMS-T10</tspan>
+</text>
+</a>
+<rect x="36" y="780" width="146" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="48" y="828.9">
+<tspan x="48" dy="0">TPMS-V11</tspan>
+</text>
+<rect x="182" y="780" width="140" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="194" y="828.9">
+<tspan x="194" dy="0">UN R141</tspan>
+</text>
+<rect x="322" y="780" width="140" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-11" target="_blank">
+<text class="cell test-link" x="334" y="828.9">
+<tspan x="334" dy="0">5.7</tspan>
+</text>
+</a>
+<rect x="462" y="780" width="320" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="474" y="818.4">
+<tspan x="474" dy="0">Alternative procedure for a</tspan>
+<tspan x="474" dy="21">subject trailer</tspan>
+</text>
+<rect x="782" y="780" width="320" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="un-r141-source.html#page-35" target="_blank">
+<text class="cell test-link" x="794" y="828.9">
+<tspan x="794" dy="0">Annex 7; Annex 8</tspan>
+</text>
+</a>
+<rect x="1102" y="780" width="340" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1114" y="807.9">
+<tspan x="1114" dy="0">If the alternative approval</tspan>
+<tspan x="1114" dy="21">procedure is selected for an</tspan>
+<tspan x="1114" dy="21">O3/O4 trailer</tspan>
+</text>
+<rect x="1442" y="780" width="130" height="87" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="1454" y="828.9">
+<tspan x="1454" dy="0">TPMS-T11</tspan>
+</text>
+</a>
+</svg>

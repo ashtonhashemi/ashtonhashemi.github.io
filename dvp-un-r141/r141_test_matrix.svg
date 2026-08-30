@@ -1,0 +1,1133 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="3319" height="3451" viewBox="0 0 3319 3451">
+<rect width="100%" height="100%" fill="#ffffff"/>
+<style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:24px;font-weight:700;fill:#17324d}.head{font-size:15px;font-weight:700;fill:#ffffff}.cell{font-size:15px;fill:#202020}.test-link,.source-link{fill:#075a9c;text-decoration:underline;cursor:pointer}</style>
+<text class="title" x="1659.5" y="75.2" text-anchor="middle">
+<tspan x="1659.5" dy="0">Test Matrix</tspan>
+</text>
+<rect x="36" y="100" width="130" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="48" y="129.25">Test ID</text>
+<rect x="166" y="100" width="237" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="178" y="129.25">Verification ID</text>
+<rect x="403" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="415" y="129.25">Requirement Verified</text>
+<rect x="723" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="735" y="129.25">Vehicle Category / Config</text>
+<rect x="1043" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1055" y="129.25">Equipment / Telltale Configuration</text>
+<rect x="1363" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1375" y="129.25">Trigger Threshold</text>
+<rect x="1683" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1695" y="129.25">Environmental / Road Conditions</text>
+<rect x="2003" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="2015" y="129.25">Test Procedure</text>
+<rect x="2323" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="2335" y="129.25">Expected Indicator Behavior</text>
+<rect x="2643" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="2655" y="129.25">Pass/Fail Criteria</text>
+<rect x="2963" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="2975" y="129.25">Evidence</text>
+<rect x="36" y="148" width="130" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="269.5">
+<tspan x="48" dy="0">TPMS-T01</tspan>
+</text>
+</a>
+<rect x="166" y="148" width="237" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="269.5">
+<tspan x="178" dy="0">TPMS-V01</tspan>
+</text>
+<rect x="403" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="269.5">
+<tspan x="415" dy="0">Whole-vehicle radiated EMC immunity</tspan>
+</text>
+<rect x="723" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="206.5">
+<tspan x="735" dy="0">Representative vehicle, unladen</tspan>
+<tspan x="735" dy="21">except for required test equipment.</tspan>
+<tspan x="735" dy="21">Test on a loaded dynamometer at a</tspan>
+<tspan x="735" dy="21">steady 50 km/h unless a different</tspan>
+<tspan x="735" dy="21">condition is technically justified</tspan>
+<tspan x="735" dy="21">and agreed with the Technical</tspan>
+<tspan x="735" dy="21">Service.</tspan>
+</text>
+<rect x="1043" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="196.0">
+<tspan x="1055" dy="0">Production TPMS fully operational</tspan>
+<tspan x="1055" dy="21">and learned; production</tspan>
+<tspan x="1055" dy="21">wheels/sensors installed. Monitor</tspan>
+<tspan x="1055" dy="21">individual pressure values, low-</tspan>
+<tspan x="1055" dy="21">pressure telltale, malfunction</tspan>
+<tspan x="1055" dy="21">indication, TPMS communications and</tspan>
+<tspan x="1055" dy="21">diagnostic status using non-</tspan>
+<tspan x="1055" dy="21">perturbing equipment.</tspan>
+</text>
+<rect x="1363" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="238.0">
+<tspan x="1375" dy="0">Expose the vehicle from 20-2,000</tspan>
+<tspan x="1375" dy="21">MHz at 30 V/m rms over more than</tspan>
+<tspan x="1375" dy="21">90% of the band and at least 25 V/m</tspan>
+<tspan x="1375" dy="21">rms over the entire band.</tspan>
+</text>
+<rect x="1683" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="217.0">
+<tspan x="1695" dy="0">Absorber-lined shielded enclosure</tspan>
+<tspan x="1695" dy="21">or compliant outdoor RF test site.</tspan>
+<tspan x="1695" dy="21">Use vertical polarization and</tspan>
+<tspan x="1695" dy="21">establish the calibrated field</tspan>
+<tspan x="1695" dy="21">strength at the vehicle reference</tspan>
+<tspan x="1695" dy="21">point or line before exposure.</tspan>
+</text>
+<rect x="2003" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="175.0">
+<tspan x="2015" dy="0">Operate the vehicle and TPMS</tspan>
+<tspan x="2015" dy="21">normally while sweeping 20-2,000</tspan>
+<tspan x="2015" dy="21">MHz. Apply 1 kHz AM at 80% depth</tspan>
+<tspan x="2015" dy="21">from 20-800 MHz and pulse</tspan>
+<tspan x="2015" dy="21">modulation (Ton 577 microseconds;</tspan>
+<tspan x="2015" dy="21">period 4,600 microseconds) from</tspan>
+<tspan x="2015" dy="21">800-2,000 MHz. Use ISO 11451-1</tspan>
+<tspan x="2015" dy="21">frequency steps and dwell times;</tspan>
+<tspan x="2015" dy="21">monitor the TPMS continuously</tspan>
+<tspan x="2015" dy="21">during exposure.</tspan>
+</text>
+<rect x="2323" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="217.0">
+<tspan x="2335" dy="0">TPMS continues reporting valid tyre</tspan>
+<tspan x="2335" dy="21">status without false low-pressure</tspan>
+<tspan x="2335" dy="21">or malfunction warnings, loss or</tspan>
+<tspan x="2335" dy="21">corruption of pressure information,</tspan>
+<tspan x="2335" dy="21">unintended reset, or loss of</tspan>
+<tspan x="2335" dy="21">warning capability.</tspan>
+</text>
+<rect x="2643" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="196.0">
+<tspan x="2655" dy="0">Pass if no TPMS performance</tspan>
+<tspan x="2655" dy="21">degradation occurs throughout</tspan>
+<tspan x="2655" dy="21">exposure and the system remains</tspan>
+<tspan x="2655" dy="21">fully functional afterward. Any</tspan>
+<tspan x="2655" dy="21">false warning, missing required</tspan>
+<tspan x="2655" dy="21">warning, corrupted display/data,</tspan>
+<tspan x="2655" dy="21">unintended reset or persistent</tspan>
+<tspan x="2655" dy="21">diagnostic fault is a failure.</tspan>
+</text>
+<rect x="2963" y="148" width="320" height="234" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="217.0">
+<tspan x="2975" dy="0">Accredited vehicle RF-immunity</tspan>
+<tspan x="2975" dy="21">report containing the test setup,</tspan>
+<tspan x="2975" dy="21">field calibration, frequency sweep,</tspan>
+<tspan x="2975" dy="21">modulation, monitored TPMS signals,</tspan>
+<tspan x="2975" dy="21">anomalies and post-test functional</tspan>
+<tspan x="2975" dy="21">check.</tspan>
+</text>
+<rect x="36" y="382" width="130" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="535.0">
+<tspan x="48" dy="0">TPMS-T02</tspan>
+</text>
+</a>
+<rect x="166" y="382" width="237" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="535.0">
+<tspan x="178" dy="0">TPMS-V01</tspan>
+</text>
+<rect x="403" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="524.5">
+<tspan x="415" dy="0">TPMS ESA radiated and conducted EMC</tspan>
+<tspan x="415" dy="21">immunity</tspan>
+</text>
+<rect x="723" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="440.5">
+<tspan x="735" dy="0">Representative TPMS ECU/receiver</tspan>
+<tspan x="735" dy="21">and interfaces in normal operation</tspan>
+<tspan x="735" dy="21">with production-intent wiring,</tspan>
+<tspan x="735" dy="21">terminations, loads and actuators.</tspan>
+<tspan x="735" dy="21">Conducted-transient testing applies</tspan>
+<tspan x="735" dy="21">to TPMS equipment connected to the</tspan>
+<tspan x="735" dy="21">vehicle 12/24 V supply; battery-</tspan>
+<tspan x="735" dy="21">powered wheel sensors are covered</tspan>
+<tspan x="735" dy="21">by the applicable radiated-immunity</tspan>
+<tspan x="735" dy="21">configuration.</tspan>
+</text>
+<rect x="1043" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="461.5">
+<tspan x="1055" dy="0">TPMS ECU/receiver, representative</tspan>
+<tspan x="1055" dy="21">wheel-sensor or RF simulator</tspan>
+<tspan x="1055" dy="21">inputs, production-intent harness,</tspan>
+<tspan x="1055" dy="21">power supply, network/load</tspan>
+<tspan x="1055" dy="21">simulator and telltale or cluster</tspan>
+<tspan x="1055" dy="21">interface. Continuously monitor</tspan>
+<tspan x="1055" dy="21">pressure data, warning outputs,</tspan>
+<tspan x="1055" dy="21">communications and diagnostics.</tspan>
+</text>
+<rect x="1363" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="409.0">
+<tspan x="1375" dy="0">Cover 20-2,000 MHz using one or</tspan>
+<tspan x="1375" dy="21">more methods that cover the full</tspan>
+<tspan x="1375" dy="21">band. Over more than 90% of the</tspan>
+<tspan x="1375" dy="21">band apply: 150 mm stripline 60 V/m</tspan>
+<tspan x="1375" dy="21">rms, 800 mm stripline 15 V/m rms,</tspan>
+<tspan x="1375" dy="21">TEM cell 75 V/m rms, BCI 60 mA rms,</tspan>
+<tspan x="1375" dy="21">or free field 30 V/m rms. Across</tspan>
+<tspan x="1375" dy="21">the entire band maintain at least:</tspan>
+<tspan x="1375" dy="21">50 V/m, 12.5 V/m, 62.5 V/m, 50 mA</tspan>
+<tspan x="1375" dy="21">or 25 V/m respectively. For 12/24 V</tspan>
+<tspan x="1375" dy="21">supplied equipment, apply ISO</tspan>
+<tspan x="1375" dy="21">7637-2 pulses 1, 2a, 2b, 3a, 3b and</tspan>
+<tspan x="1375" dy="21">4 at level III.</tspan>
+</text>
+<rect x="1683" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="440.5">
+<tspan x="1695" dy="0">Controlled and calibrated ESA</tspan>
+<tspan x="1695" dy="21">immunity laboratory. Install the</tspan>
+<tspan x="1695" dy="21">production-intent harness with</tspan>
+<tspan x="1695" dy="21">realistic terminations, loads and</tspan>
+<tspan x="1695" dy="21">actuators. Use the applicable</tspan>
+<tspan x="1695" dy="21">absorber-chamber, TEM-cell,</tspan>
+<tspan x="1695" dy="21">stripline, BCI or free-field setup</tspan>
+<tspan x="1695" dy="21">for RF exposure and a calibrated</tspan>
+<tspan x="1695" dy="21">ISO 7637-2 pulse generator for</tspan>
+<tspan x="1695" dy="21">supply transients.</tspan>
+</text>
+<rect x="2003" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="409.0">
+<tspan x="2015" dy="0">Power and stimulate the TPMS</tspan>
+<tspan x="2015" dy="21">ECU/receiver in normal operation.</tspan>
+<tspan x="2015" dy="21">Sweep 20-2,000 MHz using the</tspan>
+<tspan x="2015" dy="21">selected method, with 1 kHz AM at</tspan>
+<tspan x="2015" dy="21">80% depth from 20-800 MHz and pulse</tspan>
+<tspan x="2015" dy="21">modulation (Ton 577 microseconds;</tspan>
+<tspan x="2015" dy="21">period 4,600 microseconds) from</tspan>
+<tspan x="2015" dy="21">800-2,000 MHz. Separately apply ISO</tspan>
+<tspan x="2015" dy="21">7637-2 supply pulses 1, 2a, 2b, 3a,</tspan>
+<tspan x="2015" dy="21">3b and 4 to every powered</tspan>
+<tspan x="2015" dy="21">connection, monitor all outputs,</tspan>
+<tspan x="2015" dy="21">then perform a complete post-</tspan>
+<tspan x="2015" dy="21">exposure functional check.</tspan>
+</text>
+<rect x="2323" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="409.0">
+<tspan x="2335" dy="0">The ECU/receiver maintains correct</tspan>
+<tspan x="2335" dy="21">pressure/status processing and</tspan>
+<tspan x="2335" dy="21">valid network/telltale outputs</tspan>
+<tspan x="2335" dy="21">without false warnings, unintended</tspan>
+<tspan x="2335" dy="21">reset or loss of diagnostics.</tspan>
+<tspan x="2335" dy="21">During pulses 3a/3b it must operate</tspan>
+<tspan x="2335" dy="21">normally. During pulses 2a/4</tspan>
+<tspan x="2335" dy="21">temporary deviation is allowed only</tspan>
+<tspan x="2335" dy="21">if the unit automatically returns</tspan>
+<tspan x="2335" dy="21">to normal afterward. During pulses</tspan>
+<tspan x="2335" dy="21">1/2b temporary loss is allowed only</tspan>
+<tspan x="2335" dy="21">if the unit automatically recovers</tspan>
+<tspan x="2335" dy="21">afterward.</tspan>
+</text>
+<rect x="2643" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="451.0">
+<tspan x="2655" dy="0">Pass radiated immunity with no</tspan>
+<tspan x="2655" dy="21">degradation of TPMS immunity-</tspan>
+<tspan x="2655" dy="21">related functions. Pass conducted</tspan>
+<tspan x="2655" dy="21">immunity when pulses 1, 2b meet</tspan>
+<tspan x="2655" dy="21">status C, pulses 2a and 4 meet</tspan>
+<tspan x="2655" dy="21">status B, and pulses 3a/3b meet</tspan>
+<tspan x="2655" dy="21">status A, with no unsafe or</tspan>
+<tspan x="2655" dy="21">persistent fault and full post-test</tspan>
+<tspan x="2655" dy="21">functionality.</tspan>
+</text>
+<rect x="2963" y="382" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="472.0">
+<tspan x="2975" dy="0">Accredited ESA RF and transient-</tspan>
+<tspan x="2975" dy="21">immunity report containing setup,</tspan>
+<tspan x="2975" dy="21">selected RF method and levels,</tspan>
+<tspan x="2975" dy="21">frequency sweep, ISO 7637-2 pulse</tspan>
+<tspan x="2975" dy="21">results, monitored signals,</tspan>
+<tspan x="2975" dy="21">anomalies, recovery behavior and</tspan>
+<tspan x="2975" dy="21">post-test functional check.</tspan>
+</text>
+<rect x="36" y="679" width="130" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="853.0">
+<tspan x="48" dy="0">TPMS-T03</tspan>
+</text>
+</a>
+<rect x="166" y="679" width="237" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="853.0">
+<tspan x="178" dy="0">TPMS-V03 and TPMS-V06</tspan>
+</text>
+<rect x="403" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="853.0">
+<tspan x="415" dy="0">Puncture testing requirements</tspan>
+</text>
+<rect x="723" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="779.5">
+<tspan x="735" dy="0">M1 up to 3,500 kg and N1. Test from</tspan>
+<tspan x="735" dy="21">40–120 km/h, using the vehicle&#x27;s</tspan>
+<tspan x="735" dy="21">maximum design speed when it is</tspan>
+<tspan x="735" dy="21">below 120 km/h. Rims may be</tspan>
+<tspan x="735" dy="21">installed at any wheel position</tspan>
+<tspan x="735" dy="21">consistent with the vehicle</tspan>
+<tspan x="735" dy="21">manufacturer&#x27;s instructions or</tspan>
+<tspan x="735" dy="21">limitations.</tspan>
+</text>
+<rect x="1043" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="790.0">
+<tspan x="1055" dy="0">Use tyres installed according to</tspan>
+<tspan x="1055" dy="21">the vehicle manufacturer&#x27;s</tspan>
+<tspan x="1055" dy="21">recommendations; the spare tyre may</tspan>
+<tspan x="1055" dy="21">be used for TPMS malfunction</tspan>
+<tspan x="1055" dy="21">testing. Pressure-measurement</tspan>
+<tspan x="1055" dy="21">equipment shall be accurate to at</tspan>
+<tspan x="1055" dy="21">least ±3 kPa.</tspan>
+</text>
+<rect x="1363" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="800.5">
+<tspan x="1375" dy="0">Within 5 minutes after measuring</tspan>
+<tspan x="1375" dy="21">Pwarm, deflate one tyre to the</tspan>
+<tspan x="1375" dy="21">higher of Pwarm −20% or 150 kPa for</tspan>
+<tspan x="1375" dy="21">C1 tyres / 220 kPa for C2 tyres.</tspan>
+<tspan x="1375" dy="21">Stabilize for 2–5 minutes, then</tspan>
+<tspan x="1375" dy="21">recheck and adjust Ptest.</tspan>
+</text>
+<rect x="1683" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="779.5">
+<tspan x="1695" dy="0">Ambient temperature 0–40 °C; dry</tspan>
+<tspan x="1695" dy="21">road with good adhesion; radio-</tspan>
+<tspan x="1695" dy="21">wave-interference-free environment.</tspan>
+<tspan x="1695" dy="21">Before inflation, park outside for</tspan>
+<tspan x="1695" dy="21">at least 1 hour with engine off,</tspan>
+<tspan x="1695" dy="21">tyres shaded from direct sunlight,</tspan>
+<tspan x="1695" dy="21">and protected from wind and other</tspan>
+<tspan x="1695" dy="21">heating or chilling influences.</tspan>
+</text>
+<rect x="2003" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="706.0">
+<tspan x="2015" dy="0">Inflate to Prec using the same ±3</tspan>
+<tspan x="2015" dy="21">kPa equipment; verify lamp check</tspan>
+<tspan x="2015" dy="21">and set/reset TPMS if applicable.</tspan>
+<tspan x="2015" dy="21">Drive at least 20 minutes at an</tspan>
+<tspan x="2015" dy="21">average 80 ±10 km/h within 40–120</tspan>
+<tspan x="2015" dy="21">km/h; no more than 2 cumulative</tspan>
+<tspan x="2015" dy="21">minutes outside the range. Within 5</tspan>
+<tspan x="2015" dy="21">minutes measure Pwarm, deflate one</tspan>
+<tspan x="2015" dy="21">tyre to Ptest, stabilize, then</tspan>
+<tspan x="2015" dy="21">drive until the telltale</tspan>
+<tspan x="2015" dy="21">illuminates or 10 cumulative</tspan>
+<tspan x="2015" dy="21">minutes elapse. Cover the</tspan>
+<tspan x="2015" dy="21">applicable speed range; cruise</tspan>
+<tspan x="2015" dy="21">control off; exclude service-brake</tspan>
+<tspan x="2015" dy="21">time; keep TPRS/CTIS deactivated.</tspan>
+</text>
+<rect x="2323" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="779.5">
+<tspan x="2335" dy="0">Low-pressure telltale illuminates</tspan>
+<tspan x="2335" dy="21">during the detection drive. After</tspan>
+<tspan x="2335" dy="21">ignition is Off/Lock for 5 minutes</tspan>
+<tspan x="2335" dy="21">and returned to On/Run, it</tspan>
+<tspan x="2335" dy="21">illuminates and remains illuminated</tspan>
+<tspan x="2335" dy="21">while ignition is On/Run. After</tspan>
+<tspan x="2335" dy="21">restoring Prec and resetting the</tspan>
+<tspan x="2335" dy="21">system, it extinguishes.</tspan>
+</text>
+<rect x="2643" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="779.5">
+<tspan x="2655" dy="0">Pass if the telltale illuminates</tspan>
+<tspan x="2655" dy="21">within 10 cumulative driving</tspan>
+<tspan x="2655" dy="21">minutes, persists after the</tspan>
+<tspan x="2655" dy="21">5-minute ignition cycle, and</tspan>
+<tspan x="2655" dy="21">extinguishes after pressure</tspan>
+<tspan x="2655" dy="21">restoration/reset. Discontinue on</tspan>
+<tspan x="2655" dy="21">failure to illuminate or</tspan>
+<tspan x="2655" dy="21">extinguish.</tspan>
+</text>
+<rect x="2963" y="679" width="320" height="339" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="800.5">
+<tspan x="2975" dy="0">Vehicle test report with calibrated</tspan>
+<tspan x="2975" dy="21">pressure readings, speed and</tspan>
+<tspan x="2975" dy="21">cumulative-driving-time log,</tspan>
+<tspan x="2975" dy="21">telltale video or images, power-</tspan>
+<tspan x="2975" dy="21">mode transition record, and</tspan>
+<tspan x="2975" dy="21">reset/recovery result.</tspan>
+</text>
+<rect x="36" y="1018" width="130" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="1181.5">
+<tspan x="48" dy="0">TPMS-T04</tspan>
+</text>
+</a>
+<rect x="166" y="1018" width="237" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="1181.5">
+<tspan x="178" dy="0">TPMS-V03 and TPMS-V06</tspan>
+</text>
+<rect x="403" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="1181.5">
+<tspan x="415" dy="0">Puncture testing requirements</tspan>
+</text>
+<rect x="723" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="1076.5">
+<tspan x="735" dy="0">M2, M3, N2, N3, O3 and O4. Test</tspan>
+<tspan x="735" dy="21">from 30–90 km/h, using the</tspan>
+<tspan x="735" dy="21">vehicle&#x27;s maximum design speed when</tspan>
+<tspan x="735" dy="21">it is below 90 km/h. Rims may be</tspan>
+<tspan x="735" dy="21">installed at any wheel position</tspan>
+<tspan x="735" dy="21">consistent with the vehicle</tspan>
+<tspan x="735" dy="21">manufacturer&#x27;s instructions or</tspan>
+<tspan x="735" dy="21">limitations. Any lift axle shall be</tspan>
+<tspan x="735" dy="21">fully lowered with its tyres</tspan>
+<tspan x="735" dy="21">contacting the ground during</tspan>
+<tspan x="735" dy="21">testing.</tspan>
+</text>
+<rect x="1043" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="1118.5">
+<tspan x="1055" dy="0">Use tyres installed according to</tspan>
+<tspan x="1055" dy="21">the vehicle manufacturer&#x27;s</tspan>
+<tspan x="1055" dy="21">recommendations; the spare tyre may</tspan>
+<tspan x="1055" dy="21">be used for TPMS malfunction</tspan>
+<tspan x="1055" dy="21">testing. Pressure-measurement</tspan>
+<tspan x="1055" dy="21">equipment shall be accurate to at</tspan>
+<tspan x="1055" dy="21">least ±3 kPa.</tspan>
+</text>
+<rect x="1363" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="1139.5">
+<tspan x="1375" dy="0">Within 5 minutes after measuring</tspan>
+<tspan x="1375" dy="21">Pwarm, reduce one rolling tyre in</tspan>
+<tspan x="1375" dy="21">contact with the ground by 20% from</tspan>
+<tspan x="1375" dy="21">Pwarm. Stabilize for 2-5 minutes,</tspan>
+<tspan x="1375" dy="21">then recheck and adjust Ptest.</tspan>
+</text>
+<rect x="1683" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="1108.0">
+<tspan x="1695" dy="0">Ambient temperature 0–40 °C; dry</tspan>
+<tspan x="1695" dy="21">road with good adhesion; radio-</tspan>
+<tspan x="1695" dy="21">wave-interference-free environment.</tspan>
+<tspan x="1695" dy="21">Before inflation, park outside for</tspan>
+<tspan x="1695" dy="21">at least 4 hours with engine off,</tspan>
+<tspan x="1695" dy="21">tyres shaded from direct sunlight,</tspan>
+<tspan x="1695" dy="21">and protected from wind and other</tspan>
+<tspan x="1695" dy="21">heating or chilling influences.</tspan>
+</text>
+<rect x="2003" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="1045.0">
+<tspan x="2015" dy="0">Inflate to Prec using the same ±3</tspan>
+<tspan x="2015" dy="21">kPa equipment; verify lamp check</tspan>
+<tspan x="2015" dy="21">and set/reset TPMS if applicable.</tspan>
+<tspan x="2015" dy="21">Drive at least 120 minutes at an</tspan>
+<tspan x="2015" dy="21">average 60 ±10 km/h within 30–90</tspan>
+<tspan x="2015" dy="21">km/h; no more than 2 cumulative</tspan>
+<tspan x="2015" dy="21">minutes outside the range. Measure</tspan>
+<tspan x="2015" dy="21">Pwarm within 5 minutes, deflate one</tspan>
+<tspan x="2015" dy="21">tyre to Ptest, then drive until the</tspan>
+<tspan x="2015" dy="21">telltale illuminates or 10</tspan>
+<tspan x="2015" dy="21">cumulative minutes elapse. Cover</tspan>
+<tspan x="2015" dy="21">the applicable speed range; cruise</tspan>
+<tspan x="2015" dy="21">control off; exclude service-brake</tspan>
+<tspan x="2015" dy="21">time; keep TPRS/CTIS deactivated.</tspan>
+</text>
+<rect x="2323" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="1097.5">
+<tspan x="2335" dy="0">Low-pressure telltale illuminates</tspan>
+<tspan x="2335" dy="21">during the detection drive. After</tspan>
+<tspan x="2335" dy="21">ignition is Off/Lock for 5 minutes</tspan>
+<tspan x="2335" dy="21">and returned to On/Run, it</tspan>
+<tspan x="2335" dy="21">illuminates within 10 minutes and</tspan>
+<tspan x="2335" dy="21">remains illuminated while ignition</tspan>
+<tspan x="2335" dy="21">is On/Run. After restoring Prec and</tspan>
+<tspan x="2335" dy="21">resetting the system, it</tspan>
+<tspan x="2335" dy="21">extinguishes.</tspan>
+</text>
+<rect x="2643" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="1108.0">
+<tspan x="2655" dy="0">Pass if the telltale illuminates</tspan>
+<tspan x="2655" dy="21">within 10 cumulative driving</tspan>
+<tspan x="2655" dy="21">minutes, re-illuminates within 10</tspan>
+<tspan x="2655" dy="21">minutes after the 5-minute ignition</tspan>
+<tspan x="2655" dy="21">cycle, remains illuminated, and</tspan>
+<tspan x="2655" dy="21">extinguishes after</tspan>
+<tspan x="2655" dy="21">restoration/reset. Discontinue on</tspan>
+<tspan x="2655" dy="21">failure.</tspan>
+</text>
+<rect x="2963" y="1018" width="320" height="318" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="1129.0">
+<tspan x="2975" dy="0">Vehicle test report with calibrated</tspan>
+<tspan x="2975" dy="21">pressure readings, speed and</tspan>
+<tspan x="2975" dy="21">cumulative-driving-time log,</tspan>
+<tspan x="2975" dy="21">telltale video or images, power-</tspan>
+<tspan x="2975" dy="21">mode transition record, and</tspan>
+<tspan x="2975" dy="21">reset/recovery result.</tspan>
+</text>
+<rect x="36" y="1336" width="130" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="1489.0">
+<tspan x="48" dy="0">TPMS-T05</tspan>
+</text>
+</a>
+<rect x="166" y="1336" width="237" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="1489.0">
+<tspan x="178" dy="0">TPMS-V03 and TPMS-V07</tspan>
+</text>
+<rect x="403" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="1489.0">
+<tspan x="415" dy="0">Diffusion testing requirements</tspan>
+</text>
+<rect x="723" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="1415.5">
+<tspan x="735" dy="0">M1 up to 3,500 kg and N1. Test from</tspan>
+<tspan x="735" dy="21">40–100 km/h, using the vehicle&#x27;s</tspan>
+<tspan x="735" dy="21">maximum design speed when it is</tspan>
+<tspan x="735" dy="21">below 100 km/h. Rims may be</tspan>
+<tspan x="735" dy="21">installed at any wheel position</tspan>
+<tspan x="735" dy="21">consistent with the vehicle</tspan>
+<tspan x="735" dy="21">manufacturer&#x27;s instructions or</tspan>
+<tspan x="735" dy="21">limitations.</tspan>
+</text>
+<rect x="1043" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="1447.0">
+<tspan x="1055" dy="0">Use tyres installed according to</tspan>
+<tspan x="1055" dy="21">the vehicle manufacturer&#x27;s</tspan>
+<tspan x="1055" dy="21">recommendations. Pressure-</tspan>
+<tspan x="1055" dy="21">measurement equipment shall be</tspan>
+<tspan x="1055" dy="21">accurate to at least ±3 kPa.</tspan>
+</text>
+<rect x="1363" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="1436.5">
+<tspan x="1375" dy="0">Within 5 minutes after Pwarm,</tspan>
+<tspan x="1375" dy="21">deflate all tyres to the higher of</tspan>
+<tspan x="1375" dy="21">Pwarm −20% −7 kPa or 150 kPa for C1</tspan>
+<tspan x="1375" dy="21">tyres / 220 kPa for C2 tyres.</tspan>
+<tspan x="1375" dy="21">Stabilize 2–5 minutes, then recheck</tspan>
+<tspan x="1375" dy="21">and adjust Ptest.</tspan>
+</text>
+<rect x="1683" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="1415.5">
+<tspan x="1695" dy="0">Ambient temperature 0–40 °C; dry</tspan>
+<tspan x="1695" dy="21">road with good adhesion; radio-</tspan>
+<tspan x="1695" dy="21">wave-interference-free environment.</tspan>
+<tspan x="1695" dy="21">Before inflation, park outside for</tspan>
+<tspan x="1695" dy="21">at least 1 hour with engine off,</tspan>
+<tspan x="1695" dy="21">tyres shaded from direct sunlight,</tspan>
+<tspan x="1695" dy="21">and protected from wind and other</tspan>
+<tspan x="1695" dy="21">heating or chilling influences.</tspan>
+</text>
+<rect x="2003" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="1363.0">
+<tspan x="2015" dy="0">Inflate to Prec using the same ±3</tspan>
+<tspan x="2015" dy="21">kPa equipment; verify lamp check</tspan>
+<tspan x="2015" dy="21">and set/reset TPMS if applicable.</tspan>
+<tspan x="2015" dy="21">Drive at least 20 minutes at an</tspan>
+<tspan x="2015" dy="21">average 80 ±10 km/h within 40–100</tspan>
+<tspan x="2015" dy="21">km/h; no more than 2 cumulative</tspan>
+<tspan x="2015" dy="21">minutes outside the range. Measure</tspan>
+<tspan x="2015" dy="21">Pwarm, deflate all tyres to Ptest,</tspan>
+<tspan x="2015" dy="21">stabilize, and perform the</tspan>
+<tspan x="2015" dy="21">interrupted detection drive. Cover</tspan>
+<tspan x="2015" dy="21">the applicable range; cruise</tspan>
+<tspan x="2015" dy="21">control off; exclude service-brake</tspan>
+<tspan x="2015" dy="21">time; keep TPRS/CTIS deactivated.</tspan>
+</text>
+<rect x="2323" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="1415.5">
+<tspan x="2335" dy="0">Low-pressure telltale illuminates</tspan>
+<tspan x="2335" dy="21">within the detection period. After</tspan>
+<tspan x="2335" dy="21">ignition is Off/Lock for 5 minutes</tspan>
+<tspan x="2335" dy="21">and returned to On/Run, it</tspan>
+<tspan x="2335" dy="21">illuminates and remains</tspan>
+<tspan x="2335" dy="21">illuminated. After restoring Prec</tspan>
+<tspan x="2335" dy="21">and resetting the system, it</tspan>
+<tspan x="2335" dy="21">extinguishes.</tspan>
+</text>
+<rect x="2643" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="1426.0">
+<tspan x="2655" dy="0">Pass if the telltale illuminates</tspan>
+<tspan x="2655" dy="21">within 60 cumulative driving</tspan>
+<tspan x="2655" dy="21">minutes, persists after the</tspan>
+<tspan x="2655" dy="21">5-minute ignition cycle, and</tspan>
+<tspan x="2655" dy="21">extinguishes after</tspan>
+<tspan x="2655" dy="21">restoration/reset. Discontinue on</tspan>
+<tspan x="2655" dy="21">failure.</tspan>
+</text>
+<rect x="2963" y="1336" width="320" height="297" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="1436.5">
+<tspan x="2975" dy="0">Vehicle test report with calibrated</tspan>
+<tspan x="2975" dy="21">pressure readings for all tyres,</tspan>
+<tspan x="2975" dy="21">speed and cumulative-driving-time</tspan>
+<tspan x="2975" dy="21">log, interrupted-drive record,</tspan>
+<tspan x="2975" dy="21">telltale video or images, and</tspan>
+<tspan x="2975" dy="21">reset/recovery result.</tspan>
+</text>
+<rect x="36" y="1633" width="130" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="1786.0">
+<tspan x="48" dy="0">TPMS-T06</tspan>
+</text>
+</a>
+<rect x="166" y="1633" width="237" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="1786.0">
+<tspan x="178" dy="0">TPMS-V03 and TPMS-V07</tspan>
+</text>
+<rect x="403" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="1786.0">
+<tspan x="415" dy="0">Diffusion testing requirements</tspan>
+</text>
+<rect x="723" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="1681.0">
+<tspan x="735" dy="0">M2, M3, N2, N3, O3 and O4. Test</tspan>
+<tspan x="735" dy="21">from 30–90 km/h, using the</tspan>
+<tspan x="735" dy="21">vehicle&#x27;s maximum design speed when</tspan>
+<tspan x="735" dy="21">it is below 90 km/h. Rims may be</tspan>
+<tspan x="735" dy="21">installed at any wheel position</tspan>
+<tspan x="735" dy="21">consistent with the vehicle</tspan>
+<tspan x="735" dy="21">manufacturer&#x27;s instructions or</tspan>
+<tspan x="735" dy="21">limitations. Any lift axle shall be</tspan>
+<tspan x="735" dy="21">fully lowered with its tyres</tspan>
+<tspan x="735" dy="21">contacting the ground during</tspan>
+<tspan x="735" dy="21">testing.</tspan>
+</text>
+<rect x="1043" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="1744.0">
+<tspan x="1055" dy="0">Use tyres installed according to</tspan>
+<tspan x="1055" dy="21">the vehicle manufacturer&#x27;s</tspan>
+<tspan x="1055" dy="21">recommendations. Pressure-</tspan>
+<tspan x="1055" dy="21">measurement equipment shall be</tspan>
+<tspan x="1055" dy="21">accurate to at least ±3 kPa.</tspan>
+</text>
+<rect x="1363" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="1754.5">
+<tspan x="1375" dy="0">Within 15 minutes after Pwarm,</tspan>
+<tspan x="1375" dy="21">deflate all tyres to Pwarm −20% −7</tspan>
+<tspan x="1375" dy="21">kPa. Stabilize 5–10 minutes, then</tspan>
+<tspan x="1375" dy="21">recheck and adjust Ptest.</tspan>
+</text>
+<rect x="1683" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="1712.5">
+<tspan x="1695" dy="0">Ambient temperature 0–40 °C; dry</tspan>
+<tspan x="1695" dy="21">road with good adhesion; radio-</tspan>
+<tspan x="1695" dy="21">wave-interference-free environment.</tspan>
+<tspan x="1695" dy="21">Before inflation, park outside for</tspan>
+<tspan x="1695" dy="21">at least 4 hours with engine off,</tspan>
+<tspan x="1695" dy="21">tyres shaded from direct sunlight,</tspan>
+<tspan x="1695" dy="21">and protected from wind and other</tspan>
+<tspan x="1695" dy="21">heating or chilling influences.</tspan>
+</text>
+<rect x="2003" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="1660.0">
+<tspan x="2015" dy="0">Inflate to Prec using the same ±3</tspan>
+<tspan x="2015" dy="21">kPa equipment; verify lamp check</tspan>
+<tspan x="2015" dy="21">and set/reset TPMS if applicable.</tspan>
+<tspan x="2015" dy="21">Drive at least 120 minutes at an</tspan>
+<tspan x="2015" dy="21">average 60 ±10 km/h within 30–90</tspan>
+<tspan x="2015" dy="21">km/h; no more than 2 cumulative</tspan>
+<tspan x="2015" dy="21">minutes outside the range. Measure</tspan>
+<tspan x="2015" dy="21">Pwarm, deflate all tyres to Ptest,</tspan>
+<tspan x="2015" dy="21">stabilize, and perform the</tspan>
+<tspan x="2015" dy="21">interrupted detection drive. Cover</tspan>
+<tspan x="2015" dy="21">the applicable range; cruise</tspan>
+<tspan x="2015" dy="21">control off; exclude service-brake</tspan>
+<tspan x="2015" dy="21">time; keep TPRS/CTIS deactivated.</tspan>
+</text>
+<rect x="2323" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="1712.5">
+<tspan x="2335" dy="0">Low-pressure telltale illuminates</tspan>
+<tspan x="2335" dy="21">within the detection period. After</tspan>
+<tspan x="2335" dy="21">ignition is Off/Lock for 5 minutes</tspan>
+<tspan x="2335" dy="21">and returned to On/Run, it</tspan>
+<tspan x="2335" dy="21">illuminates within 10 minutes and</tspan>
+<tspan x="2335" dy="21">remains illuminated. After</tspan>
+<tspan x="2335" dy="21">restoring Prec and resetting the</tspan>
+<tspan x="2335" dy="21">system, it extinguishes.</tspan>
+</text>
+<rect x="2643" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="1712.5">
+<tspan x="2655" dy="0">Pass if the telltale illuminates</tspan>
+<tspan x="2655" dy="21">within 60 cumulative driving</tspan>
+<tspan x="2655" dy="21">minutes, re-illuminates within 10</tspan>
+<tspan x="2655" dy="21">minutes after the 5-minute ignition</tspan>
+<tspan x="2655" dy="21">cycle, remains illuminated, and</tspan>
+<tspan x="2655" dy="21">extinguishes after</tspan>
+<tspan x="2655" dy="21">restoration/reset. Discontinue on</tspan>
+<tspan x="2655" dy="21">failure.</tspan>
+</text>
+<rect x="2963" y="1633" width="320" height="297" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="1733.5">
+<tspan x="2975" dy="0">Vehicle test report with calibrated</tspan>
+<tspan x="2975" dy="21">pressure readings for all tyres,</tspan>
+<tspan x="2975" dy="21">speed and cumulative-driving-time</tspan>
+<tspan x="2975" dy="21">log, interrupted-drive record,</tspan>
+<tspan x="2975" dy="21">telltale video or images, and</tspan>
+<tspan x="2975" dy="21">reset/recovery result.</tspan>
+</text>
+<rect x="36" y="1930" width="130" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="2072.5">
+<tspan x="48" dy="0">TPMS-T07</tspan>
+</text>
+</a>
+<rect x="166" y="1930" width="237" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="2072.5">
+<tspan x="178" dy="0">TPMS-V03 and TPMS-V08</tspan>
+</text>
+<rect x="403" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="2072.5">
+<tspan x="415" dy="0">Malfunction detection requirements</tspan>
+</text>
+<rect x="723" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="2020.0">
+<tspan x="735" dy="0">M1 up to 3,500 kg and N1. Test</tspan>
+<tspan x="735" dy="21">within 40–100 km/h, using the</tspan>
+<tspan x="735" dy="21">vehicle&#x27;s maximum design speed when</tspan>
+<tspan x="735" dy="21">it is below 100 km/h. Rims may be</tspan>
+<tspan x="735" dy="21">installed at any permitted wheel</tspan>
+<tspan x="735" dy="21">position.</tspan>
+</text>
+<rect x="1043" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="2009.5">
+<tspan x="1055" dy="0">Simulate one TPMS malfunction by</tspan>
+<tspan x="1055" dy="21">disconnecting a TPMS power source</tspan>
+<tspan x="1055" dy="21">or component connection, or</tspan>
+<tspan x="1055" dy="21">installing an incompatible</tspan>
+<tspan x="1055" dy="21">tyre/wheel; a spare tyre may be</tspan>
+<tspan x="1055" dy="21">used. Do not disconnect telltale-</tspan>
+<tspan x="1055" dy="21">lamp electrical connections.</tspan>
+</text>
+<rect x="1363" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="2062.0">
+<tspan x="1375" dy="0">One simulated TPMS malfunction per</tspan>
+<tspan x="1375" dy="21">test.</tspan>
+</text>
+<rect x="1683" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="2051.5">
+<tspan x="1695" dy="0">Ambient temperature 0–40 °C; dry</tspan>
+<tspan x="1695" dy="21">road with good adhesion; radio-</tspan>
+<tspan x="1695" dy="21">wave-interference-free environment.</tspan>
+</text>
+<rect x="2003" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="1957.0">
+<tspan x="2015" dy="0">Verify the simulated malfunction</tspan>
+<tspan x="2015" dy="21">while retaining telltale electrical</tspan>
+<tspan x="2015" dy="21">connections. Drive within the</tspan>
+<tspan x="2015" dy="21">applicable speed range until the</tspan>
+<tspan x="2015" dy="21">indicator illuminates or 10</tspan>
+<tspan x="2015" dy="21">cumulative minutes elapse. Switch</tspan>
+<tspan x="2015" dy="21">ignition Off/Lock for 5 minutes,</tspan>
+<tspan x="2015" dy="21">return it to On/Run, then restore</tspan>
+<tspan x="2015" dy="21">normal TPMS operation and drive if</tspan>
+<tspan x="2015" dy="21">necessary until the warning</tspan>
+<tspan x="2015" dy="21">extinguishes. Cruise control off;</tspan>
+<tspan x="2015" dy="21">exclude service-brake time.</tspan>
+</text>
+<rect x="2323" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="2009.5">
+<tspan x="2335" dy="0">Malfunction indicator illuminates</tspan>
+<tspan x="2335" dy="21">within the detection drive. After</tspan>
+<tspan x="2335" dy="21">the 5-minute ignition-off period,</tspan>
+<tspan x="2335" dy="21">it signals the malfunction again</tspan>
+<tspan x="2335" dy="21">and remains illuminated while</tspan>
+<tspan x="2335" dy="21">ignition is On/Run. It extinguishes</tspan>
+<tspan x="2335" dy="21">after normal operation is restored.</tspan>
+</text>
+<rect x="2643" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="1999.0">
+<tspan x="2655" dy="0">Pass if the indicator illuminates</tspan>
+<tspan x="2655" dy="21">within 10 cumulative driving</tspan>
+<tspan x="2655" dy="21">minutes, immediately signals again</tspan>
+<tspan x="2655" dy="21">after the ignition cycle, remains</tspan>
+<tspan x="2655" dy="21">illuminated while the malfunction</tspan>
+<tspan x="2655" dy="21">exists, and extinguishes after</tspan>
+<tspan x="2655" dy="21">restoration. Discontinue on</tspan>
+<tspan x="2655" dy="21">failure.</tspan>
+</text>
+<rect x="2963" y="1930" width="320" height="276" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="2030.5">
+<tspan x="2975" dy="0">Test report showing the injected</tspan>
+<tspan x="2975" dy="21">TPMS malfunction, timeout</tspan>
+<tspan x="2975" dy="21">measurement, Ethernet and</tspan>
+<tspan x="2975" dy="21">diagnostic logs, rendered telltale</tspan>
+<tspan x="2975" dy="21">evidence, and recovery result.</tspan>
+</text>
+<rect x="36" y="2206" width="130" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="2348.5">
+<tspan x="48" dy="0">TPMS-T08</tspan>
+</text>
+</a>
+<rect x="166" y="2206" width="237" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="2348.5">
+<tspan x="178" dy="0">TPMS-V03 and TPMS-V08</tspan>
+</text>
+<rect x="403" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="2348.5">
+<tspan x="415" dy="0">Malfunction detection requirements</tspan>
+</text>
+<rect x="723" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="2275.0">
+<tspan x="735" dy="0">M2, M3, N2, N3, O3 and O4. Test</tspan>
+<tspan x="735" dy="21">within 30–90 km/h, using the</tspan>
+<tspan x="735" dy="21">vehicle&#x27;s maximum design speed when</tspan>
+<tspan x="735" dy="21">it is below 90 km/h. Rims may be</tspan>
+<tspan x="735" dy="21">installed at any permitted wheel</tspan>
+<tspan x="735" dy="21">position. Any lift axle shall be</tspan>
+<tspan x="735" dy="21">fully lowered with its tyres</tspan>
+<tspan x="735" dy="21">contacting the ground.</tspan>
+</text>
+<rect x="1043" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="2285.5">
+<tspan x="1055" dy="0">Simulate one TPMS malfunction by</tspan>
+<tspan x="1055" dy="21">disconnecting a TPMS power source</tspan>
+<tspan x="1055" dy="21">or component connection, or</tspan>
+<tspan x="1055" dy="21">installing an incompatible</tspan>
+<tspan x="1055" dy="21">tyre/wheel; a spare tyre may be</tspan>
+<tspan x="1055" dy="21">used. Do not disconnect telltale-</tspan>
+<tspan x="1055" dy="21">lamp electrical connections.</tspan>
+</text>
+<rect x="1363" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="2338.0">
+<tspan x="1375" dy="0">One simulated TPMS malfunction per</tspan>
+<tspan x="1375" dy="21">test.</tspan>
+</text>
+<rect x="1683" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="2327.5">
+<tspan x="1695" dy="0">Ambient temperature 0–40 °C; dry</tspan>
+<tspan x="1695" dy="21">road with good adhesion; radio-</tspan>
+<tspan x="1695" dy="21">wave-interference-free environment.</tspan>
+</text>
+<rect x="2003" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="2233.0">
+<tspan x="2015" dy="0">Verify the simulated malfunction</tspan>
+<tspan x="2015" dy="21">while retaining telltale electrical</tspan>
+<tspan x="2015" dy="21">connections. Drive within the</tspan>
+<tspan x="2015" dy="21">applicable speed range until the</tspan>
+<tspan x="2015" dy="21">indicator illuminates or 10</tspan>
+<tspan x="2015" dy="21">cumulative minutes elapse. Switch</tspan>
+<tspan x="2015" dy="21">ignition Off/Lock for 5 minutes,</tspan>
+<tspan x="2015" dy="21">return it to On/Run, then restore</tspan>
+<tspan x="2015" dy="21">normal TPMS operation and drive if</tspan>
+<tspan x="2015" dy="21">necessary until the warning</tspan>
+<tspan x="2015" dy="21">extinguishes. Cruise control off;</tspan>
+<tspan x="2015" dy="21">exclude service-brake time.</tspan>
+</text>
+<rect x="2323" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="2275.0">
+<tspan x="2335" dy="0">Malfunction indicator illuminates</tspan>
+<tspan x="2335" dy="21">within the detection drive. After</tspan>
+<tspan x="2335" dy="21">the 5-minute ignition-off period,</tspan>
+<tspan x="2335" dy="21">it signals the malfunction again</tspan>
+<tspan x="2335" dy="21">within 10 minutes and remains</tspan>
+<tspan x="2335" dy="21">illuminated while ignition is</tspan>
+<tspan x="2335" dy="21">On/Run. It extinguishes after</tspan>
+<tspan x="2335" dy="21">normal operation is restored.</tspan>
+</text>
+<rect x="2643" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="2275.0">
+<tspan x="2655" dy="0">Pass if the indicator illuminates</tspan>
+<tspan x="2655" dy="21">within 10 cumulative driving</tspan>
+<tspan x="2655" dy="21">minutes, signals again within 10</tspan>
+<tspan x="2655" dy="21">minutes after the ignition cycle,</tspan>
+<tspan x="2655" dy="21">remains illuminated while the</tspan>
+<tspan x="2655" dy="21">malfunction exists, and</tspan>
+<tspan x="2655" dy="21">extinguishes after restoration.</tspan>
+<tspan x="2655" dy="21">Discontinue on failure.</tspan>
+</text>
+<rect x="2963" y="2206" width="320" height="276" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="2296.0">
+<tspan x="2975" dy="0">Vehicle test report showing the</tspan>
+<tspan x="2975" dy="21">injected TPMS malfunction, speed</tspan>
+<tspan x="2975" dy="21">and cumulative-driving-time log,</tspan>
+<tspan x="2975" dy="21">telltale video or images, power-</tspan>
+<tspan x="2975" dy="21">mode transition record, and</tspan>
+<tspan x="2975" dy="21">recovery result.</tspan>
+</text>
+<rect x="36" y="2482" width="130" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="2582.5">
+<tspan x="48" dy="0">TPMS-T09</tspan>
+</text>
+</a>
+<rect x="166" y="2482" width="237" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="2582.5">
+<tspan x="178" dy="0">TPMS-V05</tspan>
+</text>
+<rect x="403" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="2582.5">
+<tspan x="415" dy="0">Reset protection</tspan>
+</text>
+<rect x="723" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="2561.5">
+<tspan x="735" dy="0">M1 up to 3,500 kg or N1 TPMS with a</tspan>
+<tspan x="735" dy="21">reset function that cannot confirm</tspan>
+<tspan x="735" dy="21">adequate tyre pressure after reset.</tspan>
+</text>
+<rect x="1043" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="2540.5">
+<tspan x="1055" dy="0">Production-intent reset control and</tspan>
+<tspan x="1055" dy="21">instrument panel, TPMS warning-</tspan>
+<tspan x="1055" dy="21">state stimulus, vehicle-speed and</tspan>
+<tspan x="1055" dy="21">power-mode inputs, and diagnostic</tspan>
+<tspan x="1055" dy="21">logging.</tspan>
+</text>
+<rect x="1363" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="2551.0">
+<tspan x="1375" dy="0">Set a low-pressure warning, then</tspan>
+<tspan x="1375" dy="21">request reset while the vehicle is</tspan>
+<tspan x="1375" dy="21">moving or with only an</tspan>
+<tspan x="1375" dy="21">inadvertent/single action.</tspan>
+</text>
+<rect x="1683" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="2551.0">
+<tspan x="1695" dy="0">Stationary functional test; no road</tspan>
+<tspan x="1695" dy="21">or tyre-pressure stimulus is</tspan>
+<tspan x="1695" dy="21">required beyond establishing the</tspan>
+<tspan x="1695" dy="21">warning state.</tspan>
+</text>
+<rect x="2003" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="2509.0">
+<tspan x="2015" dy="0">Establish a TPMS low-pressure</tspan>
+<tspan x="2015" dy="21">warning. Attempt reset while the</tspan>
+<tspan x="2015" dy="21">vehicle is not stationary. Verify</tspan>
+<tspan x="2015" dy="21">the reset is prevented. Verify the</tspan>
+<tspan x="2015" dy="21">reset control requires the</tspan>
+<tspan x="2015" dy="21">applicable deliberate action or</tspan>
+<tspan x="2015" dy="21">actions, then repeat with the</tspan>
+<tspan x="2015" dy="21">vehicle stationary.</tspan>
+</text>
+<rect x="2323" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="2540.5">
+<tspan x="2335" dy="0">The warning remains active when</tspan>
+<tspan x="2335" dy="21">reset is not permitted. The reset</tspan>
+<tspan x="2335" dy="21">is accepted only when the specified</tspan>
+<tspan x="2335" dy="21">stationary and deliberate-action</tspan>
+<tspan x="2335" dy="21">conditions are met.</tspan>
+</text>
+<rect x="2643" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="2551.0">
+<tspan x="2655" dy="0">Pass if inadvertent or moving-</tspan>
+<tspan x="2655" dy="21">vehicle reset is prevented and the</tspan>
+<tspan x="2655" dy="21">intended reset sequence works only</tspan>
+<tspan x="2655" dy="21">under the specified conditions.</tspan>
+</text>
+<rect x="2963" y="2482" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="2540.5">
+<tspan x="2975" dy="0">Functional-test report with reset</tspan>
+<tspan x="2975" dy="21">attempts, vehicle-speed and power-</tspan>
+<tspan x="2975" dy="21">mode record, telltale capture,</tspan>
+<tspan x="2975" dy="21">diagnostic logs, and pass/fail</tspan>
+<tspan x="2975" dy="21">result.</tspan>
+</text>
+<rect x="36" y="2674" width="130" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="2869.0">
+<tspan x="48" dy="0">TPMS-T10</tspan>
+</text>
+</a>
+<rect x="166" y="2674" width="237" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="2869.0">
+<tspan x="178" dy="0">TPMS-V10</tspan>
+</text>
+<rect x="403" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="2848.0">
+<tspan x="415" dy="0">Towing/towed vehicle TPMS</tspan>
+<tspan x="415" dy="21">communication-interface</tspan>
+<tspan x="415" dy="21">compatibility</tspan>
+</text>
+<rect x="723" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="2795.5">
+<tspan x="735" dy="0">N2 or N3 towing vehicle connected</tspan>
+<tspan x="735" dy="21">to an O3 or O4 trailer, or an O3/O4</tspan>
+<tspan x="735" dy="21">trailer equipped with the</tspan>
+<tspan x="735" dy="21">applicable wired ISO 11992</tspan>
+<tspan x="735" dy="21">interface and ISO 7638 connector.</tspan>
+<tspan x="735" dy="21">Test each supported towing-vehicle,</tspan>
+<tspan x="735" dy="21">trailer, TPMS and gateway</tspan>
+<tspan x="735" dy="21">configuration.</tspan>
+</text>
+<rect x="1043" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="2806.0">
+<tspan x="1055" dy="0">ISO 11992-2:2014 towing- or towed-</tspan>
+<tspan x="1055" dy="21">vehicle simulator with ISO</tspan>
+<tspan x="1055" dy="21">7638-1:2018 24 V or ISO 7638-2:2018</tspan>
+<tspan x="1055" dy="21">12 V seven-pin connection, message</tspan>
+<tspan x="1055" dy="21">readout, vehicle power supply and</tspan>
+<tspan x="1055" dy="21">warning display. Pins 6 and 7 carry</tspan>
+<tspan x="1055" dy="21">ISO 11992 messages.</tspan>
+</text>
+<rect x="1363" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="2806.0">
+<tspan x="1375" dy="0">Simulate EBS23 Tyre Pressure Status</tspan>
+<tspan x="1375" dy="21">00b for insufficient pressure and</tspan>
+<tspan x="1375" dy="21">10b for TPMS error, each with a</tspan>
+<tspan x="1375" dy="21">valid tyre/wheel ID and with ID</tspan>
+<tspan x="1375" dy="21">unavailable/not defined. Also</tspan>
+<tspan x="1375" dy="21">simulate a permanent communication-</tspan>
+<tspan x="1375" dy="21">line failure.</tspan>
+</text>
+<rect x="1683" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="2827.0">
+<tspan x="1695" dy="0">Stationary communication test with</tspan>
+<tspan x="1695" dy="21">the simulator connected through the</tspan>
+<tspan x="1695" dy="21">production ISO 7638 interface while</tspan>
+<tspan x="1695" dy="21">all relevant towing- and towed-</tspan>
+<tspan x="1695" dy="21">vehicle messages are transmitted.</tspan>
+</text>
+<rect x="2003" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="2701.0">
+<tspan x="2015" dy="0">For a towing vehicle, inject EBS23</tspan>
+<tspan x="2015" dy="21">insufficient-pressure and</tspan>
+<tspan x="2015" dy="21">malfunction states with known and</tspan>
+<tspan x="2015" dy="21">unknown wheel IDs, verify the</tspan>
+<tspan x="2015" dy="21">driver warnings, then interrupt the</tspan>
+<tspan x="2015" dy="21">communication line and verify the</tspan>
+<tspan x="2015" dy="21">malfunction warning. For a towed</tspan>
+<tspan x="2015" dy="21">vehicle, configure VIN</tspan>
+<tspan x="2015" dy="21">AABBCCDDEE1234567 or the actual</tspan>
+<tspan x="2015" dy="21">VIN; simulate low pressure, TPMS</tspan>
+<tspan x="2015" dy="21">malfunction and unavailable</tspan>
+<tspan x="2015" dy="21">pressure data; transmit all</tspan>
+<tspan x="2015" dy="21">required towing-vehicle messages;</tspan>
+<tspan x="2015" dy="21">and capture EBS23 status, wheel ID</tspan>
+<tspan x="2015" dy="21">and time to warning. Verify message</tspan>
+<tspan x="2015" dy="21">routing through the gateway and</tspan>
+<tspan x="2015" dy="21">diagnostic communication.</tspan>
+</text>
+<rect x="2323" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="2753.5">
+<tspan x="2335" dy="0">The towing vehicle displays the</tspan>
+<tspan x="2335" dy="21">required low-pressure warning for</tspan>
+<tspan x="2335" dy="21">insufficient-pressure messages and</tspan>
+<tspan x="2335" dy="21">the TPMS malfunction indication for</tspan>
+<tspan x="2335" dy="21">error messages or permanent</tspan>
+<tspan x="2335" dy="21">communication failure, unless valid</tspan>
+<tspan x="2335" dy="21">TPMS information is available</tspan>
+<tspan x="2335" dy="21">through an alternative interface.</tspan>
+<tspan x="2335" dy="21">The towed vehicle transmits the</tspan>
+<tspan x="2335" dy="21">configured VIN and correct EBS23</tspan>
+<tspan x="2335" dy="21">warning/malfunction states and</tspan>
+<tspan x="2335" dy="21">wheel identification.</tspan>
+</text>
+<rect x="2643" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="2753.5">
+<tspan x="2655" dy="0">Pass if mandatory ISO 11992</tspan>
+<tspan x="2655" dy="21">messages and values are transmitted</tspan>
+<tspan x="2655" dy="21">and interpreted correctly, low-</tspan>
+<tspan x="2655" dy="21">pressure and malfunction</tspan>
+<tspan x="2655" dy="21">indications are displayed for all</tspan>
+<tspan x="2655" dy="21">required known/unknown wheel-ID</tspan>
+<tspan x="2655" dy="21">cases, permanent link failure</tspan>
+<tspan x="2655" dy="21">produces a malfunction indication,</tspan>
+<tspan x="2655" dy="21">and the towed vehicle transmits an</tspan>
+<tspan x="2655" dy="21">error state within 10 cumulative</tspan>
+<tspan x="2655" dy="21">driving minutes whenever valid</tspan>
+<tspan x="2655" dy="21">pressure status cannot be provided.</tspan>
+</text>
+<rect x="2963" y="2674" width="320" height="381" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="2795.5">
+<tspan x="2975" dy="0">Communication-interface test report</tspan>
+<tspan x="2975" dy="21">containing simulator configuration,</tspan>
+<tspan x="2975" dy="21">ISO 7638 connection, supported-</tspan>
+<tspan x="2975" dy="21">message matrix, captured EBS23</tspan>
+<tspan x="2975" dy="21">data, VIN, warning response,</tspan>
+<tspan x="2975" dy="21">measured time to warning,</tspan>
+<tspan x="2975" dy="21">communication-failure result and</tspan>
+<tspan x="2975" dy="21">gateway diagnostics.</tspan>
+</text>
+<rect x="36" y="3055" width="130" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<a href="r141_tables_viewer.html#2" target="_top">
+<text class="cell test-link" x="48" y="3239.5">
+<tspan x="48" dy="0">TPMS-T11</tspan>
+</text>
+</a>
+<rect x="166" y="3055" width="237" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="3239.5">
+<tspan x="178" dy="0">TPMS-V11</tspan>
+</text>
+<rect x="403" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="415" y="3229.0">
+<tspan x="415" dy="0">Alternative approval verification</tspan>
+<tspan x="415" dy="21">for a subject trailer</tspan>
+</text>
+<rect x="723" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="735" y="3155.5">
+<tspan x="735" dy="0">O3 or O4 subject trailer using a</tspan>
+<tspan x="735" dy="21">TPMS configuration covered by a</tspan>
+<tspan x="735" dy="21">physical reference-trailer test</tspan>
+<tspan x="735" dy="21">report. The reference trailer must</tspan>
+<tspan x="735" dy="21">have completed the physical</tspan>
+<tspan x="735" dy="21">puncture, diffusion, malfunction</tspan>
+<tspan x="735" dy="21">and communication tests and cannot</tspan>
+<tspan x="735" dy="21">itself have been approved only by</tspan>
+<tspan x="735" dy="21">equivalence.</tspan>
+</text>
+<rect x="1043" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1055" y="3176.5">
+<tspan x="1055" dy="0">Subject-trailer TPMS sensors,</tspan>
+<tspan x="1055" dy="21">receivers/antennas, ECU and ISO</tspan>
+<tspan x="1055" dy="21">11992-2 gateway, if applicable,</tspan>
+<tspan x="1055" dy="21">shall match a configuration and</tspan>
+<tspan x="1055" dy="21">installation envelope covered by</tspan>
+<tspan x="1055" dy="21">the reference-trailer reports and</tspan>
+<tspan x="1055" dy="21">information documents.</tspan>
+</text>
+<rect x="1363" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1375" y="3197.5">
+<tspan x="1375" dy="0">Documentary and installation-</tspan>
+<tspan x="1375" dy="21">equivalence verification; no new</tspan>
+<tspan x="1375" dy="21">pressure-loss stimulus is required</tspan>
+<tspan x="1375" dy="21">when repeat testing is waived by</tspan>
+<tspan x="1375" dy="21">the Type Approval Authority.</tspan>
+</text>
+<rect x="1683" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1695" y="3176.5">
+<tspan x="1695" dy="0">Not applicable to the equivalence</tspan>
+<tspan x="1695" dy="21">review. If equivalence cannot be</tspan>
+<tspan x="1695" dy="21">established, perform the complete</tspan>
+<tspan x="1695" dy="21">physical pressure-loss, malfunction</tspan>
+<tspan x="1695" dy="21">and/or communication tests using</tspan>
+<tspan x="1695" dy="21">the conditions defined in their</tspan>
+<tspan x="1695" dy="21">dedicated matrix rows.</tspan>
+</text>
+<rect x="2003" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2015" y="3082.0">
+<tspan x="2015" dy="0">Review the reference-trailer TPMS</tspan>
+<tspan x="2015" dy="21">performance report and gateway</tspan>
+<tspan x="2015" dy="21">communication report, if</tspan>
+<tspan x="2015" dy="21">applicable. Compare subject and</tspan>
+<tspan x="2015" dy="21">reference trailers for axle count,</tspan>
+<tspan x="2015" dy="21">tyre count, lift-axle position,</tspan>
+<tspan x="2015" dy="21">nominal-pressure range, sensor and</tspan>
+<tspan x="2015" dy="21">receiver/antenna locations, system</tspan>
+<tspan x="2015" dy="21">setup, required input messages,</tspan>
+<tspan x="2015" dy="21">gateway compatibility and every</tspan>
+<tspan x="2015" dy="21">installation/integration limit.</tspan>
+<tspan x="2015" dy="21">Complete the subject-trailer system</tspan>
+<tspan x="2015" dy="21">description and physically inspect</tspan>
+<tspan x="2015" dy="21">the installed components, wiring,</tspan>
+<tspan x="2015" dy="21">sensor locations, antenna locations</tspan>
+<tspan x="2015" dy="21">and gateway configuration.</tspan>
+</text>
+<rect x="2323" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2335" y="3187.0">
+<tspan x="2335" dy="0">The subject-trailer installation</tspan>
+<tspan x="2335" dy="21">provides the same approved</tspan>
+<tspan x="2335" dy="21">puncture, diffusion, malfunction</tspan>
+<tspan x="2335" dy="21">and communication-warning</tspan>
+<tspan x="2335" dy="21">functionality as the covered</tspan>
+<tspan x="2335" dy="21">reference-trailer configuration.</tspan>
+</text>
+<rect x="2643" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2655" y="3145.0">
+<tspan x="2655" dy="0">Pass if the subject trailer is</tspan>
+<tspan x="2655" dy="21">fully covered by a physically</tspan>
+<tspan x="2655" dy="21">tested reference configuration, its</tspan>
+<tspan x="2655" dy="21">nominal-pressure range is within</tspan>
+<tspan x="2655" dy="21">the tested range, and every</tspan>
+<tspan x="2655" dy="21">TPMS/gateway installation and</tspan>
+<tspan x="2655" dy="21">integration limitation is</tspan>
+<tspan x="2655" dy="21">satisfied. Otherwise perform the</tspan>
+<tspan x="2655" dy="21">affected physical tests or revise</tspan>
+<tspan x="2655" dy="21">the approval scope.</tspan>
+</text>
+<rect x="2963" y="3055" width="320" height="360" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="2975" y="3166.0">
+<tspan x="2975" dy="0">Reference-trailer TPMS performance</tspan>
+<tspan x="2975" dy="21">report, gateway communication</tspan>
+<tspan x="2975" dy="21">report if applicable, reference-</tspan>
+<tspan x="2975" dy="21">and subject-trailer system</tspan>
+<tspan x="2975" dy="21">descriptions, configuration</tspan>
+<tspan x="2975" dy="21">comparison, installation inspection</tspan>
+<tspan x="2975" dy="21">record and Type Approval Authority</tspan>
+<tspan x="2975" dy="21">acceptance or test waiver.</tspan>
+</text>
+</svg>

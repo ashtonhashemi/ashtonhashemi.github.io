@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>UN-R 141 - 01 Suppl. 2 - Approval of vehicles with regard to their Tyre Pressure Monitoring Systems</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #eef2f6;
+      color: #17324d;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      overflow-x: hidden;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+      padding: 12px 18px;
+      background: #17324d;
+      color: #fff;
+      box-shadow: 0 2px 8px rgb(20 42 63 / 22%);
+      z-index: 1;
+    }
+
+    h1 {
+      margin: 0 auto 0 0;
+      font-size: 18px;
+      min-width: 0;
+    }
+
+    main {
+      min-width: 0;
+      min-height: 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: 250px minmax(0, 1fr);
+      gap: 0;
+    }
+
+    .toc {
+      overflow-y: auto;
+      padding: 18px 12px;
+      background: #e6edf2;
+      border-right: 1px solid #c9d3dc;
+    }
+
+    .toc-button {
+      display: block;
+      width: 100%;
+      margin: 0 0 6px;
+      border: 1px solid transparent;
+      border-radius: 4px;
+      background: transparent;
+      color: #17324d;
+      padding: 10px 12px;
+      text-align: left;
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .toc-button:hover { background: #d5e2eb; }
+    .toc-button.is-active {
+      border-color: #4b91b9;
+      background: #fff;
+      font-weight: 700;
+    }
+
+    .viewer {
+      position: relative;
+      min-height: 0;
+      overflow: scroll;
+      background: #fff;
+    }
+
+    .viewer::-webkit-scrollbar {
+      width: 16px;
+      height: 16px;
+    }
+
+    .viewer::-webkit-scrollbar-track {
+      background: #dce5ec;
+    }
+
+    .viewer::-webkit-scrollbar-thumb {
+      min-width: 42px;
+      min-height: 42px;
+      border: 3px solid #dce5ec;
+      border-radius: 0;
+      background: #647b8d;
+    }
+
+    .viewer::-webkit-scrollbar-thumb:hover {
+      background: #425d73;
+    }
+
+    .viewer::-webkit-scrollbar-corner {
+      background: #dce5ec;
+    }
+
+    .vertical-scrollbar {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 16px;
+      width: 16px;
+      background: #dce5ec;
+      z-index: 2;
+      touch-action: none;
+    }
+
+    .vertical-thumb {
+      width: 16px;
+      height: 84px;
+      min-height: 42px;
+      border: 3px solid #dce5ec;
+      background: #647b8d;
+      cursor: grab;
+      transform: translateY(0);
+    }
+
+    .vertical-thumb:active { cursor: grabbing; }
+
+    #viewerContent {
+      width: max-content;
+      min-width: 100%;
+    }
+
+    #tableImage {
+      display: block;
+      width: auto;
+      height: auto;
+      max-width: none;
+      border: 0;
+    }
+
+    @media (max-width: 850px) {
+      header { flex-wrap: wrap; }
+      h1 { width: 100%; }
+      main { grid-template-columns: 190px minmax(0, 1fr); }
+      .toc { padding: 12px 8px; }
+      .toc-button { padding: 8px; font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>UN-R 141 - 01 Suppl. 2 - Approval of vehicles with regard to their Tyre Pressure Monitoring Systems</h1>
+  </header>
+
+  <main>
+    <nav class="toc" aria-label="Document pages">
+      <div id="tableOfContents"></div>
+    </nav>
+    <div class="viewer" id="viewer">
+      <div id="viewerContent">
+        <iframe id="tableImage" title="Current table" scrolling="no"></iframe>
+      </div>
+      <div class="vertical-scrollbar" id="verticalScrollbar" aria-label="Vertical table scrollbar">
+        <div class="vertical-thumb" id="verticalThumb"></div>
+      </div>
+    </div>
+  </main>
+
+  <script>
+    const tables = [
+      { title: "EU Homologation Path", file: "dvp_un_r141_landing.svg", width: 1200, height: 1460 },
+      { title: "Regulatory Traceability", file: "r141_requirements.svg", width: 1608, height: 903 },
+      { title: "Test Matrix", file: "r141_test_matrix.svg", width: 3319, height: 3451 },
+      { title: "Reference Logical Architecture", file: "tpms_layered_stack.svg", width: 1480, height: 780 },
+      { title: "Verification Strategy Matrix", file: "r141_verification_environment.svg", width: 2242, height: 784 }
+    ];
+
+    const image = document.querySelector("#tableImage");
+    const viewer = document.querySelector("#viewer");
+    const tableOfContents = document.querySelector("#tableOfContents");
+    const verticalScrollbar = document.querySelector("#verticalScrollbar");
+    const verticalThumb = document.querySelector("#verticalThumb");
+    let verticalDragStartY = 0;
+    let verticalDragStartScrollTop = 0;
+
+    function updateVerticalScrollbar() {
+      const trackHeight = verticalScrollbar.clientHeight;
+      const contentHeight = viewer.scrollHeight;
+      const viewportHeight = viewer.clientHeight;
+      const maxScroll = Math.max(0, contentHeight - viewportHeight);
+      const thumbHeight = maxScroll === 0
+        ? trackHeight
+        : Math.max(42, trackHeight * viewportHeight / contentHeight);
+      const maxThumbTravel = Math.max(0, trackHeight - thumbHeight);
+      const thumbPosition = maxScroll === 0 ? 0 : maxThumbTravel * viewer.scrollTop / maxScroll;
+      verticalThumb.style.height = `${thumbHeight}px`;
+      verticalThumb.style.transform = `translateY(${thumbPosition}px)`;
+    }
+
+    function scrollVerticalFromPointer(clientY) {
+      const trackHeight = verticalScrollbar.clientHeight;
+      const thumbHeight = verticalThumb.offsetHeight;
+      const maxThumbTravel = Math.max(0, trackHeight - thumbHeight);
+      const maxScroll = Math.max(0, viewer.scrollHeight - viewer.clientHeight);
+      if (maxThumbTravel === 0) return;
+      viewer.scrollTop = verticalDragStartScrollTop + (clientY - verticalDragStartY) * maxScroll / maxThumbTravel;
+    }
+    function sizeTable(table) {
+      image.style.width = `${table.width}px`;
+      image.style.height = `${table.height}px`;
+    }
+
+    let currentIndex = Number.parseInt(location.hash.slice(1), 10);
+    if (!Number.isInteger(currentIndex) || currentIndex < 0 || currentIndex >= tables.length) {
+      currentIndex = 0;
+    }
+
+    function indexFromHash() {
+      const index = Number.parseInt(location.hash.slice(1), 10);
+      return Number.isInteger(index) && index >= 0 && index < tables.length ? index : 0;
+    }
+
+    function showTable(index) {
+      currentIndex = (index + tables.length) % tables.length;
+      const table = tables[currentIndex];
+      sizeTable(table);
+      image.src = table.file;
+      image.title = table.title;
+      for (const button of tableOfContents.children) {
+        button.classList.toggle("is-active", Number(button.dataset.index) === currentIndex);
+      }
+      location.hash = currentIndex;
+      viewer.scrollTo({ top: 0, left: 0 });
+      requestAnimationFrame(() => requestAnimationFrame(updateVerticalScrollbar));
+    }
+
+    window.addEventListener("hashchange", () => {
+      const index = indexFromHash();
+      if (index !== currentIndex) showTable(index);
+    });
+
+    image.addEventListener("load", () => requestAnimationFrame(updateVerticalScrollbar));
+    viewer.addEventListener("scroll", updateVerticalScrollbar);
+    window.addEventListener("resize", updateVerticalScrollbar);
+
+    verticalThumb.addEventListener("pointerdown", event => {
+      verticalDragStartY = event.clientY;
+      verticalDragStartScrollTop = viewer.scrollTop;
+      verticalThumb.setPointerCapture(event.pointerId);
+    });
+
+    verticalThumb.addEventListener("pointermove", event => {
+      if (verticalThumb.hasPointerCapture(event.pointerId)) scrollVerticalFromPointer(event.clientY);
+    });
+
+    verticalThumb.addEventListener("pointerup", event => {
+      if (verticalThumb.hasPointerCapture(event.pointerId)) verticalThumb.releasePointerCapture(event.pointerId);
+    });
+
+    verticalScrollbar.addEventListener("pointerdown", event => {
+      if (event.target === verticalThumb) return;
+      const rect = verticalScrollbar.getBoundingClientRect();
+      const ratio = (event.clientY - rect.top) / rect.height;
+      viewer.scrollTop = ratio * Math.max(0, viewer.scrollHeight - viewer.clientHeight);
+    });
+
+    for (const [index, table] of tables.entries()) {
+      const button = document.createElement("button");
+      button.type = "button";
+      button.className = "toc-button";
+      button.textContent = table.title;
+      button.dataset.index = index;
+      button.addEventListener("click", () => showTable(index));
+      tableOfContents.append(button);
+    }
+
+    showTable(currentIndex);
+  </script>
+</body>
+</html>

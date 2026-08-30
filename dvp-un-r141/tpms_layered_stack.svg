@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1480" height="780" viewBox="0 0 1480 780" role="img" aria-labelledby="title description">
+  <title id="title">Reference Logical Architecture</title>
+  <desc id="description">Four TPMS components shown as hardware, platform, application, and integrated telltale layers.</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#34495e"/>
+    </marker>
+  </defs>
+  <style>
+    .title { font: 700 28px "Segoe UI", sans-serif; fill: #17324d; }
+    .unit { font: 700 17px "Segoe UI", sans-serif; fill: #17324d; }
+    .layer { font: 700 15px "Segoe UI", sans-serif; fill: #17324d; }
+    .detail { font: 13px "Segoe UI", sans-serif; fill: #243746; }
+    .link { font: 13px "Segoe UI", sans-serif; fill: #34495e; }
+    .outline { fill: #ffffff; fill-opacity: 0.10; stroke: #c9d3dc; stroke-width: 2; }
+    .hardware { fill: #d9edf7; fill-opacity: 0.52; stroke: #4b91b9; stroke-width: 2; }
+    .platform { fill: #e4f1e5; fill-opacity: 0.52; stroke: #5a9b63; stroke-width: 2; }
+    .application { fill: #fff2cc; fill-opacity: 0.52; stroke: #d6b656; stroke-width: 2; }
+    .output { fill: #fce4d6; fill-opacity: 0.52; stroke: #d86a35; stroke-width: 2; }
+  </style>
+
+  <text class="title" x="740" y="55" text-anchor="middle">Reference Logical Architecture</text>
+
+  <g transform="translate(35 105)">
+    <rect class="outline" x="0" y="0" width="290" height="515" rx="0"/>
+    <text class="unit" x="145" y="34" text-anchor="middle">Wheel-End Sensors x4</text>
+    <rect class="hardware" x="15" y="70" width="260" height="125"/>
+    <text class="layer" x="145" y="113" text-anchor="middle">Hardware</text>
+    <text class="detail" x="145" y="140" text-anchor="middle">Sensors, MCU, battery, RF</text>
+    <rect class="platform" x="15" y="195" width="260" height="125"/>
+    <text class="layer" x="145" y="238" text-anchor="middle">Firmware</text>
+    <text class="detail" x="145" y="265" text-anchor="middle">Drivers and RF protocol</text>
+    <rect class="application" x="15" y="320" width="260" height="125"/>
+    <text class="layer" x="145" y="363" text-anchor="middle">Application Software</text>
+    <text class="detail" x="145" y="390" text-anchor="middle">Measure and transmit</text>
+  </g>
+
+  <g transform="translate(395 105)">
+    <rect class="outline" x="0" y="0" width="290" height="515" rx="0"/>
+    <text class="unit" x="145" y="34" text-anchor="middle">Zonal Control Unit</text>
+    <rect class="hardware" x="15" y="70" width="260" height="125"/>
+    <text class="layer" x="145" y="113" text-anchor="middle">Hardware</text>
+    <text class="detail" x="145" y="140" text-anchor="middle">RF receiver, SoC, Ethernet</text>
+    <rect class="platform" x="15" y="195" width="260" height="125"/>
+    <text class="layer" x="145" y="238" text-anchor="middle">Firmware</text>
+    <text class="detail" x="145" y="265" text-anchor="middle">RF and Ethernet drivers</text>
+    <rect class="application" x="15" y="320" width="260" height="125"/>
+    <text class="layer" x="145" y="363" text-anchor="middle">Application Software</text>
+    <text class="detail" x="145" y="390" text-anchor="middle">Decode and publish</text>
+  </g>
+
+  <g transform="translate(755 105)">
+    <rect class="outline" x="0" y="0" width="290" height="515" rx="0"/>
+    <text class="unit" x="145" y="34" text-anchor="middle">High-Performance Computer</text>
+    <rect class="hardware" x="15" y="70" width="260" height="125"/>
+    <text class="layer" x="145" y="113" text-anchor="middle">Hardware</text>
+    <text class="detail" x="145" y="140" text-anchor="middle">SoC, Ethernet, vehicle network</text>
+    <rect class="platform" x="15" y="195" width="260" height="125"/>
+    <text class="layer" x="145" y="238" text-anchor="middle">Platform</text>
+    <text class="detail" x="145" y="265" text-anchor="middle">OS and network middleware</text>
+    <rect class="application" x="15" y="320" width="260" height="125"/>
+    <text class="layer" x="145" y="363" text-anchor="middle">Application Software</text>
+    <text class="detail" x="145" y="390" text-anchor="middle">Diagnostics and warning</text>
+  </g>
+
+  <g transform="translate(1115 105)">
+    <rect class="outline" x="0" y="0" width="290" height="640" rx="0"/>
+    <text class="unit" x="145" y="34" text-anchor="middle">Instrument Panel Unit</text>
+    <rect class="hardware" x="15" y="70" width="260" height="125"/>
+    <text class="layer" x="145" y="113" text-anchor="middle">Hardware</text>
+    <text class="detail" x="145" y="140" text-anchor="middle">Display and indicator output</text>
+    <rect class="platform" x="15" y="195" width="260" height="125"/>
+    <text class="layer" x="145" y="238" text-anchor="middle">Platform</text>
+    <text class="detail" x="145" y="265" text-anchor="middle">Cluster and graphics drivers</text>
+    <rect class="application" x="15" y="320" width="260" height="125"/>
+    <text class="layer" x="145" y="363" text-anchor="middle">Application Software</text>
+    <text class="detail" x="145" y="390" text-anchor="middle">Cluster HMI: tire display and warning</text>
+    <rect class="output" x="15" y="445" width="260" height="125"/>
+    <text class="layer" x="145" y="488" text-anchor="middle">TPMS Warning Telltale</text>
+    <text class="detail" x="145" y="515" text-anchor="middle">Cluster-screen visual warning</text>
+  </g>
+
+  <path d="M 325 362 L 395 362" fill="none" stroke="#34495e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="link" x="360" y="342" text-anchor="middle" transform="rotate(-90 360 342)">RF</text>
+  <path d="M 685 362 L 755 362" fill="none" stroke="#34495e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="link" x="720" y="342" text-anchor="middle" transform="rotate(-90 720 342)">Ethernet</text>
+  <path d="M 1045 362 L 1115 362" fill="none" stroke="#34495e" stroke-width="2" marker-end="url(#arrow)"/>
+  <text class="link" x="1080" y="342" text-anchor="middle" transform="rotate(-90 1080 342)">Ethernet</text>
+
+</svg>
