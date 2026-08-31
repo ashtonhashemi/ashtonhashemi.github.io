@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2242" height="889" viewBox="0 0 2242 889">
+<svg xmlns="http://www.w3.org/2000/svg" width="1902" height="742" viewBox="0 0 1902 742">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:24px;font-weight:700;fill:#17324d}.head{font-size:15px;font-weight:700;fill:#ffffff}.cell{font-size:15px;fill:#202020}.test-link,.source-link{fill:#075a9c;text-decoration:underline;cursor:pointer}</style>
-<text class="title" x="1121.0" y="75.2" text-anchor="middle">
-<tspan x="1121.0" dy="0">Verification Strategy Matrix</tspan>
+<text class="title" x="951.0" y="75.2" text-anchor="middle">
+<tspan x="951.0" dy="0">Verification Strategy Matrix</tspan>
 </text>
 <rect x="36" y="100" width="130" height="48" fill="#17324d" stroke="#ffffff"/>
 <text class="head" x="48" y="129.25">Test ID</text>
@@ -16,10 +16,8 @@
 <text class="head" x="918" y="129.25">SiL Scope</text>
 <rect x="1226" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
 <text class="head" x="1238" y="129.25">HiL Scope</text>
-<rect x="1546" y="100" width="340" height="48" fill="#17324d" stroke="#ffffff"/>
-<text class="head" x="1558" y="129.25">Test Automation / Instrumentation</text>
-<rect x="1886" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
-<text class="head" x="1898" y="129.25">Automation Risk</text>
+<rect x="1546" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1558" y="129.25">Automation Risk</text>
 <rect x="36" y="148" width="130" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
 <text class="cell test-link" x="48" y="217.0">
@@ -32,11 +30,11 @@
 </text>
 <rect x="426" y="148" width="280" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="438" y="217.0">
-<tspan x="438" dy="0">Semi-automated Vehicle Test</tspan>
+<tspan x="438" dy="0">Only measurements- Canlyzer</tspan>
 </text>
 <rect x="706" y="148" width="200" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="718" y="175.0">
-<tspan x="718" dy="0">Real tyre deflation,</tspan>
+<tspan x="718" dy="0">Real tire deflation,</tspan>
 <tspan x="718" dy="21">conditioning,</tspan>
 <tspan x="718" dy="21">driving, and actual</tspan>
 <tspan x="718" dy="21">telltale</tspan>
@@ -45,8 +43,8 @@
 <rect x="906" y="148" width="320" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="918" y="185.5">
 <tspan x="918" dy="0">Not applicable — requires physical</tspan>
-<tspan x="918" dy="21">tyre pressure loss, real TPMS</tspan>
-<tspan x="918" dy="21">sensor/RF behavior, tyre thermal</tspan>
+<tspan x="918" dy="21">tire pressure loss, real TPMS</tspan>
+<tspan x="918" dy="21">sensor/RF behavior, tire thermal</tspan>
 <tspan x="918" dy="21">response, and vehicle dynamics.</tspan>
 </text>
 <rect x="1226" y="148" width="320" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
@@ -57,16 +55,9 @@
 <tspan x="1238" dy="21">hardware adds limited value versus</tspan>
 <tspan x="1238" dy="21">the vehicle test.</tspan>
 </text>
-<rect x="1546" y="148" width="340" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="185.5">
-<tspan x="1558" dy="0">CANalyzer Ethernet logging; vehicle</tspan>
-<tspan x="1558" dy="21">speed, time, ambient-temperature,</tspan>
-<tspan x="1558" dy="21">pressure, and telltale evidence</tspan>
-<tspan x="1558" dy="21">capture.</tspan>
-</text>
-<rect x="1886" y="148" width="320" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1898" y="217.0">
-<tspan x="1898" dy="0">None</tspan>
+<rect x="1546" y="148" width="320" height="129" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="217.0">
+<tspan x="1558" dy="0">None</tspan>
 </text>
 <rect x="36" y="277" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
@@ -84,7 +75,7 @@
 </text>
 <rect x="706" y="277" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <text class="cell" x="718" y="304.0">
-<tspan x="718" dy="0">Real tyre deflation,</tspan>
+<tspan x="718" dy="0">Real tire deflation,</tspan>
 <tspan x="718" dy="21">conditioning,</tspan>
 <tspan x="718" dy="21">driving, and actual</tspan>
 <tspan x="718" dy="21">telltale</tspan>
@@ -93,8 +84,8 @@
 <rect x="906" y="277" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <text class="cell" x="918" y="314.5">
 <tspan x="918" dy="0">Not applicable — requires physical</tspan>
-<tspan x="918" dy="21">tyre pressure loss, real TPMS</tspan>
-<tspan x="918" dy="21">sensor/RF behavior, tyre thermal</tspan>
+<tspan x="918" dy="21">tire pressure loss, real TPMS</tspan>
+<tspan x="918" dy="21">sensor/RF behavior, tire thermal</tspan>
 <tspan x="918" dy="21">response, and vehicle dynamics.</tspan>
 </text>
 <rect x="1226" y="277" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
@@ -105,116 +96,83 @@
 <tspan x="1238" dy="21">hardware adds limited value versus</tspan>
 <tspan x="1238" dy="21">the vehicle test.</tspan>
 </text>
-<rect x="1546" y="277" width="340" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="314.5">
-<tspan x="1558" dy="0">CANalyzer Ethernet logging; vehicle</tspan>
-<tspan x="1558" dy="21">speed, time, ambient-temperature,</tspan>
-<tspan x="1558" dy="21">pressure, and telltale evidence</tspan>
-<tspan x="1558" dy="21">capture.</tspan>
+<rect x="1546" y="277" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="346.0">
+<tspan x="1558" dy="0">None</tspan>
 </text>
-<rect x="1886" y="277" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1898" y="346.0">
-<tspan x="1898" dy="0">None</tspan>
-</text>
-<rect x="36" y="406" width="130" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<rect x="36" y="406" width="130" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
-<text class="cell test-link" x="48" y="569.5">
+<text class="cell test-link" x="48" y="496.0">
 <tspan x="48" dy="0">TPMS-T07</tspan>
 </text>
 </a>
-<rect x="166" y="406" width="260" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="178" y="569.5">
+<rect x="166" y="406" width="260" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="496.0">
 <tspan x="178" dy="0">Malfunction</tspan>
 </text>
-<rect x="426" y="406" width="280" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="538.0">
+<rect x="426" y="406" width="280" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="438" y="464.5">
 <tspan x="438" dy="0">Real SW + Simulated HW and</tspan>
 <tspan x="438" dy="21">Test Environment — subject to</tspan>
 <tspan x="438" dy="21">Technical Service / Approval</tspan>
 <tspan x="438" dy="21">Authority acceptance</tspan>
 </text>
-<rect x="706" y="406" width="200" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="527.5">
-<tspan x="718" dy="0">Fallback regulatory</tspan>
-<tspan x="718" dy="21">vehicle test if</tspan>
-<tspan x="718" dy="21">virtual-test</tspan>
-<tspan x="718" dy="21">evidence is not</tspan>
-<tspan x="718" dy="21">accepted.</tspan>
+<rect x="706" y="406" width="200" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="496.0">
+<tspan x="718" dy="0">None</tspan>
 </text>
-<rect x="906" y="406" width="320" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="527.5">
+<rect x="906" y="406" width="320" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="918" y="475.0">
 <tspan x="918" dy="0">Execute ZCU and HPC TPMS</tspan>
 <tspan x="918" dy="21">application software in a virtual</tspan>
-<tspan x="918" dy="21">machine with Zephyr native</tspan>
-<tspan x="918" dy="21">simulation. VEOS V-ECU is the</tspan>
-<tspan x="918" dy="21">alternative.</tspan>
+<tspan x="918" dy="21">machine with native simulation.</tspan>
 </text>
-<rect x="1226" y="406" width="320" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="569.5">
+<rect x="1226" y="406" width="320" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1238" y="496.0">
 <tspan x="1238" dy="0">None</tspan>
 </text>
-<rect x="1546" y="406" width="340" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="569.5">
-<tspan x="1558" dy="0">Python test runner</tspan>
+<rect x="1546" y="406" width="320" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="433.0">
+<tspan x="1558" dy="0">Zonal Control Unit Ethernet</tspan>
+<tspan x="1558" dy="21">loss/delay/restart, High-</tspan>
+<tspan x="1558" dy="21">Performance Computer or Instrument</tspan>
+<tspan x="1558" dy="21">Panel Unit timeout/startup, and</tspan>
+<tspan x="1558" dy="21">other hardware failure modes or</tspan>
+<tspan x="1558" dy="21">impacts on the application</tspan>
+<tspan x="1558" dy="21">software;</tspan>
 </text>
-<rect x="1886" y="406" width="320" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1898" y="433.0">
-<tspan x="1898" dy="0">SiL excludes real RF/sensor</tspan>
-<tspan x="1898" dy="21">recovery behavior, Zonal Control</tspan>
-<tspan x="1898" dy="21">Unit Ethernet loss/delay/restart,</tspan>
-<tspan x="1898" dy="21">High-Performance Computer or</tspan>
-<tspan x="1898" dy="21">Instrument Panel Unit</tspan>
-<tspan x="1898" dy="21">timeout/startup, and other hardware</tspan>
-<tspan x="1898" dy="21">impacts including CPU clock;</tspan>
-<tspan x="1898" dy="21">virtual-test equivalence requires</tspan>
-<tspan x="1898" dy="21">physical correlation and regulatory</tspan>
-<tspan x="1898" dy="21">acceptance. Any software</tspan>
-<tspan x="1898" dy="21">functionality that can be impacted</tspan>
-<tspan x="1898" dy="21">by hardware failures may not be</tspan>
-<tspan x="1898" dy="21">fully validated without actual</tspan>
-<tspan x="1898" dy="21">hardware.</tspan>
-</text>
-<rect x="36" y="724" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<rect x="36" y="577" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
-<text class="cell test-link" x="48" y="793.0">
+<text class="cell test-link" x="48" y="646.0">
 <tspan x="48" dy="0">TPMS-T09</tspan>
 </text>
 </a>
-<rect x="166" y="724" width="260" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="178" y="793.0">
+<rect x="166" y="577" width="260" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="646.0">
 <tspan x="178" dy="0">Reset protection</tspan>
 </text>
-<rect x="426" y="724" width="280" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="772.0">
-<tspan x="438" dy="0">Proposed SiL cascade — subject</tspan>
-<tspan x="438" dy="21">to Technical Service /</tspan>
-<tspan x="438" dy="21">Approval Authority acceptance</tspan>
+<rect x="426" y="577" width="280" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="438" y="646.0">
+<tspan x="438" dy="0">Real SW</tspan>
 </text>
-<rect x="706" y="724" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="751.0">
+<rect x="706" y="577" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="604.0">
 <tspan x="718" dy="0">Fallback regulatory</tspan>
 <tspan x="718" dy="21">vehicle test if</tspan>
 <tspan x="718" dy="21">virtual-test</tspan>
 <tspan x="718" dy="21">evidence is not</tspan>
 <tspan x="718" dy="21">accepted.</tspan>
 </text>
-<rect x="906" y="724" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="761.5">
-<tspan x="918" dy="0">Instrument Panel Unit reset UI and</tspan>
-<tspan x="918" dy="21">reset-state logic, with simulated</tspan>
-<tspan x="918" dy="21">vehicle-speed, power-mode, and TPMS</tspan>
-<tspan x="918" dy="21">warning-state inputs.</tspan>
+<rect x="906" y="577" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="918" y="646.0">
+<tspan x="918" dy="0">High-Performance Computer .</tspan>
 </text>
-<rect x="1226" y="724" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="793.0">
+<rect x="1226" y="577" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1238" y="646.0">
 <tspan x="1238" dy="0">None</tspan>
 </text>
-<rect x="1546" y="724" width="340" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="793.0">
-<tspan x="1558" dy="0">Python test runner</tspan>
-</text>
-<rect x="1886" y="724" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1898" y="793.0">
-<tspan x="1898" dy="0">None</tspan>
+<rect x="1546" y="577" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="646.0">
+<tspan x="1558" dy="0">None</tspan>
 </text>
 </svg>
