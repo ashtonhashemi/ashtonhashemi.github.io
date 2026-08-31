@@ -79,7 +79,8 @@
 
     .viewer {
       min-height: 0;
-      overflow: auto;
+      overflow-x: auto;
+      overflow-y: scroll;
       background: #fff;
     }
 
@@ -149,10 +150,10 @@
   <script>
     const tables = [
       { title: "EU Homologation Path", file: "dvp_un_r141_landing.svg", width: 1200, height: 1460 },
-      { title: "Regulatory Traceability", file: "r141_requirements.svg", width: 1608, height: 903 },
+      { title: "Regulatory Traceability", file: "r141_requirements.svg", width: 1608, height: 959 },
       { title: "Test Matrix", file: "r141_test_matrix.svg", width: 3319, height: 3451 },
       { title: "Reference Logical Architecture", file: "tpms_layered_stack.svg", width: 1480, height: 780 },
-      { title: "Verification Strategy Matrix", file: "r141_verification_environment.svg", width: 2242, height: 784 }
+      { title: "Verification Strategy Matrix", file: "r141_verification_environment.svg", width: 2242, height: 889 }
     ];
 
     const image = document.querySelector("#tableImage");

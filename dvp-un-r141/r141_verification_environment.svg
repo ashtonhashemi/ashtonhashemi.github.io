@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="2242" height="784" viewBox="0 0 2242 784">
+<svg xmlns="http://www.w3.org/2000/svg" width="2242" height="889" viewBox="0 0 2242 889">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:24px;font-weight:700;fill:#17324d}.head{font-size:15px;font-weight:700;fill:#ffffff}.cell{font-size:15px;fill:#202020}.test-link,.source-link{fill:#075a9c;text-decoration:underline;cursor:pointer}</style>
 <text class="title" x="1121.0" y="75.2" text-anchor="middle">
@@ -116,48 +116,48 @@
 <text class="cell" x="1898" y="346.0">
 <tspan x="1898" dy="0">None</tspan>
 </text>
-<rect x="36" y="406" width="130" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<rect x="36" y="406" width="130" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
-<text class="cell test-link" x="48" y="517.0">
+<text class="cell test-link" x="48" y="569.5">
 <tspan x="48" dy="0">TPMS-T07</tspan>
 </text>
 </a>
-<rect x="166" y="406" width="260" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="178" y="517.0">
+<rect x="166" y="406" width="260" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="569.5">
 <tspan x="178" dy="0">Malfunction</tspan>
 </text>
-<rect x="426" y="406" width="280" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="496.0">
-<tspan x="438" dy="0">Proposed SiL cascade — subject</tspan>
-<tspan x="438" dy="21">to Technical Service /</tspan>
-<tspan x="438" dy="21">Approval Authority acceptance</tspan>
+<rect x="426" y="406" width="280" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="438" y="538.0">
+<tspan x="438" dy="0">Real SW + Simulated HW and</tspan>
+<tspan x="438" dy="21">Test Environment — subject to</tspan>
+<tspan x="438" dy="21">Technical Service / Approval</tspan>
+<tspan x="438" dy="21">Authority acceptance</tspan>
 </text>
-<rect x="706" y="406" width="200" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="475.0">
+<rect x="706" y="406" width="200" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="527.5">
 <tspan x="718" dy="0">Fallback regulatory</tspan>
 <tspan x="718" dy="21">vehicle test if</tspan>
 <tspan x="718" dy="21">virtual-test</tspan>
 <tspan x="718" dy="21">evidence is not</tspan>
 <tspan x="718" dy="21">accepted.</tspan>
 </text>
-<rect x="906" y="406" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="464.5">
-<tspan x="918" dy="0">Execute host-compiled ZCU and HPC</tspan>
-<tspan x="918" dy="21">TPMS application software on ARM64</tspan>
-<tspan x="918" dy="21">Linux, with Python-orchestrated</tspan>
-<tspan x="918" dy="21">simulation of TPMS sensor/status,</tspan>
-<tspan x="918" dy="21">vehicle-speed, power-mode, and</tspan>
-<tspan x="918" dy="21">other inputs.</tspan>
+<rect x="906" y="406" width="320" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="918" y="527.5">
+<tspan x="918" dy="0">Execute ZCU and HPC TPMS</tspan>
+<tspan x="918" dy="21">application software in a virtual</tspan>
+<tspan x="918" dy="21">machine with Zephyr native</tspan>
+<tspan x="918" dy="21">simulation. VEOS V-ECU is the</tspan>
+<tspan x="918" dy="21">alternative.</tspan>
 </text>
-<rect x="1226" y="406" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="517.0">
+<rect x="1226" y="406" width="320" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1238" y="569.5">
 <tspan x="1238" dy="0">None</tspan>
 </text>
-<rect x="1546" y="406" width="340" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="517.0">
+<rect x="1546" y="406" width="340" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="569.5">
 <tspan x="1558" dy="0">Python test runner</tspan>
 </text>
-<rect x="1886" y="406" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<rect x="1886" y="406" width="320" height="318" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="1898" y="433.0">
 <tspan x="1898" dy="0">SiL excludes real RF/sensor</tspan>
 <tspan x="1898" dy="21">recovery behavior, Zonal Control</tspan>
@@ -165,51 +165,56 @@
 <tspan x="1898" dy="21">High-Performance Computer or</tspan>
 <tspan x="1898" dy="21">Instrument Panel Unit</tspan>
 <tspan x="1898" dy="21">timeout/startup, and other hardware</tspan>
-<tspan x="1898" dy="21">impacts; virtual-test equivalence</tspan>
-<tspan x="1898" dy="21">requires physical correlation and</tspan>
-<tspan x="1898" dy="21">regulatory acceptance.</tspan>
+<tspan x="1898" dy="21">impacts including CPU clock;</tspan>
+<tspan x="1898" dy="21">virtual-test equivalence requires</tspan>
+<tspan x="1898" dy="21">physical correlation and regulatory</tspan>
+<tspan x="1898" dy="21">acceptance. Any software</tspan>
+<tspan x="1898" dy="21">functionality that can be impacted</tspan>
+<tspan x="1898" dy="21">by hardware failures may not be</tspan>
+<tspan x="1898" dy="21">fully validated without actual</tspan>
+<tspan x="1898" dy="21">hardware.</tspan>
 </text>
-<rect x="36" y="619" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<rect x="36" y="724" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
-<text class="cell test-link" x="48" y="688.0">
+<text class="cell test-link" x="48" y="793.0">
 <tspan x="48" dy="0">TPMS-T09</tspan>
 </text>
 </a>
-<rect x="166" y="619" width="260" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="178" y="688.0">
+<rect x="166" y="724" width="260" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="793.0">
 <tspan x="178" dy="0">Reset protection</tspan>
 </text>
-<rect x="426" y="619" width="280" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="667.0">
+<rect x="426" y="724" width="280" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="438" y="772.0">
 <tspan x="438" dy="0">Proposed SiL cascade — subject</tspan>
 <tspan x="438" dy="21">to Technical Service /</tspan>
 <tspan x="438" dy="21">Approval Authority acceptance</tspan>
 </text>
-<rect x="706" y="619" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="646.0">
+<rect x="706" y="724" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="751.0">
 <tspan x="718" dy="0">Fallback regulatory</tspan>
 <tspan x="718" dy="21">vehicle test if</tspan>
 <tspan x="718" dy="21">virtual-test</tspan>
 <tspan x="718" dy="21">evidence is not</tspan>
 <tspan x="718" dy="21">accepted.</tspan>
 </text>
-<rect x="906" y="619" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="656.5">
+<rect x="906" y="724" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="918" y="761.5">
 <tspan x="918" dy="0">Instrument Panel Unit reset UI and</tspan>
 <tspan x="918" dy="21">reset-state logic, with simulated</tspan>
 <tspan x="918" dy="21">vehicle-speed, power-mode, and TPMS</tspan>
 <tspan x="918" dy="21">warning-state inputs.</tspan>
 </text>
-<rect x="1226" y="619" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="688.0">
+<rect x="1226" y="724" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1238" y="793.0">
 <tspan x="1238" dy="0">None</tspan>
 </text>
-<rect x="1546" y="619" width="340" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="688.0">
+<rect x="1546" y="724" width="340" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="793.0">
 <tspan x="1558" dy="0">Python test runner</tspan>
 </text>
-<rect x="1886" y="619" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1898" y="688.0">
+<rect x="1886" y="724" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1898" y="793.0">
 <tspan x="1898" dy="0">None</tspan>
 </text>
 </svg>
