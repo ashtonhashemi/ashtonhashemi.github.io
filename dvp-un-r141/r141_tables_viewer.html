@@ -164,6 +164,15 @@
       image.style.height = `${table.height}px`;
     }
 
+    image.addEventListener("load", () => {
+      const svg = image.contentDocument?.documentElement;
+      const width = Number.parseFloat(svg?.getAttribute("width"));
+      const height = Number.parseFloat(svg?.getAttribute("height"));
+      if (Number.isFinite(width) && Number.isFinite(height)) {
+        sizeTable({ width, height });
+      }
+    });
+
     let currentIndex = Number.parseInt(location.hash.slice(1), 10);
     if (!Number.isInteger(currentIndex) || currentIndex < 0 || currentIndex >= tables.length) {
       currentIndex = 0;
