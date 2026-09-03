@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1902" height="742" viewBox="0 0 1902 742">
+<svg xmlns="http://www.w3.org/2000/svg" width="1902" height="763" viewBox="0 0 1902 763">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:24px;font-weight:700;fill:#17324d}.head{font-size:15px;font-weight:700;fill:#ffffff}.cell{font-size:15px;fill:#202020}.test-link,.source-link{fill:#075a9c;text-decoration:underline;cursor:pointer}</style>
 <text class="title" x="951.0" y="75.2" text-anchor="middle">
-<tspan x="951.0" dy="0">Verification Strategy Matrix</tspan>
+<tspan x="951.0" dy="0">Verification Strategy</tspan>
 </text>
 <rect x="36" y="100" width="130" height="48" fill="#17324d" stroke="#ffffff"/>
 <text class="head" x="48" y="129.25">Test ID</text>
@@ -100,79 +100,79 @@
 <text class="cell" x="1558" y="346.0">
 <tspan x="1558" dy="0">None</tspan>
 </text>
-<rect x="36" y="406" width="130" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<rect x="36" y="406" width="130" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
-<text class="cell test-link" x="48" y="496.0">
+<text class="cell test-link" x="48" y="506.5">
 <tspan x="48" dy="0">TPMS-T07</tspan>
 </text>
 </a>
-<rect x="166" y="406" width="260" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="178" y="496.0">
+<rect x="166" y="406" width="260" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="506.5">
 <tspan x="178" dy="0">Malfunction</tspan>
 </text>
-<rect x="426" y="406" width="280" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="464.5">
-<tspan x="438" dy="0">Real SW + Simulated HW and</tspan>
-<tspan x="438" dy="21">Test Environment — subject to</tspan>
-<tspan x="438" dy="21">Technical Service / Approval</tspan>
-<tspan x="438" dy="21">Authority acceptance</tspan>
+<rect x="426" y="406" width="280" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="438" y="506.5">
+<tspan x="438" dy="0">Automated SIL — Partial System</tspan>
 </text>
-<rect x="706" y="406" width="200" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="496.0">
+<rect x="706" y="406" width="200" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="506.5">
 <tspan x="718" dy="0">None</tspan>
 </text>
-<rect x="906" y="406" width="320" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="475.0">
+<rect x="906" y="406" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="918" y="485.5">
 <tspan x="918" dy="0">Execute ZCU and HPC TPMS</tspan>
 <tspan x="918" dy="21">application software in a virtual</tspan>
-<tspan x="918" dy="21">machine with native simulation.</tspan>
+<tspan x="918" dy="21">machine separately (SIL Stack).</tspan>
 </text>
-<rect x="1226" y="406" width="320" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="496.0">
+<rect x="1226" y="406" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1238" y="506.5">
 <tspan x="1238" dy="0">None</tspan>
 </text>
-<rect x="1546" y="406" width="320" height="171" fill="#f7f9fb" stroke="#aeb7bf"/>
+<rect x="1546" y="406" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="1558" y="433.0">
-<tspan x="1558" dy="0">Zonal Control Unit Ethernet</tspan>
-<tspan x="1558" dy="21">loss/delay/restart, High-</tspan>
-<tspan x="1558" dy="21">Performance Computer or Instrument</tspan>
-<tspan x="1558" dy="21">Panel Unit timeout/startup, and</tspan>
-<tspan x="1558" dy="21">other hardware failure modes or</tspan>
-<tspan x="1558" dy="21">impacts on the application</tspan>
-<tspan x="1558" dy="21">software;</tspan>
+<tspan x="1558" dy="0">Does not validate production</tspan>
+<tspan x="1558" dy="21">hardware, network timing, cross-ECU</tspan>
+<tspan x="1558" dy="21">synchronization, startup/restart</tspan>
+<tspan x="1558" dy="21">sequencing, or production</tspan>
+<tspan x="1558" dy="21">middleware behavior. Fault</tspan>
+<tspan x="1558" dy="21">injection represents software-</tspan>
+<tspan x="1558" dy="21">visible effects rather than the</tspan>
+<tspan x="1558" dy="21">complete physical failure.</tspan>
 </text>
-<rect x="36" y="577" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<rect x="36" y="598" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
-<text class="cell test-link" x="48" y="646.0">
+<text class="cell test-link" x="48" y="667.0">
 <tspan x="48" dy="0">TPMS-T09</tspan>
 </text>
 </a>
-<rect x="166" y="577" width="260" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="178" y="646.0">
+<rect x="166" y="598" width="260" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="178" y="667.0">
 <tspan x="178" dy="0">Reset protection</tspan>
 </text>
-<rect x="426" y="577" width="280" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="646.0">
-<tspan x="438" dy="0">Real SW</tspan>
+<rect x="426" y="598" width="280" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="438" y="667.0">
+<tspan x="438" dy="0">Automated SIL — Partial System</tspan>
 </text>
-<rect x="706" y="577" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="604.0">
-<tspan x="718" dy="0">Fallback regulatory</tspan>
-<tspan x="718" dy="21">vehicle test if</tspan>
-<tspan x="718" dy="21">virtual-test</tspan>
-<tspan x="718" dy="21">evidence is not</tspan>
-<tspan x="718" dy="21">accepted.</tspan>
+<rect x="706" y="598" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="667.0">
+<tspan x="718" dy="0">None</tspan>
 </text>
-<rect x="906" y="577" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<rect x="906" y="598" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <text class="cell" x="918" y="646.0">
-<tspan x="918" dy="0">High-Performance Computer .</tspan>
+<tspan x="918" dy="0">Execute HPC TPMS application</tspan>
+<tspan x="918" dy="21">software in a virtual machine (SIL</tspan>
+<tspan x="918" dy="21">Stack).</tspan>
 </text>
-<rect x="1226" y="577" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="646.0">
+<rect x="1226" y="598" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1238" y="667.0">
 <tspan x="1238" dy="0">None</tspan>
 </text>
-<rect x="1546" y="577" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="646.0">
-<tspan x="1558" dy="0">None</tspan>
+<rect x="1546" y="598" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1558" y="625.0">
+<tspan x="1558" dy="0">Virtual reset may not reproduce</tspan>
+<tspan x="1558" dy="21">production power-cycle behavior,</tspan>
+<tspan x="1558" dy="21">retained memory, watchdog/reset-</tspan>
+<tspan x="1558" dy="21">cause handling, startup timing, or</tspan>
+<tspan x="1558" dy="21">peripheral initialization.</tspan>
 </text>
 </svg>

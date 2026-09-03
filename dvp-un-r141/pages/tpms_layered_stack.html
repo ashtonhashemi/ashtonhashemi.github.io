@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reference Logical Architecture</title>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-width: 1600px; min-height: 970px; background: #fff; font-family: Arial, Helvetica, sans-serif; color: #111; }
+  .page-title { margin: 48px 0 8px; color: #17324d; font-size: 38px; text-align: center; }
+  .page-subtitle { margin: 0; color: #425d73; font-size: 17px; text-align: center; }
+  .architecture { width: 1540px; margin: 52px auto 70px; display: flex; align-items: flex-start; justify-content: center; }
+  .unit { width: 330px; text-align: center; }
+  .unit-shell { min-height: 650px; padding: 24px 20px 22px; border: 1px solid #c9d3dc; border-radius: 12px; background: #f7f9fb; }
+  .unit-title { height: 66px; margin: 0; color: #17324d; font-size: 22px; font-weight: 700; line-height: 1.25; display: flex; align-items: center; justify-content: center; }
+  .box { width: 100%; min-height: 112px; border: 1.5px solid; border-radius: 5px; display: flex; align-items: center; justify-content: center; padding: 14px; }
+  .box-title { margin-bottom: 8px; font-size: 21px; font-weight: 700; }
+  .box-subtitle { color: #243746; font-size: 16px; line-height: 1.35; }
+  .hardware { background: linear-gradient(#eaf3ff, #dbe9fb); border-color: #3675d1; }
+  .platform { background: linear-gradient(#eef7e7, #e2f0d9); border-color: #79aa54; }
+  .application { background: linear-gradient(#fff8e5, #ffefc3); border-color: #dfa821; }
+  .output { background: linear-gradient(#fff0e5, #ffe0ca); border-color: #f26b22; }
+  .down-arrow { height: 34px; position: relative; }
+  .down-arrow::before { content: ""; position: absolute; width: 3px; height: 21px; background: #17324d; top: 0; left: 50%; transform: translateX(-50%); }
+  .down-arrow::after { content: ""; position: absolute; left: 50%; bottom: 1px; transform: translateX(-50%); border-left: 7px solid transparent; border-right: 7px solid transparent; border-top: 11px solid #17324d; }
+  .link { width: 72px; height: 650px; padding-top: 318px; text-align: center; }
+  .link-label { margin-bottom: 8px; color: #425d73; font-size: 14px; font-weight: 700; }
+  .right-arrow { height: 3px; background: #17324d; position: relative; }
+  .right-arrow::after { content: ""; position: absolute; right: -1px; top: 50%; transform: translateY(-50%); border-top: 7px solid transparent; border-bottom: 7px solid transparent; border-left: 11px solid #17324d; }
+</style>
+</head>
+<body>
+<h1 class="page-title">Reference Logical Architecture</h1>
+<p class="page-subtitle">TPMS signal path from wheel-end sensing through vehicle processing to the driver warning</p>
+
+<main class="architecture">
+  <section class="unit" aria-labelledby="wheel-title">
+    <div class="unit-shell">
+      <h2 class="unit-title" id="wheel-title">Wheel-End Sensors ×4</h2>
+      <div class="box hardware"><div><div class="box-title">Hardware</div><div class="box-subtitle">Sensors, MCU, battery, RF</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box platform"><div><div class="box-title">Firmware</div><div class="box-subtitle">Drivers and RF protocol</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box application"><div><div class="box-title">Application Software</div><div class="box-subtitle">Measure and transmit</div></div></div>
+    </div>
+  </section>
+
+  <div class="link" aria-label="RF connection"><div class="link-label">RF</div><div class="right-arrow"></div></div>
+
+  <section class="unit" aria-labelledby="zcu-title">
+    <div class="unit-shell">
+      <h2 class="unit-title" id="zcu-title">Zonal Control Unit</h2>
+      <div class="box hardware"><div><div class="box-title">Hardware</div><div class="box-subtitle">RF receiver, SoC, Ethernet</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box platform"><div><div class="box-title">Firmware</div><div class="box-subtitle">RF and Ethernet drivers</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box application"><div><div class="box-title">Application Software</div><div class="box-subtitle">Decode and publish</div></div></div>
+    </div>
+  </section>
+
+  <div class="link" aria-label="Ethernet connection"><div class="link-label">Ethernet</div><div class="right-arrow"></div></div>
+
+  <section class="unit" aria-labelledby="hpc-title">
+    <div class="unit-shell">
+      <h2 class="unit-title" id="hpc-title">High-Performance Computer</h2>
+      <div class="box hardware"><div><div class="box-title">Hardware</div><div class="box-subtitle">SoC, Ethernet, vehicle network</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box platform"><div><div class="box-title">Platform</div><div class="box-subtitle">OS and network middleware</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box application"><div><div class="box-title">Application Software</div><div class="box-subtitle">Diagnostics and warning</div></div></div>
+    </div>
+  </section>
+
+  <div class="link" aria-label="Ethernet connection"><div class="link-label">Ethernet</div><div class="right-arrow"></div></div>
+
+  <section class="unit" aria-labelledby="cluster-title">
+    <div class="unit-shell">
+      <h2 class="unit-title" id="cluster-title">Instrument Panel Unit</h2>
+      <div class="box hardware"><div><div class="box-title">Hardware</div><div class="box-subtitle">Display and indicator output</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box platform"><div><div class="box-title">Platform</div><div class="box-subtitle">Cluster and graphics drivers</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box application"><div><div class="box-title">Application Software</div><div class="box-subtitle">Cluster HMI: tire display and warning</div></div></div>
+      <div class="down-arrow" aria-hidden="true"></div>
+      <div class="box output"><div><div class="box-title">TPMS Warning Telltale</div><div class="box-subtitle">Cluster-screen visual warning</div></div></div>
+    </div>
+  </section>
+</main>
+</body>
+</html>
+
