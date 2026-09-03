@@ -1,8 +1,8 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1902" height="931" viewBox="0 0 1902 931">
+<svg xmlns="http://www.w3.org/2000/svg" width="2342" height="931" viewBox="0 0 2342 931">
 <rect width="100%" height="100%" fill="#ffffff"/>
 <style>text{font-family:Arial, Helvetica, sans-serif}.title{font-size:24px;font-weight:700;fill:#17324d}.head{font-size:15px;font-weight:700;fill:#ffffff}.cell{font-size:15px;fill:#202020}.test-link,.source-link{fill:#075a9c;text-decoration:underline;cursor:pointer}</style>
-<text class="title" x="951.0" y="75.2" text-anchor="middle">
-<tspan x="951.0" dy="0">Verification Strategy</tspan>
+<text class="title" x="1171.0" y="75.2" text-anchor="middle">
+<tspan x="1171.0" dy="0">Verification Strategy</tspan>
 </text>
 <rect x="36" y="100" width="130" height="48" fill="#17324d" stroke="#ffffff"/>
 <text class="head" x="48" y="129.25">Test ID</text>
@@ -10,14 +10,16 @@
 <text class="head" x="178" y="129.25">Required Verification</text>
 <rect x="426" y="100" width="280" height="48" fill="#17324d" stroke="#ffffff"/>
 <text class="head" x="438" y="129.25">Automation</text>
-<rect x="706" y="100" width="200" height="48" fill="#17324d" stroke="#ffffff"/>
-<text class="head" x="718" y="129.25">Vehicle Scope</text>
-<rect x="906" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
-<text class="head" x="918" y="129.25">SiL Scope</text>
-<rect x="1226" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
-<text class="head" x="1238" y="129.25">HiL Scope</text>
-<rect x="1546" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
-<text class="head" x="1558" y="129.25">Automation Risk</text>
+<rect x="706" y="100" width="440" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="718" y="129.25">Test Tools / Automation Framework</text>
+<rect x="1146" y="100" width="200" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1158" y="129.25">Vehicle Scope</text>
+<rect x="1346" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1358" y="129.25">SiL Scope</text>
+<rect x="1666" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1678" y="129.25">HiL Scope</text>
+<rect x="1986" y="100" width="320" height="48" fill="#17324d" stroke="#ffffff"/>
+<text class="head" x="1998" y="129.25">Automation Risk</text>
 <rect x="36" y="148" width="130" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
 <text class="cell test-link" x="48" y="259.0">
@@ -33,37 +35,45 @@
 <tspan x="438" dy="0">Automated HIL — System</tspan>
 <tspan x="438" dy="21">Functional</tspan>
 </text>
-<rect x="706" y="148" width="200" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="175.0">
-<tspan x="718" dy="0">Record</tspan>
-<tspan x="718" dy="21">representative TPMS</tspan>
-<tspan x="718" dy="21">RF messages, vehicle</tspan>
-<tspan x="718" dy="21">speed, and relevant</tspan>
-<tspan x="718" dy="21">vehicle-</tspan>
-<tspan x="718" dy="21">state/network</tspan>
-<tspan x="718" dy="21">signals for</tspan>
-<tspan x="718" dy="21">synchronized bench</tspan>
-<tspan x="718" dy="21">playback.</tspan>
+<rect x="706" y="148" width="440" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="217.0">
+<tspan x="718" dy="0">Python + CANoe/CANalyzer + RF signal</tspan>
+<tspan x="718" dy="21">generator/transceiver control — Python</tspan>
+<tspan x="718" dy="21">orchestrates playback, fault profiles, timing,</tspan>
+<tspan x="718" dy="21">and pass/fail evaluation; CANoe/CANalyzer records</tspan>
+<tspan x="718" dy="21">and validates vehicle-network behavior.</tspan>
 </text>
-<rect x="906" y="148" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="238.0">
-<tspan x="918" dy="0">Generate TPMS sensor messages and</tspan>
-<tspan x="918" dy="21">pressure-loss profiles used to</tspan>
-<tspan x="918" dy="21">drive the bench RF transmitter.</tspan>
+<rect x="1146" y="148" width="200" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1158" y="175.0">
+<tspan x="1158" dy="0">Record</tspan>
+<tspan x="1158" dy="21">representative TPMS</tspan>
+<tspan x="1158" dy="21">RF messages, vehicle</tspan>
+<tspan x="1158" dy="21">speed, and relevant</tspan>
+<tspan x="1158" dy="21">vehicle-</tspan>
+<tspan x="1158" dy="21">state/network</tspan>
+<tspan x="1158" dy="21">signals for</tspan>
+<tspan x="1158" dy="21">synchronized bench</tspan>
+<tspan x="1158" dy="21">playback.</tspan>
 </text>
-<rect x="1226" y="148" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="248.5">
-<tspan x="1238" dy="0">Execute ZCU → HPC → IPU and verify</tspan>
-<tspan x="1238" dy="21">warning behavior/timing</tspan>
+<rect x="1346" y="148" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1358" y="238.0">
+<tspan x="1358" dy="0">Generate TPMS sensor messages and</tspan>
+<tspan x="1358" dy="21">pressure-loss profiles used to</tspan>
+<tspan x="1358" dy="21">drive the bench RF transmitter.</tspan>
 </text>
-<rect x="1546" y="148" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="206.5">
-<tspan x="1558" dy="0">HIL may not reproduce actual tire</tspan>
-<tspan x="1558" dy="21">deflation dynamics, RF propagation,</tspan>
-<tspan x="1558" dy="21">TPMS sensor wake-up behavior,</tspan>
-<tspan x="1558" dy="21">pressure sampling/transmission</tspan>
-<tspan x="1558" dy="21">timing, or vehicle dynamic and</tspan>
-<tspan x="1558" dy="21">thermal effects.</tspan>
+<rect x="1666" y="148" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1678" y="248.5">
+<tspan x="1678" dy="0">Execute ZCU → HPC → IPU and verify</tspan>
+<tspan x="1678" dy="21">warning behavior/timing</tspan>
+</text>
+<rect x="1986" y="148" width="320" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1998" y="206.5">
+<tspan x="1998" dy="0">HIL may not reproduce actual tire</tspan>
+<tspan x="1998" dy="21">deflation dynamics, RF propagation,</tspan>
+<tspan x="1998" dy="21">TPMS sensor wake-up behavior,</tspan>
+<tspan x="1998" dy="21">pressure sampling/transmission</tspan>
+<tspan x="1998" dy="21">timing, or vehicle dynamic and</tspan>
+<tspan x="1998" dy="21">thermal effects.</tspan>
 </text>
 <rect x="36" y="361" width="130" height="213" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
@@ -80,37 +90,45 @@
 <tspan x="438" dy="0">Automated HIL — System</tspan>
 <tspan x="438" dy="21">Functional</tspan>
 </text>
-<rect x="706" y="361" width="200" height="213" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="388.0">
-<tspan x="718" dy="0">Record</tspan>
-<tspan x="718" dy="21">representative TPMS</tspan>
-<tspan x="718" dy="21">RF messages, vehicle</tspan>
-<tspan x="718" dy="21">speed, and relevant</tspan>
-<tspan x="718" dy="21">vehicle-</tspan>
-<tspan x="718" dy="21">state/network</tspan>
-<tspan x="718" dy="21">signals for</tspan>
-<tspan x="718" dy="21">synchronized bench</tspan>
-<tspan x="718" dy="21">playback.</tspan>
+<rect x="706" y="361" width="440" height="213" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="430.0">
+<tspan x="718" dy="0">Python + CANoe/CANalyzer + RF signal</tspan>
+<tspan x="718" dy="21">generator/transceiver control — automate long-</tspan>
+<tspan x="718" dy="21">duration pressure profiles, synchronized</tspan>
+<tspan x="718" dy="21">RF/network playback, and warning-time</tspan>
+<tspan x="718" dy="21">measurement.</tspan>
 </text>
-<rect x="906" y="361" width="320" height="213" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="918" y="451.0">
-<tspan x="918" dy="0">Generate TPMS sensor messages and</tspan>
-<tspan x="918" dy="21">pressure-loss profiles used to</tspan>
-<tspan x="918" dy="21">drive the bench RF transmitter.</tspan>
+<rect x="1146" y="361" width="200" height="213" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1158" y="388.0">
+<tspan x="1158" dy="0">Record</tspan>
+<tspan x="1158" dy="21">representative TPMS</tspan>
+<tspan x="1158" dy="21">RF messages, vehicle</tspan>
+<tspan x="1158" dy="21">speed, and relevant</tspan>
+<tspan x="1158" dy="21">vehicle-</tspan>
+<tspan x="1158" dy="21">state/network</tspan>
+<tspan x="1158" dy="21">signals for</tspan>
+<tspan x="1158" dy="21">synchronized bench</tspan>
+<tspan x="1158" dy="21">playback.</tspan>
 </text>
-<rect x="1226" y="361" width="320" height="213" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="461.5">
-<tspan x="1238" dy="0">Execute ZCU → HPC → IPU and verify</tspan>
-<tspan x="1238" dy="21">warning behavior/timing.</tspan>
+<rect x="1346" y="361" width="320" height="213" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1358" y="451.0">
+<tspan x="1358" dy="0">Generate TPMS sensor messages and</tspan>
+<tspan x="1358" dy="21">pressure-loss profiles used to</tspan>
+<tspan x="1358" dy="21">drive the bench RF transmitter.</tspan>
 </text>
-<rect x="1546" y="361" width="320" height="213" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="419.5">
-<tspan x="1558" dy="0">HIL may not reproduce actual tire</tspan>
-<tspan x="1558" dy="21">deflation dynamics, RF propagation,</tspan>
-<tspan x="1558" dy="21">TPMS sensors wake-up behavior,</tspan>
-<tspan x="1558" dy="21">pressure sampling/transmission</tspan>
-<tspan x="1558" dy="21">timing, or vehicle dynamic and</tspan>
-<tspan x="1558" dy="21">thermal effects.</tspan>
+<rect x="1666" y="361" width="320" height="213" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1678" y="461.5">
+<tspan x="1678" dy="0">Execute ZCU → HPC → IPU and verify</tspan>
+<tspan x="1678" dy="21">warning behavior/timing.</tspan>
+</text>
+<rect x="1986" y="361" width="320" height="213" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1998" y="419.5">
+<tspan x="1998" dy="0">HIL may not reproduce actual tire</tspan>
+<tspan x="1998" dy="21">deflation dynamics, RF propagation,</tspan>
+<tspan x="1998" dy="21">TPMS sensors wake-up behavior,</tspan>
+<tspan x="1998" dy="21">pressure sampling/transmission</tspan>
+<tspan x="1998" dy="21">timing, or vehicle dynamic and</tspan>
+<tspan x="1998" dy="21">thermal effects.</tspan>
 </text>
 <rect x="36" y="574" width="130" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
@@ -126,32 +144,38 @@
 <text class="cell" x="438" y="674.5">
 <tspan x="438" dy="0">Automated SIL — Partial System</tspan>
 </text>
-<rect x="706" y="574" width="200" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="674.5">
-<tspan x="718" dy="0">None</tspan>
+<rect x="706" y="574" width="440" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="653.5">
+<tspan x="718" dy="0">Python + pytest + QEMU/Zephyr — automated fault</tspan>
+<tspan x="718" dy="21">injection, SIL execution, regression, and</tspan>
+<tspan x="718" dy="21">requirement-based pass/fail checks.</tspan>
 </text>
-<rect x="906" y="574" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<rect x="1146" y="574" width="200" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1158" y="674.5">
+<tspan x="1158" dy="0">None</tspan>
+</text>
+<rect x="1346" y="574" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#5" target="_top">
-<text class="cell test-link" x="918" y="653.5">
-<tspan x="918" dy="0">Execute ZCU and HPC TPMS</tspan>
-<tspan x="918" dy="21">application software in a virtual</tspan>
-<tspan x="918" dy="21">machine separately (SIL Stack).</tspan>
+<text class="cell test-link" x="1358" y="653.5">
+<tspan x="1358" dy="0">Execute ZCU and HPC TPMS</tspan>
+<tspan x="1358" dy="21">application software in a virtual</tspan>
+<tspan x="1358" dy="21">machine separately (SIL Stack).</tspan>
 </text>
 </a>
-<rect x="1226" y="574" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="674.5">
-<tspan x="1238" dy="0">None</tspan>
+<rect x="1666" y="574" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1678" y="674.5">
+<tspan x="1678" dy="0">None</tspan>
 </text>
-<rect x="1546" y="574" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="601.0">
-<tspan x="1558" dy="0">Does not validate production</tspan>
-<tspan x="1558" dy="21">hardware, network timing, cross-ECU</tspan>
-<tspan x="1558" dy="21">synchronization, startup/restart</tspan>
-<tspan x="1558" dy="21">sequencing, or production</tspan>
-<tspan x="1558" dy="21">middleware behavior. Fault</tspan>
-<tspan x="1558" dy="21">injection represents software-</tspan>
-<tspan x="1558" dy="21">visible effects rather than the</tspan>
-<tspan x="1558" dy="21">complete physical failure.</tspan>
+<rect x="1986" y="574" width="320" height="192" fill="#f7f9fb" stroke="#aeb7bf"/>
+<text class="cell" x="1998" y="601.0">
+<tspan x="1998" dy="0">Does not validate production</tspan>
+<tspan x="1998" dy="21">hardware, network timing, cross-ECU</tspan>
+<tspan x="1998" dy="21">synchronization, startup/restart</tspan>
+<tspan x="1998" dy="21">sequencing, or production</tspan>
+<tspan x="1998" dy="21">middleware behavior. Fault</tspan>
+<tspan x="1998" dy="21">injection represents software-</tspan>
+<tspan x="1998" dy="21">visible effects rather than the</tspan>
+<tspan x="1998" dy="21">complete physical failure.</tspan>
 </text>
 <rect x="36" y="766" width="130" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#2" target="_top">
@@ -168,28 +192,34 @@
 <text class="cell" x="438" y="835.0">
 <tspan x="438" dy="0">Automated SIL — Partial System</tspan>
 </text>
-<rect x="706" y="766" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="835.0">
-<tspan x="718" dy="0">None</tspan>
+<rect x="706" y="766" width="440" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="718" y="814.0">
+<tspan x="718" dy="0">Python + pytest + QEMU/Zephyr — automate</tspan>
+<tspan x="718" dy="21">reset/state sequences and verify application</tspan>
+<tspan x="718" dy="21">recovery and retained-state behavior.</tspan>
 </text>
-<rect x="906" y="766" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<rect x="1146" y="766" width="200" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1158" y="835.0">
+<tspan x="1158" dy="0">None</tspan>
+</text>
+<rect x="1346" y="766" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
 <a href="r141_tables_viewer.html#5" target="_top">
-<text class="cell test-link" x="918" y="814.0">
-<tspan x="918" dy="0">Execute HPC TPMS application</tspan>
-<tspan x="918" dy="21">software in a virtual machine (SIL</tspan>
-<tspan x="918" dy="21">Stack).</tspan>
+<text class="cell test-link" x="1358" y="814.0">
+<tspan x="1358" dy="0">Execute HPC TPMS application</tspan>
+<tspan x="1358" dy="21">software in a virtual machine (SIL</tspan>
+<tspan x="1358" dy="21">Stack).</tspan>
 </text>
 </a>
-<rect x="1226" y="766" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1238" y="835.0">
-<tspan x="1238" dy="0">None</tspan>
+<rect x="1666" y="766" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1678" y="835.0">
+<tspan x="1678" dy="0">None</tspan>
 </text>
-<rect x="1546" y="766" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="1558" y="793.0">
-<tspan x="1558" dy="0">Virtual reset may not reproduce</tspan>
-<tspan x="1558" dy="21">production power-cycle behavior,</tspan>
-<tspan x="1558" dy="21">retained memory, watchdog/reset-</tspan>
-<tspan x="1558" dy="21">cause handling, startup timing, or</tspan>
-<tspan x="1558" dy="21">peripheral initialization.</tspan>
+<rect x="1986" y="766" width="320" height="129" fill="#ffffff" stroke="#aeb7bf"/>
+<text class="cell" x="1998" y="793.0">
+<tspan x="1998" dy="0">Virtual reset may not reproduce</tspan>
+<tspan x="1998" dy="21">production power-cycle behavior,</tspan>
+<tspan x="1998" dy="21">retained memory, watchdog/reset-</tspan>
+<tspan x="1998" dy="21">cause handling, startup timing, or</tspan>
+<tspan x="1998" dy="21">peripheral initialization.</tspan>
 </text>
 </svg>
