@@ -31,9 +31,12 @@
 <tspan x="178" dy="0">Puncture (Vehicle Level)</tspan>
 </text>
 <rect x="426" y="148" width="280" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="248.5">
-<tspan x="438" dy="0">Automated HIL — System</tspan>
-<tspan x="438" dy="21">Functional</tspan>
+<text class="cell" x="438" y="217.0">
+<tspan x="438" dy="0">AVehicle-level testing is</tspan>
+<tspan x="438" dy="21">recommended; however,</tspan>
+<tspan x="438" dy="21">automated HIL system-</tspan>
+<tspan x="438" dy="21">functional testing can support</tspan>
+<tspan x="438" dy="21">change-impact assessment.</tspan>
 </text>
 <rect x="706" y="148" width="440" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="718" y="248.5">
@@ -83,9 +86,12 @@
 <tspan x="178" dy="0">Diffusion (Vehicle Level)</tspan>
 </text>
 <rect x="426" y="361" width="280" height="213" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="438" y="461.5">
-<tspan x="438" dy="0">Automated HIL — System</tspan>
-<tspan x="438" dy="21">Functional</tspan>
+<text class="cell" x="438" y="430.0">
+<tspan x="438" dy="0">Vehicle-level testing is</tspan>
+<tspan x="438" dy="21">recommended; however,</tspan>
+<tspan x="438" dy="21">automated HIL system-</tspan>
+<tspan x="438" dy="21">functional testing can support</tspan>
+<tspan x="438" dy="21">change-impact assessment.</tspan>
 </text>
 <rect x="706" y="361" width="440" height="213" fill="#ffffff" stroke="#aeb7bf"/>
 <text class="cell" x="718" y="461.5">
