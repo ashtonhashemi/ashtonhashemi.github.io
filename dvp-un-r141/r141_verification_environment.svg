@@ -36,12 +36,9 @@
 <tspan x="438" dy="21">Functional</tspan>
 </text>
 <rect x="706" y="148" width="440" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="217.0">
-<tspan x="718" dy="0">Python + CANoe/CANalyzer + RF signal</tspan>
-<tspan x="718" dy="21">generator/transceiver control — Python</tspan>
-<tspan x="718" dy="21">orchestrates playback, fault profiles, timing,</tspan>
-<tspan x="718" dy="21">and pass/fail evaluation; CANoe/CANalyzer records</tspan>
-<tspan x="718" dy="21">and validates vehicle-network behavior.</tspan>
+<text class="cell" x="718" y="248.5">
+<tspan x="718" dy="0">Python + CANoe/CANalyzer + dSPACE + RF signal</tspan>
+<tspan x="718" dy="21">generator/transceiver control.</tspan>
 </text>
 <rect x="1146" y="148" width="200" height="213" fill="#f7f9fb" stroke="#aeb7bf"/>
 <text class="cell" x="1158" y="175.0">
@@ -91,12 +88,9 @@
 <tspan x="438" dy="21">Functional</tspan>
 </text>
 <rect x="706" y="361" width="440" height="213" fill="#ffffff" stroke="#aeb7bf"/>
-<text class="cell" x="718" y="430.0">
-<tspan x="718" dy="0">Python + CANoe/CANalyzer + RF signal</tspan>
-<tspan x="718" dy="21">generator/transceiver control — automate long-</tspan>
-<tspan x="718" dy="21">duration pressure profiles, synchronized</tspan>
-<tspan x="718" dy="21">RF/network playback, and warning-time</tspan>
-<tspan x="718" dy="21">measurement.</tspan>
+<text class="cell" x="718" y="461.5">
+<tspan x="718" dy="0">Python + CANoe/CANalyzer + dSPACE + RF signal</tspan>
+<tspan x="718" dy="21">generator/transceiver control.</tspan>
 </text>
 <rect x="1146" y="361" width="200" height="213" fill="#ffffff" stroke="#aeb7bf"/>
 <text class="cell" x="1158" y="388.0">
