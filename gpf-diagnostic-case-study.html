@@ -4,95 +4,107 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>GPF Diagnostic Development | Ashton Hashemi</title>
-  <meta name="description" content="GPF diagnostic development case study: functional decomposition, failure modes, effects, OBD monitor concepts, and physical allocation.">
+  <meta name="description" content="GPF diagnostic case study: objective, requirements, architecture, engineering approach, and verification planning.">
+  <meta property="og:title" content="GPF Diagnostic Development | Ashton Hashemi">
+  <meta property="og:description" content="A draft engineering analysis connecting GPF functions, failure modes, monitoring concepts, and verification needs.">
+  <meta property="og:url" content="https://ashtonhashemi.github.io/gpf-diagnostic-case-study.html">
+  <link rel="canonical" href="https://ashtonhashemi.github.io/gpf-diagnostic-case-study.html">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="top-style.css">
+  <link rel="stylesheet" href="gpf-case-study.css">
 </head>
-<body>
-  <div class="draft-banner" role="status">This portfolio is still a work in progress.</div>
+<body class="gpf-case">
   <header class="topbar">
-    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </button>
-    <a class="site-mark" href="system-engineer-fault-management/" aria-label="Ashton Hashemi home">AH</a>
-    <a class="logo" href="system-engineer-fault-management/">Portfolio</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu" aria-label="Open menu"><span></span><span></span><span></span></button>
+    <a class="site-mark" href="selected-work/" aria-label="Ashton Hashemi selected work">AH</a>
+    <a class="logo" href="selected-work/">Portfolio</a>
   </header>
-
-  <div id="site-menu" class="site-menu" aria-hidden="true">
-    <nav class="menu-inner" aria-label="Main navigation">
+  <div id="site-menu" class="site-menu" aria-hidden="true" inert>
+    <nav class="menu-inner" aria-label="Case study navigation">
       <div class="menu-primary">
-        <a href="system-engineer-fault-management/#work"><span>01</span>Work</a>
-        <a href="system-engineer-fault-management/#experience"><span>02</span>Experience</a>
-        <a href="system-engineer-fault-management/#skills"><span>03</span>Skills</a>
-        <a href="system-engineer-fault-management/#education"><span>04</span>Education</a>
+        <a href="#overview"><span>00</span>Overview</a>
+        <a href="#objective"><span>01</span>Objective / Problem</a>
+        <a href="#requirements"><span>02</span>Requirements / Standards</a>
+        <a href="#architecture"><span>03</span>Architecture</a>
+        <a href="#approach"><span>04</span>Engineering Approach</a>
+        <a href="#verification"><span>05</span>Verification / Results</a>
       </div>
-      <div class="menu-secondary">
-        <p>System Engineer — Fault Management</p>
-        <a href="https://github.com/ashtonhashemi">GitHub ↗</a>
-        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
-      </div>
+      <div class="menu-secondary"><p>GPF Diagnostic Development</p><a href="selected-work/">Selected Work ↗</a></div>
     </nav>
   </div>
-
   <main>
-    <section class="case-hero">
+    <section id="overview" class="case-hero" aria-labelledby="project-title">
       <div class="case-shell">
-        <a class="case-back" href="system-engineer-fault-management/#work">← Selected Engineering Work</a>
-        <p class="case-kicker">Diagnostics / FMEA / requirements decomposition</p>
-        <h1>GPF Diagnostic Development</h1>
-        <p class="case-lead">
-          A system-level diagnostic decomposition that starts with the Gasoline Particulate Filter functions,
-          identifies representative failure modes and effects, and connects them to OBD monitoring concepts and
-          physical implementation elements.
-        </p>
-        <div class="case-meta">
-          <span>GPF</span>
-          <span>OBD</span>
-          <span>FMEA</span>
-          <span>Functional decomposition</span>
-          <span>Diagnostic monitoring</span>
-          <span>Verification planning</span>
-        </div>
+        <a class="case-back" href="selected-work/">← Selected Work</a>
+        <p class="case-kicker">Overview</p>
+        <h1 id="project-title">GPF Diagnostic Development</h1>
+        <p class="case-lead">A diagnostic analysis for a Gasoline Particulate Filter (GPF), linking soot capture, storage, and regeneration to failure modes, monitor concepts, and implementation responsibilities.</p>
+        <div class="case-meta"><span>Engineering analysis / draft</span><span>OBD monitoring</span><span>FMEA</span></div>
+        <nav class="gpf-section-nav" aria-label="Jump to section">
+          <a href="#objective">01 Objective</a><a href="#requirements">02 Requirements</a><a href="#architecture">03 Architecture</a><a href="#approach">04 Approach</a><a href="#verification">05 Verification</a>
+        </nav>
       </div>
     </section>
 
-    <section class="case-shell case-section">
-      <div class="case-label">01 / Functional decomposition</div>
-      <h2>Start with what the filter must do.</h2>
-      <p class="case-intro">
-        The diagnostic analysis is organized around three top-level GPF functions. This creates a traceable path from
-        intended function to failure mode, observable effect, and monitor concept.
-      </p>
-      <div class="gpf-function-flow" aria-label="GPF functional decomposition">
-        <div class="gpf-function"><span>F1</span><strong>Capture soot</strong></div>
-        <div class="gpf-function"><span>F2</span><strong>Store soot</strong></div>
-        <div class="gpf-function"><span>F3</span><strong>Burn soot</strong></div>
+    <section id="objective" class="case-shell case-section">
+      <div class="case-label">01</div>
+      <h2>Objective / Problem</h2>
+      <p class="case-intro">Identify how the GPF can lose or degrade its intended function, which effects could be observed, and which diagnostic concepts could detect those conditions.</p>
+      <div class="gpf-function-flow" aria-label="GPF functions">
+        <div class="gpf-function"><span>Filtration</span><strong>Capture soot</strong></div>
+        <div class="gpf-function"><span>Loading capacity</span><strong>Store soot</strong></div>
+        <div class="gpf-function"><span>Regeneration</span><strong>Burn soot</strong></div>
       </div>
+      <p class="gpf-section-copy">The analysis covers reduced filtration, excessive loading, reduced storage capacity, restriction, and regeneration faults. The intended output is a traceable diagnostic concept that can be developed into measurable requirements.</p>
     </section>
 
-    <section class="case-shell case-section">
-      <div class="case-label">02 / Diagnostic table</div>
-      <h2>Failure mode → function → cause → effect → monitor.</h2>
-      <p class="case-intro">
-        This table is generated directly from the editable JSON source. Change the JSON, commit it, and the portfolio
-        table updates without editing this HTML page.
-      </p>
-
-      <div class="table-data-source">
-        <span id="gpf-table-status">Loading gpf-fmea-obd.json…</span>
-        <a href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">Open JSON source →</a>
+    <section id="requirements" class="case-shell case-section">
+      <div class="case-label">02</div>
+      <h2>Requirements / Standards</h2>
+      <p class="case-intro">The working requirements below describe the diagnostic intent. Numerical limits, enabling conditions, and regulatory references remain to be defined for the target vehicle program.</p>
+      <div class="case-flow-list">
+        <div><span>R1</span><strong>Filtration performance</strong><p>Identify degraded soot capture or a bypass path. Define the measurable signal or model response used to distinguish a healthy filter from a failed one.</p></div>
+        <div><span>R2</span><strong>Loading and restriction</strong><p>Assess soot loading and restriction using pressure information and a soot-load model. Define operating conditions and diagnostic thresholds.</p></div>
+        <div><span>R3</span><strong>Regeneration behavior</strong><p>Evaluate regeneration initiation, completion, and thermal behavior. Define valid temperature ranges and expected changes in soot loading.</p></div>
+        <div><span>R4</span><strong>Diagnostic decisions</strong><p>Specify sensor plausibility checks, detection timing, diagnostic status, and the required system response for each confirmed fault.</p></div>
       </div>
+      <div class="gpf-evidence-note"><h3>Standards baseline</h3><p>The current draft does not cite a specific emissions or OBD regulation, clause, or model year. Establish that baseline and link each applicable clause to a requirement before setting final acceptance criteria.</p></div>
+    </section>
 
-      <div class="table-wrap">
+    <section id="architecture" class="case-shell case-section">
+      <div class="case-label">03</div>
+      <h2>Architecture</h2>
+      <p class="case-intro">The physical allocation separates the exhaust path, sensing, diagnostic decisions, and regeneration controls.</p>
+      <div class="gpf-physical-flow gpf-exhaust-path" aria-label="Exhaust path: engine-out exhaust to GPF substrate and canning to tailpipe">
+        <div class="arch-node arch-node-main">Engine-out exhaust</div><div class="arch-arrow" aria-hidden="true">→</div>
+        <div class="arch-node arch-node-main">GPF substrate / canning</div><div class="arch-arrow" aria-hidden="true">→</div>
+        <div class="arch-node arch-node-main">Tailpipe</div>
+      </div>
+      <div class="gpf-monitor-grid">
+        <div class="case-fact"><h3>Sensing</h3><p>Pre- and post-GPF pressure taps feed the differential-pressure sensing path. Upstream and downstream temperature sensors provide thermal inputs.</p></div>
+        <div class="case-fact"><h3>ECU / OBD logic</h3><p>Sensor inputs and model estimates support plausibility checks, fault detection, and diagnostic status decisions.</p></div>
+        <div class="case-fact"><h3>Regeneration controls</h3><p>The ECU interfaces with engine and regeneration controls to coordinate the response to monitored conditions.</p></div>
+      </div>
+      <p class="gpf-section-copy">Signal path: pressure and temperature sensing → ECU diagnostic logic → engine / regeneration controls. The allocation is a concept-level view; sensor specifications and interface timing are not defined in the source.</p>
+    </section>
+
+    <section id="approach" class="case-shell case-section">
+      <div class="case-label">04</div>
+      <h2>Engineering Approach</h2>
+      <p class="case-intro">Decompose the three filter functions into representative failure modes, connect each mode to causes and observable effects, then assign a candidate monitor and physical implementation path.</p>
+      <h3 class="gpf-subheading">Failure-mode and monitor analysis</h3>
+      <div class="table-data-source"><span id="gpf-table-status" role="status">Loading diagnostic analysis…</span></div>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Failure-mode analysis; scroll horizontally on small screens">
         <table class="diagnostic-table">
+          <caption>Representative GPF failure modes and candidate OBD monitors</caption>
           <thead>
             <tr>
-              <th>ID</th>
-              <th>Failure Mode</th>
-              <th>Function</th>
-              <th>Possible Cause / Failure Mechanism</th>
-              <th>Example Effect</th>
-              <th>OBD Monitor Concept</th>
+              <th scope="col">ID</th>
+              <th scope="col">Failure Mode</th>
+              <th scope="col">Function</th>
+              <th scope="col">Possible Cause / Failure Mechanism</th>
+              <th scope="col">Example Effect</th>
+              <th scope="col">OBD Monitor Concept</th>
             </tr>
           </thead>
           <tbody id="gpf-diagnostic-table-body">
@@ -103,94 +115,42 @@
         </table>
       </div>
 
-      <p class="case-note">
-        The table displays only what is present in the JSON source. Missing entries are shown as “—”. Severity,
-        occurrence, detection ratings and RPN are intentionally omitted unless they are added to the source model.
-      </p>
+
+      <p class="case-note">Candidate monitors are draft concepts. “—” marks information not yet defined; a populated row is not evidence that a fault has been detected or validated.</p>
+      <details class="gpf-artifacts"><summary>Supporting analysis artifacts</summary>
+        <div class="case-source-links">
+          <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">Diagnostic analysis data</a>
+          <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-functional.mmd">Functional model</a>
+          <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-physical.mmd">Physical model</a>
+        </div>
+      </details>
     </section>
 
-    <section class="case-shell case-section">
-      <div class="case-label">03 / Physical allocation</div>
-      <h2>Map diagnostic responsibility to physical elements.</h2>
-      <p class="case-intro">
-        The functional view is then allocated across sensing, the GPF assembly, ECU diagnostic logic, and engine / regeneration controls.
-      </p>
-
-      <div class="gpf-physical-flow" aria-label="GPF physical diagnostic allocation">
-        <div class="arch-node arch-node-main">Engine-out exhaust</div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node">Upstream temperature sensing</div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node arch-node-main">GPF substrate / canning</div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node">Downstream temperature sensing</div>
-        <div class="arch-arrow">→</div>
-        <div class="arch-node arch-node-main">Tailpipe</div>
+    <section id="verification" class="case-shell case-section">
+      <div class="case-label">05</div>
+      <h2>Verification / Results</h2>
+      <p class="case-intro">The current deliverable is a draft analysis and allocation model. The published source contains no executed test cases, measured results, detection thresholds, or pass/fail evidence.</p>
+      <h3 class="gpf-subheading">Proposed verification plan</h3>
+      <div class="table-wrap" tabindex="0" role="region" aria-label="Proposed verification plan; scroll horizontally on small screens">
+        <table class="gpf-verification-table">
+          <caption>Evidence to collect after requirements and acceptance criteria are defined</caption>
+          <thead><tr><th scope="col">Coverage</th><th scope="col">Proposed test</th><th scope="col">Evidence needed</th></tr></thead>
+          <tbody>
+            <tr><td>Filtration / F1</td><td>Compare healthy-filter behavior with representative loss-of-efficiency or bypass conditions.</td><td>Reference filtration measurements, monitor response, and detection timing.</td></tr>
+            <tr><td>Loading / F2–F4</td><td>Evaluate pressure and model response across controlled loading and restriction conditions.</td><td>Pressure measurements, reference loading information, model error, and fault discrimination.</td></tr>
+            <tr><td>Regeneration / F5–F7</td><td>Exercise successful, incomplete, non-initiating, and over-temperature regeneration scenarios.</td><td>Temperature traces, soot-load change, diagnostic status, and control response.</td></tr>
+            <tr><td>Sensor plausibility / R4</td><td>Inject representative sensor faults and check monitor behavior when inputs are unreliable.</td><td>Plausibility-check outcomes, monitor enabling behavior, and recovery behavior.</td></tr>
+          </tbody>
+        </table>
       </div>
-
-      <div class="gpf-monitor-grid">
-        <div class="case-fact">
-          <h3>Differential pressure sensing</h3>
-          <p>Pre- and post-GPF pressure information supports soot-loading and restriction assessment.</p>
-        </div>
-        <div class="case-fact">
-          <h3>ECU / OBD diagnostic logic</h3>
-          <p>Evaluates sensor information and models, applies diagnostic criteria, and determines diagnostic status.</p>
-        </div>
-        <div class="case-fact">
-          <h3>Engine / regeneration controls</h3>
-          <p>Provides the actuation path for regeneration behavior and system response when diagnostic conditions require it.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="case-shell case-section">
-      <div class="case-label">04 / Systems engineering traceability</div>
-      <h2>Turn failure analysis into testable requirements.</h2>
-      <div class="case-flow-list">
-        <div><span>01</span><strong>Function</strong><p>Define the intended GPF behavior: capture, store, and burn soot.</p></div>
-        <div><span>02</span><strong>Failure mode</strong><p>Identify how each function can be lost, degraded, or behave outside the intended range.</p></div>
-        <div><span>03</span><strong>Effect</strong><p>Connect the failure to emissions, restriction, regeneration, performance, or thermal consequences.</p></div>
-        <div><span>04</span><strong>Diagnostic monitor</strong><p>Define the sensing, model, plausibility, threshold, and enabling-condition concept needed for detection.</p></div>
-        <div><span>05</span><strong>Allocation</strong><p>Assign implementation responsibility to sensing, ECU software, controls, and calibration.</p></div>
-        <div><span>06</span><strong>Verification</strong><p>Define software, system, and vehicle-level criteria that demonstrate the diagnostic requirement is satisfied.</p></div>
-      </div>
-    </section>
-
-    <section class="case-shell case-section">
-      <div class="case-label">05 / Editable source</div>
-      <h2>Edit the JSON, not the table.</h2>
-      <p class="case-intro">
-        The FMEA / OBD table reads the JSON file at page load. The Mermaid files remain available for the functional
-        and physical architecture views.
-      </p>
-      <div class="case-source-links">
-        <a class="apply-btn" href="engineering-data/gpf-fmea-obd/gpf-fmea-obd.json">JSON source</a>
-        <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-functional.mmd">Functional Mermaid</a>
-        <a class="source-outline" href="engineering-data/gpf-fmea-obd/gpf-physical.mmd">Physical Mermaid</a>
-      </div>
+      <p class="case-note">All tests above are proposed. Acceptance limits and an execution record must be added before reporting verification results.</p>
     </section>
   </main>
-
-  <footer class="footer">
-    <div class="footer-inner">
-      <div>
-        <h3>From function to diagnostic evidence.</h3>
-        <p>System decomposition, failure analysis, monitoring strategy, allocation, and verification.</p>
-      </div>
-      <div class="footer-links">
-        <a href="system-engineer-fault-management/#work">Portfolio ↗</a>
-        <a href="mailto:ashtonhashemi@gmail.com">Email ↗</a>
-      </div>
-    </div>
-    <div class="copyright">© 2026 Ashton Hashemi</div>
-  </footer>
-
+  <footer class="footer"><div class="copyright">© 2026 Ashton Hashemi · <a href="selected-work/">Selected Work ↗</a></div></footer>
   <script src="gpf-table.js"></script>
   <script>
     const menuButton = document.querySelector('.menu-toggle');
     const siteMenu = document.getElementById('site-menu');
-    const menuLinks = siteMenu.querySelectorAll('a');
     function setMenu(open) {
       menuButton.classList.toggle('is-open', open);
       siteMenu.classList.toggle('is-open', open);
@@ -198,10 +158,11 @@
       menuButton.setAttribute('aria-expanded', String(open));
       menuButton.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
       siteMenu.setAttribute('aria-hidden', String(!open));
+      siteMenu.inert = !open;
     }
     menuButton.addEventListener('click', () => setMenu(!siteMenu.classList.contains('is-open')));
-    menuLinks.forEach(link => link.addEventListener('click', () => setMenu(false)));
-    document.addEventListener('keydown', event => { if (event.key === 'Escape') setMenu(false); });
+    siteMenu.querySelectorAll('a').forEach(link => link.addEventListener('click', () => setMenu(false)));
+    document.addEventListener('keydown', event => { if (event.key === 'Escape') { setMenu(false); menuButton.focus(); } });
   </script>
 </body>
 </html>

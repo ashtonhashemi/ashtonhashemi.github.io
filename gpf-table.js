@@ -84,13 +84,13 @@
       const tr = document.createElement('tr');
       const td = document.createElement('td');
       td.colSpan = 6;
-      td.textContent = 'No diagnostic rows are defined in the JSON source.';
+      td.textContent = 'No diagnostic analysis is available yet.';
       tr.appendChild(td);
       tbody.appendChild(tr);
     }
 
     if (status) {
-      status.textContent = 'Live from gpf-fmea-obd.json';
+      status.textContent = `${failureModes.length} representative failure modes · Draft analysis`;
       status.classList.remove('table-status-error');
     }
   };
@@ -100,12 +100,12 @@
     const tr = document.createElement('tr');
     const td = document.createElement('td');
     td.colSpan = 6;
-    td.textContent = 'Could not load the JSON source. Check gpf-fmea-obd.json for valid JSON syntax.';
+    td.textContent = 'The diagnostic analysis could not be loaded. Please try again later.';
     tr.appendChild(td);
     tbody.appendChild(tr);
 
     if (status) {
-      status.textContent = 'JSON load error';
+      status.textContent = 'Diagnostic analysis unavailable';
       status.classList.add('table-status-error');
     }
     console.error('GPF diagnostic table:', error);
